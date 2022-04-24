@@ -17,6 +17,21 @@
 		DAA95F7E2815E78D0085388A /* MazeAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95F7D2815E78D0085388A /* MazeAppUITestsLaunchTests.swift */; };
 		DAA95F982815EEB10085388A /* MazeNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = DAA95F972815EEB10085388A /* MazeNetwork */; };
 		DAA95F9B2815F2070085388A /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = DAA95F9A2815F2070085388A /* Nuke */; };
+		DAA95FA32815F3980085388A /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95FA22815F3980085388A /* Show.swift */; };
+		DAA95FA52815F3B50085388A /* ShowEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95FA42815F3B50085388A /* ShowEndpoint.swift */; };
+		DAA95FA72815F4960085388A /* ShowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95FA62815F4960085388A /* ShowService.swift */; };
+		DAA95FAA2815F6A10085388A /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95FA92815F6A10085388A /* UIViewExtensions.swift */; };
+		DAA95FAC2815F6CB0085388A /* ReusableViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95FAB2815F6CB0085388A /* ReusableViews.swift */; };
+		DAA95FAE2815F8310085388A /* ShowListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95FAD2815F8310085388A /* ShowListRouter.swift */; };
+		DAA95FB02815F8A80085388A /* ShowListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95FAF2815F8A80085388A /* ShowListController.swift */; };
+		DAA95FB32815F9230085388A /* ShowListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95FB22815F9230085388A /* ShowListViewModel.swift */; };
+		DAA95FB62815F99A0085388A /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95FB52815F99A0085388A /* RootRouter.swift */; };
+		DAA95FB82815FA050085388A /* ApplicationTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95FB72815FA050085388A /* ApplicationTabBarController.swift */; };
+		DAA95FBA2815FBBF0085388A /* NavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95FB92815FBBF0085388A /* NavigationControllerExtension.swift */; };
+		DAA95FBC2815FD320085388A /* ShowCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95FBB2815FD320085388A /* ShowCollectionCell.swift */; };
+		DAA95FBE2815FDB30085388A /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95FBD2815FDB30085388A /* UIFontExtension.swift */; };
+		DAA95FC0281606910085388A /* LoadableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95FBF281606910085388A /* LoadableImageView.swift */; };
+		DAA95FC3281606F80085388A /* ActivityIndicatorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95FC2281606F80085388A /* ActivityIndicatorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +65,21 @@
 		DAA95F7B2815E78D0085388A /* MazeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeAppUITests.swift; sourceTree = "<group>"; };
 		DAA95F7D2815E78D0085388A /* MazeAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DAA95F952815EE620085388A /* MazeNetwork */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MazeNetwork; sourceTree = "<group>"; };
+		DAA95FA22815F3980085388A /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
+		DAA95FA42815F3B50085388A /* ShowEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowEndpoint.swift; sourceTree = "<group>"; };
+		DAA95FA62815F4960085388A /* ShowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowService.swift; sourceTree = "<group>"; };
+		DAA95FA92815F6A10085388A /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		DAA95FAB2815F6CB0085388A /* ReusableViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViews.swift; sourceTree = "<group>"; };
+		DAA95FAD2815F8310085388A /* ShowListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowListRouter.swift; sourceTree = "<group>"; };
+		DAA95FAF2815F8A80085388A /* ShowListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowListController.swift; sourceTree = "<group>"; };
+		DAA95FB22815F9230085388A /* ShowListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowListViewModel.swift; sourceTree = "<group>"; };
+		DAA95FB52815F99A0085388A /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		DAA95FB72815FA050085388A /* ApplicationTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationTabBarController.swift; sourceTree = "<group>"; };
+		DAA95FB92815FBBF0085388A /* NavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerExtension.swift; sourceTree = "<group>"; };
+		DAA95FBB2815FD320085388A /* ShowCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCollectionCell.swift; sourceTree = "<group>"; };
+		DAA95FBD2815FDB30085388A /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
+		DAA95FBF281606910085388A /* LoadableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableImageView.swift; sourceTree = "<group>"; };
+		DAA95FC2281606F80085388A /* ActivityIndicatorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +134,10 @@
 		DAA95F592815E7890085388A /* MazeApp */ = {
 			isa = PBXGroup;
 			children = (
+				DAA95FC1281606B90085388A /* CustomComponents */,
+				DAA95FA82815F6600085388A /* Extensions */,
+				DAA95FA12815F3720085388A /* Models */,
+				DAA95F9C2815F3470085388A /* Modules */,
 				DAA95F5A2815E7890085388A /* AppDelegate.swift */,
 				DAA95F5C2815E7890085388A /* SceneDelegate.swift */,
 				DAA95F5E2815E7890085388A /* ViewController.swift */,
@@ -144,6 +178,97 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAA95F9C2815F3470085388A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DAA95FB42815F98F0085388A /* Root */,
+				DAA95F9D2815F3500085388A /* ShowsList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DAA95F9D2815F3500085388A /* ShowsList */ = {
+			isa = PBXGroup;
+			children = (
+				DAA95FB12815F9190085388A /* ViewModels */,
+				DAA95FA02815F3670085388A /* Router */,
+				DAA95F9F2815F3620085388A /* Views */,
+				DAA95F9E2815F35C0085388A /* Service */,
+			);
+			path = ShowsList;
+			sourceTree = "<group>";
+		};
+		DAA95F9E2815F35C0085388A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DAA95FA42815F3B50085388A /* ShowEndpoint.swift */,
+				DAA95FA62815F4960085388A /* ShowService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DAA95F9F2815F3620085388A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DAA95FAF2815F8A80085388A /* ShowListController.swift */,
+				DAA95FBB2815FD320085388A /* ShowCollectionCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DAA95FA02815F3670085388A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				DAA95FAD2815F8310085388A /* ShowListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		DAA95FA12815F3720085388A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DAA95FA22815F3980085388A /* Show.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DAA95FA82815F6600085388A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DAA95FA92815F6A10085388A /* UIViewExtensions.swift */,
+				DAA95FAB2815F6CB0085388A /* ReusableViews.swift */,
+				DAA95FB92815FBBF0085388A /* NavigationControllerExtension.swift */,
+				DAA95FBD2815FDB30085388A /* UIFontExtension.swift */,
+				DAA95FC2281606F80085388A /* ActivityIndicatorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DAA95FB12815F9190085388A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DAA95FB22815F9230085388A /* ShowListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DAA95FB42815F98F0085388A /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				DAA95FB52815F99A0085388A /* RootRouter.swift */,
+				DAA95FB72815FA050085388A /* ApplicationTabBarController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		DAA95FC1281606B90085388A /* CustomComponents */ = {
+			isa = PBXGroup;
+			children = (
+				DAA95FBF281606910085388A /* LoadableImageView.swift */,
+			);
+			path = CustomComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,9 +408,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAA95FC3281606F80085388A /* ActivityIndicatorExtension.swift in Sources */,
+				DAA95FB02815F8A80085388A /* ShowListController.swift in Sources */,
+				DAA95FA52815F3B50085388A /* ShowEndpoint.swift in Sources */,
+				DAA95FBE2815FDB30085388A /* UIFontExtension.swift in Sources */,
+				DAA95FC0281606910085388A /* LoadableImageView.swift in Sources */,
+				DAA95FAA2815F6A10085388A /* UIViewExtensions.swift in Sources */,
+				DAA95FBA2815FBBF0085388A /* NavigationControllerExtension.swift in Sources */,
 				DAA95F5F2815E7890085388A /* ViewController.swift in Sources */,
+				DAA95FB82815FA050085388A /* ApplicationTabBarController.swift in Sources */,
+				DAA95FB62815F99A0085388A /* RootRouter.swift in Sources */,
 				DAA95F5B2815E7890085388A /* AppDelegate.swift in Sources */,
+				DAA95FB32815F9230085388A /* ShowListViewModel.swift in Sources */,
+				DAA95FBC2815FD320085388A /* ShowCollectionCell.swift in Sources */,
+				DAA95FAE2815F8310085388A /* ShowListRouter.swift in Sources */,
+				DAA95FA32815F3980085388A /* Show.swift in Sources */,
+				DAA95FA72815F4960085388A /* ShowService.swift in Sources */,
 				DAA95F5D2815E7890085388A /* SceneDelegate.swift in Sources */,
+				DAA95FAC2815F6CB0085388A /* ReusableViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

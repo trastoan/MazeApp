@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol ServiceRoute {
+public protocol ServiceEndpoint {
     var path: String { get }
     var baseUrl: String { get }
     var queryParameters: [String: String]? { get }

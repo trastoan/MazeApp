@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 public protocol HTTPClient {
-    func requestObject<Model: Decodable>(route: ServiceRoute) async throws -> Model
+    func requestObject<Model: Decodable>(endpoint: ServiceEndpoint) async throws -> Model
 }
 
 public enum HTTPClientError: Error, Equatable {
@@ -24,19 +24,19 @@ public struct HTTPWorker: HTTPClient {
         self.session = session
     }
 
-    public func requestObject<Model>(route: ServiceRoute) async throws -> Model where Model : Decodable {
-        let url = try url(from: route)
+    public func requestObject<Model>(endpoint: ServiceEndpoint) async throws -> Model where Model : Decodable {
+        let url = try url(from: endpoint)
         var urlRequest = URLRequest(url: url)
-        urlRequest.httpMethod = route.method.value
+        urlRequest.httpMethod = endpoint.method.value
         let (data, _) = try await session.data(from: url)
 
         return try JSONDecoder().decode(Model.self, from: data)
     }
 
-    func url(from route: ServiceRoute) throws -> URL {
-        var urlComponent = URLComponents(string: route.baseUrl)
-        urlComponent?.path = route.path
-        urlComponent?.queryItems = route.queryParameters?.map { URLQueryItem(name: $0.key, value: $0.value) }
+    func url(from endpoint: ServiceEndpoint) throws -> URL {
+        var urlComponent = URLComponents(string: endpoint.baseUrl)
+        urlComponent?.path = endpoint.path
+        urlComponent?.queryItems = endpoint.queryParameters?.map { URLQueryItem(name: $0.key, value: $0.value) }
 
         guard let url = urlComponent?.url else {
             throw HTTPClientError.urlCreation
