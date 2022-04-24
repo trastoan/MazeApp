@@ -16,6 +16,7 @@
 		DAA95F7C2815E78D0085388A /* MazeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95F7B2815E78D0085388A /* MazeAppUITests.swift */; };
 		DAA95F7E2815E78D0085388A /* MazeAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95F7D2815E78D0085388A /* MazeAppUITestsLaunchTests.swift */; };
 		DAA95F982815EEB10085388A /* MazeNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = DAA95F972815EEB10085388A /* MazeNetwork */; };
+		DAA95F9B2815F2070085388A /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = DAA95F9A2815F2070085388A /* Nuke */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAA95F982815EEB10085388A /* MazeNetwork in Frameworks */,
+				DAA95F9B2815F2070085388A /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +164,7 @@
 			name = MazeApp;
 			packageProductDependencies = (
 				DAA95F972815EEB10085388A /* MazeNetwork */,
+				DAA95F9A2815F2070085388A /* Nuke */,
 			);
 			productName = MazeApp;
 			productReference = DAA95F572815E7890085388A /* MazeApp.app */;
@@ -235,6 +238,9 @@
 				Base,
 			);
 			mainGroup = DAA95F4E2815E7890085388A;
+			packageReferences = (
+				DAA95F992815F2070085388A /* XCRemoteSwiftPackageReference "Nuke" */,
+			);
 			productRefGroup = DAA95F582815E7890085388A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -612,10 +618,26 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		DAA95F992815F2070085388A /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		DAA95F972815EEB10085388A /* MazeNetwork */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MazeNetwork;
+		};
+		DAA95F9A2815F2070085388A /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DAA95F992815F2070085388A /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
