@@ -24,15 +24,27 @@ class SearchView: UIViewController, SearchViewProtocol {
         return table
     }()
 
+    private let segmentedControl: UISegmentedControl = {
+        let segment = UISegmentedControl()
+        segment.translatesAutoresizingMaskIntoConstraints = false
+        segment.backgroundColor = .systemBackground
+        segment.selectedSegmentIndex = 0
+        return segment
+    }()
+
     private let searchController = UISearchController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
         title = model.title
+
         table.dataSource = self
         table.delegate = self
 
         setupSearchBar()
+        setupSegmentBar()
+
         setupSubviews()
         setupConstraints()
 
@@ -58,18 +70,31 @@ class SearchView: UIViewController, SearchViewProtocol {
         definesPresentationContext = true 
     }
 
+    private func setupSegmentBar() {
+        for (index,searchType) in model.searchTypes.enumerated() {
+            let title = searchType.rawValue.capitalized
+            segmentedControl.insertSegment(withTitle: title, at: index, animated: false)
+        }
+        segmentedControl.selectedSegmentIndex = 0
+        segmentedControl.addTarget(self, action: #selector(segmentedChanged(_:)), for: .valueChanged)
+    }
+
+    @objc
+    private func segmentedChanged(_ segmented: UISegmentedControl) {
+        model.changeSearch(index: segmented.selectedSegmentIndex)
+        guard let name = searchController.searchBar.text else {
+            model.resetSearch()
+            return
+        }
+        searchFor(name: name)
+    }
+
     private func setupSubviews() {
         self.view.addSubview(table)
+        self.view.addSubview(segmentedControl)
     }
 
-    private func setupConstraints() {
-        table.centerOn(view: view)
-    }
-}
-
-extension SearchView: UISearchResultsUpdating, UISearchBarDelegate {
-    func updateSearchResults(for searchController: UISearchController) {
-        guard let name = searchController.searchBar.text else { return }
+    private func searchFor(name: String) {
         if name.count > 1 {
             Task {
                 try await model.search(for: name)
@@ -77,6 +102,27 @@ extension SearchView: UISearchResultsUpdating, UISearchBarDelegate {
         } else {
             model.resetSearch()
         }
+    }
+
+    private func setupConstraints() {
+
+        NSLayoutConstraint.activate([
+            segmentedControl.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            segmentedControl.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
+            segmentedControl.rightAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.rightAnchor),
+
+            self.table.topAnchor.constraint(equalTo: segmentedControl.bottomAnchor),
+            self.table.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
+            self.table.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
+            self.table.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+    }
+}
+
+extension SearchView: UISearchResultsUpdating, UISearchBarDelegate {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let name = searchController.searchBar.text else { return }
+        searchFor(name: name)
     }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {

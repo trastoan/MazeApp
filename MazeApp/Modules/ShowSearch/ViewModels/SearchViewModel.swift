@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum SearchType {
+enum SearchType: String {
     case people
     case show
 }
@@ -21,10 +21,10 @@ protocol SearchViewModelProtocol {
     var hasFinishedSearching: (() -> ())? { get set }
 
     func resetSearch()
-    func changeSearch(type: SearchType)
+    func changeSearch(index: Int)
     func search(for: String) async throws
     func showDetails(for row: Int)
-    func model(for row: Int) -> SearchTableCellModel
+    func model(for row: Int) -> SearchTableCellModel?
 }
 
 class SearchViewModel: SearchViewModelProtocol {
@@ -49,18 +49,22 @@ class SearchViewModel: SearchViewModelProtocol {
         hasFinishedSearching?()
     }
 
-    func changeSearch(type: SearchType) {
+    func changeSearch(index: Int) {
+        let type = searchTypes[index]
         currentSearchType = type
     }
 
     @MainActor
     func search(for name: String) async throws {
+        results = []
         switch currentSearchType {
             case .people:
                 let searchResult: [PeopleSearch] = try await service.searchFor(endpoint: .people(named: name))
+                try Task.checkCancellation()
                 results = searchResult.map { SearchTableCellModel(with: $0.person) }
             case .show:
                 let SearchResult: [ShowSearch] = try await service.searchFor(endpoint: .show(named: name))
+                try Task.checkCancellation()
                 results = SearchResult.map { SearchTableCellModel(with: $0.show) }
         }
         hasFinishedSearching?()
@@ -77,6 +81,11 @@ class SearchViewModel: SearchViewModelProtocol {
         }
     }
 
-    func model(for row: Int) -> SearchTableCellModel { results[row] }
+    func model(for row: Int) -> SearchTableCellModel? {
+        if row < results.count {
+            return results[row]
+        }
+        return nil
+    }
 
 }

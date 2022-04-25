@@ -32,6 +32,8 @@ class SearchTableViewCell: UITableViewCell {
         return label
     }()
 
+    var model: SearchTableCellModel?
+
     override func prepareForReuse() {
         nameLabel.text = ""
         subtitleLabel.text = ""
@@ -48,11 +50,12 @@ class SearchTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func setup(with model: SearchTableCellModel) {
+    func setup(with model: SearchTableCellModel?) {
         self.selectionStyle = .none
-        nameLabel.text = model.name
-        subtitleLabel.text = model.subtitle
-        posterImageView.loadImage(withURL: URL(string: model.image ?? ""))
+        self.model = model
+        nameLabel.text = model?.name
+        subtitleLabel.text = model?.subtitle
+        posterImageView.loadImage(withURL: URL(string: model?.image ?? ""))
     }
 
     override func layoutSubviews() {

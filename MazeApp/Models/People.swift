@@ -16,7 +16,12 @@ struct People: Decodable {
     var id: Int
     var url: String
     var name: String
-    var country: String?
+    var country: Country?
     var image: Image?
+
+    struct Country: Decodable {
+        var name: String
+        var code: String
+    }
 
 }

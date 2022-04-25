@@ -20,7 +20,7 @@ struct SearchTableCellModel {
 
     init(with people: People) {
         self.name = people.name
-        self.subtitle = people.country ?? "Unknow"
+        self.subtitle = people.country?.name ?? "Unknow"
         self.image = people.image?.medium
     }
 }
