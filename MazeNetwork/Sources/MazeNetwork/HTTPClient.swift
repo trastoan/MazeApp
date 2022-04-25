@@ -30,7 +30,14 @@ public struct HTTPWorker: HTTPClient {
         urlRequest.httpMethod = endpoint.method.value
         let (data, _) = try await session.data(from: url)
 
-        return try JSONDecoder().decode(Model.self, from: data)
+        do {
+            let result = try JSONDecoder().decode(Model.self, from: data)
+            return result
+        } catch(let error) {
+            print(error)
+            throw error
+        }
+
     }
 
     func url(from endpoint: ServiceEndpoint) throws -> URL {

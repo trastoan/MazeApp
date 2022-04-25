@@ -13,10 +13,12 @@ class ApplicationTabBarController: UITabBarController {
         setupAppearence()
 
         let showListController = ShowListRouter.assembleModule()
+        let searchController = SearchRouter.assembleModule()
 
         showListController.tabBarItem = UITabBarItem(title: "Shows", image: UIImage(systemName: "calendar"), tag: 1)
+        searchController.tabBarItem = UITabBarItem(title: "Search", image: UIImage(systemName: "magnifyingglass"), tag: 2)
 
-        let tabBarControllers = [showListController]
+        let tabBarControllers = [showListController, searchController]
         self.setViewControllers(tabBarControllers, animated: true)
     }
 

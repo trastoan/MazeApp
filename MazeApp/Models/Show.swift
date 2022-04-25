@@ -7,6 +7,11 @@
 
 import Foundation
 
+struct ShowSearch: Decodable {
+    var score: Double
+    var show: Show
+}
+
 struct Show: Decodable {
     let id: Int
     let name: String
@@ -20,9 +25,4 @@ struct Show: Decodable {
         let time: String
         let days: [String]
     }
-}
-
-struct Image: Decodable {
-    let medium: String
-    let original: String
 }

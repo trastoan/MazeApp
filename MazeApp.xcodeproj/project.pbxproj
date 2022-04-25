@@ -32,6 +32,15 @@
 		DAA95FBE2815FDB30085388A /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95FBD2815FDB30085388A /* UIFontExtension.swift */; };
 		DAA95FC0281606910085388A /* LoadableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95FBF281606910085388A /* LoadableImageView.swift */; };
 		DAA95FC3281606F80085388A /* ActivityIndicatorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95FC2281606F80085388A /* ActivityIndicatorExtension.swift */; };
+		DAA95FC628162A470085388A /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95FC528162A470085388A /* SearchRouter.swift */; };
+		DAA95FC828162A5A0085388A /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95FC728162A5A0085388A /* SearchController.swift */; };
+		DAA95FCA28162A6C0085388A /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95FC928162A6C0085388A /* SearchViewModel.swift */; };
+		DAA95FCC28162AA50085388A /* SearchEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95FCB28162AA50085388A /* SearchEndpoint.swift */; };
+		DAA95FCE28162AB10085388A /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95FCD28162AB10085388A /* SearchService.swift */; };
+		DAA95FD428162DE90085388A /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95FD328162DE90085388A /* People.swift */; };
+		DAA95FD628162EA50085388A /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95FD528162EA50085388A /* Image.swift */; };
+		DAA95FD8281631150085388A /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95FD7281631150085388A /* SearchTableViewCell.swift */; };
+		DAA95FDA281631A70085388A /* SearchTableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95FD9281631A70085388A /* SearchTableCellModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +89,15 @@
 		DAA95FBD2815FDB30085388A /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
 		DAA95FBF281606910085388A /* LoadableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableImageView.swift; sourceTree = "<group>"; };
 		DAA95FC2281606F80085388A /* ActivityIndicatorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorExtension.swift; sourceTree = "<group>"; };
+		DAA95FC528162A470085388A /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		DAA95FC728162A5A0085388A /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		DAA95FC928162A6C0085388A /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		DAA95FCB28162AA50085388A /* SearchEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEndpoint.swift; sourceTree = "<group>"; };
+		DAA95FCD28162AB10085388A /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		DAA95FD328162DE90085388A /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		DAA95FD528162EA50085388A /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		DAA95FD7281631150085388A /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		DAA95FD9281631A70085388A /* SearchTableCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableCellModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +201,7 @@
 		DAA95F9C2815F3470085388A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				DAA95FC4281611140085388A /* ShowSearch */,
 				DAA95FB42815F98F0085388A /* Root */,
 				DAA95F9D2815F3500085388A /* ShowsList */,
 			);
@@ -230,6 +249,8 @@
 			isa = PBXGroup;
 			children = (
 				DAA95FA22815F3980085388A /* Show.swift */,
+				DAA95FD328162DE90085388A /* People.swift */,
+				DAA95FD528162EA50085388A /* Image.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -269,6 +290,52 @@
 				DAA95FBF281606910085388A /* LoadableImageView.swift */,
 			);
 			path = CustomComponents;
+			sourceTree = "<group>";
+		};
+		DAA95FC4281611140085388A /* ShowSearch */ = {
+			isa = PBXGroup;
+			children = (
+				DAA95FD228162AD30085388A /* ViewModels */,
+				DAA95FD128162ACA0085388A /* Views */,
+				DAA95FD028162AC00085388A /* Router */,
+				DAA95FCF28162AB60085388A /* Service */,
+			);
+			path = ShowSearch;
+			sourceTree = "<group>";
+		};
+		DAA95FCF28162AB60085388A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DAA95FCB28162AA50085388A /* SearchEndpoint.swift */,
+				DAA95FCD28162AB10085388A /* SearchService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DAA95FD028162AC00085388A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				DAA95FC528162A470085388A /* SearchRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		DAA95FD128162ACA0085388A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DAA95FC728162A5A0085388A /* SearchController.swift */,
+				DAA95FD7281631150085388A /* SearchTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DAA95FD228162AD30085388A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DAA95FC928162A6C0085388A /* SearchViewModel.swift */,
+				DAA95FD9281631A70085388A /* SearchTableCellModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,20 +479,29 @@
 				DAA95FB02815F8A80085388A /* ShowListController.swift in Sources */,
 				DAA95FA52815F3B50085388A /* ShowEndpoint.swift in Sources */,
 				DAA95FBE2815FDB30085388A /* UIFontExtension.swift in Sources */,
+				DAA95FD428162DE90085388A /* People.swift in Sources */,
+				DAA95FCE28162AB10085388A /* SearchService.swift in Sources */,
 				DAA95FC0281606910085388A /* LoadableImageView.swift in Sources */,
 				DAA95FAA2815F6A10085388A /* UIViewExtensions.swift in Sources */,
 				DAA95FBA2815FBBF0085388A /* NavigationControllerExtension.swift in Sources */,
+				DAA95FC628162A470085388A /* SearchRouter.swift in Sources */,
+				DAA95FDA281631A70085388A /* SearchTableCellModel.swift in Sources */,
 				DAA95F5F2815E7890085388A /* ViewController.swift in Sources */,
 				DAA95FB82815FA050085388A /* ApplicationTabBarController.swift in Sources */,
 				DAA95FB62815F99A0085388A /* RootRouter.swift in Sources */,
+				DAA95FCC28162AA50085388A /* SearchEndpoint.swift in Sources */,
+				DAA95FCA28162A6C0085388A /* SearchViewModel.swift in Sources */,
 				DAA95F5B2815E7890085388A /* AppDelegate.swift in Sources */,
 				DAA95FB32815F9230085388A /* ShowListViewModel.swift in Sources */,
 				DAA95FBC2815FD320085388A /* ShowCollectionCell.swift in Sources */,
 				DAA95FAE2815F8310085388A /* ShowListRouter.swift in Sources */,
 				DAA95FA32815F3980085388A /* Show.swift in Sources */,
+				DAA95FC828162A5A0085388A /* SearchController.swift in Sources */,
+				DAA95FD8281631150085388A /* SearchTableViewCell.swift in Sources */,
 				DAA95FA72815F4960085388A /* ShowService.swift in Sources */,
 				DAA95F5D2815E7890085388A /* SceneDelegate.swift in Sources */,
 				DAA95FAC2815F6CB0085388A /* ReusableViews.swift in Sources */,
+				DAA95FD628162EA50085388A /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
