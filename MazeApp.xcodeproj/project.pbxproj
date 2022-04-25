@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DAA95F5B2815E7890085388A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95F5A2815E7890085388A /* AppDelegate.swift */; };
 		DAA95F5D2815E7890085388A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95F5C2815E7890085388A /* SceneDelegate.swift */; };
-		DAA95F5F2815E7890085388A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95F5E2815E7890085388A /* ViewController.swift */; };
 		DAA95F642815E78D0085388A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA95F632815E78D0085388A /* Assets.xcassets */; };
 		DAA95F672815E78D0085388A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA95F652815E78D0085388A /* LaunchScreen.storyboard */; };
 		DAA95F722815E78D0085388A /* MazeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95F712815E78D0085388A /* MazeAppTests.swift */; };
@@ -64,7 +63,6 @@
 		DAA95F572815E7890085388A /* MazeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MazeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA95F5A2815E7890085388A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAA95F5C2815E7890085388A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DAA95F5E2815E7890085388A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DAA95F632815E78D0085388A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAA95F662815E78D0085388A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAA95F682815E78D0085388A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -158,7 +156,6 @@
 				DAA95F9C2815F3470085388A /* Modules */,
 				DAA95F5A2815E7890085388A /* AppDelegate.swift */,
 				DAA95F5C2815E7890085388A /* SceneDelegate.swift */,
-				DAA95F5E2815E7890085388A /* ViewController.swift */,
 				DAA95F632815E78D0085388A /* Assets.xcassets */,
 				DAA95F652815E78D0085388A /* LaunchScreen.storyboard */,
 				DAA95F682815E78D0085388A /* Info.plist */,
@@ -486,7 +483,6 @@
 				DAA95FBA2815FBBF0085388A /* NavigationControllerExtension.swift in Sources */,
 				DAA95FC628162A470085388A /* SearchRouter.swift in Sources */,
 				DAA95FDA281631A70085388A /* SearchTableCellModel.swift in Sources */,
-				DAA95F5F2815E7890085388A /* ViewController.swift in Sources */,
 				DAA95FB82815FA050085388A /* ApplicationTabBarController.swift in Sources */,
 				DAA95FB62815F99A0085388A /* RootRouter.swift in Sources */,
 				DAA95FCC28162AA50085388A /* SearchEndpoint.swift in Sources */,
