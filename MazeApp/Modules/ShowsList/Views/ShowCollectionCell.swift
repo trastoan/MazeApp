@@ -28,7 +28,7 @@ class ShowCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.font(named: "Helvetica", size: 10, weight: .bold)
-        label.textColor = .systemBlue
+        label.textColor = .appMainColor
         return label
     }()
 

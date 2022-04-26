@@ -43,4 +43,7 @@ extension UIColor {
 
     static let defaultBackground = UIColor(light: UIColor(red: 0.94, green: 0.94, blue: 0.94, alpha: 1),
                                            dark:  UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1))
+
+    static let appMainColor = UIColor(light: UIColor(red: 0.24, green: 0.58, blue: 0.55, alpha: 1),
+                                      dark:  UIColor(red: 0.24, green: 0.58, blue: 0.55, alpha: 1))
 }

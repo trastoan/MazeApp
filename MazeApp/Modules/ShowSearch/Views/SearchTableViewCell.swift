@@ -44,6 +44,7 @@ class SearchTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupSubviews()
         setupConstraints()
+        self.backgroundColor = .clear
     }
 
     required init?(coder: NSCoder) {

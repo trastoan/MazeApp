@@ -20,6 +20,7 @@ class SearchView: UIViewController, SearchViewProtocol {
         table.separatorStyle = .singleLine
         table.tableFooterView = UIView()
         table.register(SearchTableViewCell.self)
+        table.backgroundColor = .defaultBackground
         table.rowHeight = 124
         return table
     }()
@@ -36,7 +37,6 @@ class SearchView: UIViewController, SearchViewProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
         title = model.title
 
         table.dataSource = self

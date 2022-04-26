@@ -20,7 +20,7 @@ class ShowListController: UIViewController, ShowListView {
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.translatesAutoresizingMaskIntoConstraints = false
         collection.register(ShowCollectionViewCell.self)
-        collection.backgroundColor = .systemBackground
+        collection.backgroundColor = .defaultBackground
         collection.contentInsetAdjustmentBehavior = .always
         return collection
     }()
