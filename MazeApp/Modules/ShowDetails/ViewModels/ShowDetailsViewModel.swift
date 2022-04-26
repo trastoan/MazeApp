@@ -16,6 +16,7 @@ protocol ShowDetailViewModelProtocol: ObservableObject {
 
     func buildInfoViewModel() -> ShowInfoViewModel
     func buildHeaderViewModel() -> ShowHeaderViewModel
+    func presentEpisodeDetails(_ episode: Episode)
 }
 
 
@@ -108,5 +109,9 @@ class ShowDetailViewModel: ShowDetailViewModelProtocol {
                                               numberOfSeasons: seasons.count,
                                               network: show.network?.name ?? "Unknow",
                                               genres: show.genres.prefix(3).joined(separator: " | "))
+    }
+
+    func presentEpisodeDetails(_ episode: Episode) {
+        router.presentEpisodeDetails(for: episode)
     }
 }

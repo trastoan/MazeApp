@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SeasonView: View {
     var season: Season
+    var onEpisodeSelect: (Episode) -> Void
+
     @State var isExpanded = false
 
     var body: some View {
@@ -21,6 +23,7 @@ struct SeasonView: View {
             if isExpanded {
                 ForEach(season.episodes) { episode in
                     EpisodeCell(episode: episode)
+                        .onTapGesture { onEpisodeSelect(episode) }
                 }
             }
             Divider()

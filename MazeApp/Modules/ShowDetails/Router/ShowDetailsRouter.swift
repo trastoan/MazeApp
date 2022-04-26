@@ -32,7 +32,7 @@ class ShowDetailsRouter: ShowDetailsRouterProtocol {
     }
 
     func presentEpisodeDetails(for episode: Episode) {
-        //TBD
+        print("presenting episode \(episode.number)")
     }
 
     func presentPersonDetails(for person: People) {
