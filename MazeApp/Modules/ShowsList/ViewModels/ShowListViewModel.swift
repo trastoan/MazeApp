@@ -18,6 +18,7 @@ protocol ShowListModel {
     func fetch() async throws
     func fetchNextPage() async throws
     func show(for index: Int) -> Show
+    func showDetails(for index: Int)
 }
 
 class ShowListViewModel: ShowListModel {
@@ -46,7 +47,6 @@ class ShowListViewModel: ShowListModel {
     func fetch() async throws {
         shows = try await fetchShows()
         hasFinishedFetch?()
-        //call delegate
     }
 
     @MainActor
@@ -68,4 +68,9 @@ class ShowListViewModel: ShowListModel {
     }
 
     func show(for index: Int) -> Show { shows[index] }
+
+    func showDetails(for index: Int) {
+        let show = shows[index]
+        router.presentDetailsForShow(show)
+    }
 }

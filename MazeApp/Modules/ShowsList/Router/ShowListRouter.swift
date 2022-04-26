@@ -32,6 +32,7 @@ class ShowListRouter: ShowListRouterProtocol {
     }
 
     func presentDetailsForShow(_ show: Show) {
-        //TBD
+        let destination = ShowDetailsRouter.assembleModule(for: show)
+        viewController?.navigationController?.pushViewController(destination, animated: true)
     }
 }

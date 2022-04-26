@@ -17,7 +17,7 @@ struct People: Decodable {
     var url: String
     var name: String
     var country: Country?
-    var image: Image?
+    var image: MazeImage?
 
     struct Country: Decodable {
         var name: String

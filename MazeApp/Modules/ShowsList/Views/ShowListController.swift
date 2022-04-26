@@ -87,6 +87,10 @@ extension ShowListController: UICollectionViewDelegate, UICollectionViewDataSour
             }
         }
     }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        model.showDetails(for: indexPath.row)
+    }
     
 }
 

@@ -140,6 +140,10 @@ extension SearchView: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        model.showDetails(for: indexPath.row)
+    }
+
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard let searchCell = cell as? SearchTableViewCell else { return }
         let cellModel = model.model(for: indexPath.row)

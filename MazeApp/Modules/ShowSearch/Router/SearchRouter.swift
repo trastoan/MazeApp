@@ -33,7 +33,8 @@ class SearchRouter: SearchRouterProtocol {
     }
 
     func presentDetailsForShow(_ show: Show) {
-//        TDB
+        let destination = ShowDetailsRouter.assembleModule(for: show)
+        viewController?.navigationController?.pushViewController(destination, animated: true)
     }
 
     func presentDetailsForPeople(_ people: People) {

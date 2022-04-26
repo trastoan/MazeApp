@@ -31,6 +31,8 @@ class SearchViewModel: SearchViewModelProtocol {
     private var results: [SearchTableCellModel] = []
     private var service: SearchServiceProtocol
     private var currentSearchType: SearchType = .show
+    private var lastShows: [Show] = []
+    private var lastPeople: [People] = []
 
     var router: SearchRouter!
     var title: String { return "Search"}
@@ -61,10 +63,12 @@ class SearchViewModel: SearchViewModelProtocol {
             case .people:
                 let searchResult: [PeopleSearch] = try await service.searchFor(endpoint: .people(named: name))
                 try Task.checkCancellation()
+                lastPeople = searchResult.map { $0.person }
                 results = searchResult.map { SearchTableCellModel(with: $0.person) }
             case .show:
                 let SearchResult: [ShowSearch] = try await service.searchFor(endpoint: .show(named: name))
                 try Task.checkCancellation()
+                lastShows = SearchResult.map { $0.show }
                 results = SearchResult.map { SearchTableCellModel(with: $0.show) }
         }
         hasFinishedSearching?()
@@ -73,10 +77,10 @@ class SearchViewModel: SearchViewModelProtocol {
     func showDetails(for row: Int) {
         switch currentSearchType {
             case .people:
-                //Get person
+                router.presentDetailsForPeople(lastPeople[row])
                 return
             case .show:
-                //get show
+                router.presentDetailsForShow(lastShows[row])
                 return
         }
     }

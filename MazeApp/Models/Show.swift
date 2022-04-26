@@ -15,7 +15,7 @@ struct ShowSearch: Decodable {
 struct Show: Decodable {
     let id: Int
     let name: String
-    let image: Image?
+    let image: MazeImage?
     let genres: [String]
     let summary: String?
     let status: String?

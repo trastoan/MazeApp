@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Image: Decodable {
+struct MazeImage: Decodable {
     let medium: String
     let original: String
 }
