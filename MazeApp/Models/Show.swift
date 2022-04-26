@@ -20,9 +20,20 @@ struct Show: Decodable {
     let summary: String?
     let status: String?
     let schedule: Schedule
+    let rating: Rating?
+    let network: Network?
+
+    struct Rating: Decodable {
+        let average: Double?
+    }
 
     struct Schedule: Decodable {
         let time: String
         let days: [String]
+    }
+
+    struct Network: Decodable {
+        var id: Int
+        var name: String
     }
 }
