@@ -13,6 +13,8 @@
 		DA18D36C28188622006816CB /* ShowHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D36B28188622006816CB /* ShowHeaderView.swift */; };
 		DA18D36E2818863B006816CB /* ShowInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D36D2818863B006816CB /* ShowInfoViewModel.swift */; };
 		DA18D3702818864A006816CB /* ShowHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D36F2818864A006816CB /* ShowHeaderViewModel.swift */; };
+		DA18D37228189748006816CB /* SeasonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D37128189748006816CB /* SeasonView.swift */; };
+		DA18D37428189EC3006816CB /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D37328189EC3006816CB /* AppColors.swift */; };
 		DAA95F5B2815E7890085388A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95F5A2815E7890085388A /* AppDelegate.swift */; };
 		DAA95F5D2815E7890085388A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95F5C2815E7890085388A /* SceneDelegate.swift */; };
 		DAA95F642815E78D0085388A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA95F632815E78D0085388A /* Assets.xcassets */; };
@@ -82,6 +84,8 @@
 		DA18D36B28188622006816CB /* ShowHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowHeaderView.swift; sourceTree = "<group>"; };
 		DA18D36D2818863B006816CB /* ShowInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowInfoViewModel.swift; sourceTree = "<group>"; };
 		DA18D36F2818864A006816CB /* ShowHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowHeaderViewModel.swift; sourceTree = "<group>"; };
+		DA18D37128189748006816CB /* SeasonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonView.swift; sourceTree = "<group>"; };
+		DA18D37328189EC3006816CB /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		DAA95F572815E7890085388A /* MazeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MazeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA95F5A2815E7890085388A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAA95F5C2815E7890085388A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -299,6 +303,7 @@
 				DAA95FBD2815FDB30085388A /* UIFontExtension.swift */,
 				DAA95FC2281606F80085388A /* ActivityIndicatorExtension.swift */,
 				DA18D36728187A2A006816CB /* StringsExtension.swift */,
+				DA18D37328189EC3006816CB /* AppColors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -400,6 +405,7 @@
 				DAA95FF428175CE10085388A /* LazyImage.swift */,
 				DA18D36928188617006816CB /* ShowInfoView.swift */,
 				DA18D36B28188622006816CB /* ShowHeaderView.swift */,
+				DA18D37128189748006816CB /* SeasonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -561,6 +567,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAA95FC3281606F80085388A /* ActivityIndicatorExtension.swift in Sources */,
+				DA18D37228189748006816CB /* SeasonView.swift in Sources */,
 				DAA95FB02815F8A80085388A /* ShowListController.swift in Sources */,
 				DA18D3702818864A006816CB /* ShowHeaderViewModel.swift in Sources */,
 				DAA95FA52815F3B50085388A /* ShowEndpoint.swift in Sources */,
@@ -596,6 +603,7 @@
 				DAA95FD8281631150085388A /* SearchTableViewCell.swift in Sources */,
 				DAA95FF528175CE10085388A /* LazyImage.swift in Sources */,
 				DAA95FEB281743180085388A /* ShowDetailsService.swift in Sources */,
+				DA18D37428189EC3006816CB /* AppColors.swift in Sources */,
 				DAA95FE92817430B0085388A /* ShowDetailsEndpoint.swift in Sources */,
 				DAA95FA72815F4960085388A /* ShowService.swift in Sources */,
 				DAA95FE4281741870085388A /* ShowDetailsViewModel.swift in Sources */,

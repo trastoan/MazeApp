@@ -8,7 +8,6 @@
 import MazeNetwork
 
 enum ShowDetailsEndpoint: ServiceEndpoint {
-    case seasons(showId: Int)
     case episodes(showId: Int)
     case images(showId: Int)
     case cast(showId: Int)
@@ -16,8 +15,6 @@ enum ShowDetailsEndpoint: ServiceEndpoint {
 
     var path: String {
         switch self {
-            case .seasons(let id):
-                return "/shows/\(id)/seasons"
             case .episodes(let id):
                 return "/shows/\(id)/episodes"
             case .images(let id):

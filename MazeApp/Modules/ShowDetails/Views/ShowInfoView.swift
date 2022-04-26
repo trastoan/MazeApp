@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct ShowInfoView<ViewModel>: View where ViewModel: ShowInfoViewModelProtocol {
-    var model: ViewModel
+struct ShowInfoView: View {
+    var model: ShowInfoViewModel
 
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
@@ -20,13 +20,15 @@ struct ShowInfoView<ViewModel>: View where ViewModel: ShowInfoViewModelProtocol 
                 Text(model.summary)
                     .font(.callout)
             }
-            HStack {
-                Image(systemName: "calendar")
-                Text("\(model.days) at \(model.time)")
-                Image(systemName: "star.fill")
-                    .foregroundColor(.yellow)
-                Text("\(model.rating)")
-                Spacer()
+            if model.hasAdditionalInfo {
+                HStack {
+                    Image(systemName: "calendar")
+                    Text("\(model.days) at \(model.time)")
+                    Image(systemName: "star.fill")
+                        .foregroundColor(.yellow)
+                    Text("\(model.rating)")
+                    Spacer()
+                }
             }
         }
         .padding()

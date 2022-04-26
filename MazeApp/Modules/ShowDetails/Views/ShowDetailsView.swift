@@ -15,15 +15,15 @@ struct ShowDetailsView<ViewModel>: View where ViewModel: ShowDetailViewModelProt
             ProgressView()
                 .scaleEffect(4)
         } else {
-            //Without the geometry reader, the image may extend beyond edges on portrait
             ScrollView {
                 VStack {
-                    ShowHeaderView(model: model.headerViewModel)
+                    ShowHeaderView(model: model.buildHeaderViewModel())
                         .frame(height: 250)
-                    ShowInfoView(model: model.infoViewModel)
+                    ShowInfoView(model: model.buildInfoViewModel())
+                    ForEach(model.seasons) { SeasonView(season: $0) }
                 }
             }
-            
+            .background(Color.defaultBackground)
         }
     }
 }

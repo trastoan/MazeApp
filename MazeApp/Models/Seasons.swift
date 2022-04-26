@@ -7,13 +7,8 @@
 
 import Foundation
 
-struct Season: Decodable {
-    var id: Int
+struct Season: Identifiable {
+    var id: Int { return number }
     var number: Int
-    var numberOfEpisodes: Int?
-
-    enum CodingKeys: String, CodingKey {
-        case id, number
-        case numberOfEpisodes = "episodeOrder"
-    }
+    var episodes: [Episode]
 }

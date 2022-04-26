@@ -10,7 +10,6 @@ import MazeNetwork
 protocol ShowDetailServiceProtocol {
     func listImages(showId: Int) async throws -> [ShowImage]
     func listEpisodes(showId: Int) async throws -> [Episode]
-    func listSeasons(showId: Int) async throws -> [Season]
     func listCrew(showId: Int) async throws -> [Crew]
     func listCast(showId: Int) async throws -> [Cast]
 }
@@ -28,10 +27,6 @@ class ShowDetailService:  ShowDetailServiceProtocol {
 
     func listEpisodes(showId: Int) async throws -> [Episode] {
         try await client.requestObject(endpoint: ShowDetailsEndpoint.episodes(showId: showId))
-    }
-
-    func listSeasons(showId: Int) async throws -> [Season] {
-        try await client.requestObject(endpoint: ShowDetailsEndpoint.seasons(showId: showId))
     }
 
     func listCrew(showId: Int) async throws -> [Crew] {

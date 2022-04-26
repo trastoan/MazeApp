@@ -7,16 +7,7 @@
 
 import Foundation
 
-protocol ShowHeaderViewModelProtocol: ObservableObject {
-    var status: String { get }
-    var numberOfSeasons: Int { get }
-    var network: String { get }
-    var genres: String { get }
-    var backgroundImage: URL? { get }
-    var posterImage: URL? { get }
-}
-
-class ShowHeaderViewModel: ShowHeaderViewModelProtocol {
+class ShowHeaderViewModel {
 
     var posterImage: URL?
     private(set) var backgroundImage: URL?

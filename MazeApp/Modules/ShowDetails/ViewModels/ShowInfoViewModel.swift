@@ -7,19 +7,16 @@
 
 import Foundation
 
-protocol ShowInfoViewModelProtocol: ObservableObject {
-    var summary: String { get }
-    var days: String { get }
-    var time: String { get }
-    var rating: String { get }
-}
-
-class ShowInfoViewModel: ShowInfoViewModelProtocol {
+class ShowInfoViewModel {
 
     var summary: String
     var days: String
     var rating: String
     var time: String
+
+    var hasAdditionalInfo: Bool {
+        return !(days.isEmpty && rating == "0.0" && time.isEmpty)
+    }
 
     init(summary: String, days: String, rating: String, time: String){
         self.summary = summary

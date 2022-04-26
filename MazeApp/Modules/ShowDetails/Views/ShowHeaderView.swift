@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct ShowHeaderView<ViewModel>: View where ViewModel: ShowHeaderViewModelProtocol {
-    var model: ViewModel
+struct ShowHeaderView: View {
+    var model: ShowHeaderViewModel
 
     var body: some View {
         GeometryReader { proxy in
