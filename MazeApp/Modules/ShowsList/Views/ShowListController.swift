@@ -15,7 +15,7 @@ protocol ShowListView {
 class ShowListController: UIViewController, ShowListView {
     var model: ShowListModel!
 
-    let collection: UICollectionView = {
+    private let collection: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.translatesAutoresizingMaskIntoConstraints = false
@@ -25,8 +25,11 @@ class ShowListController: UIViewController, ShowListView {
         return collection
     }()
 
+    private let loadingIndicator = UIActivityIndicatorView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .defaultBackground
 
         title = model.title
 
@@ -38,6 +41,7 @@ class ShowListController: UIViewController, ShowListView {
 
         setupModelCallback()
 
+        animateLoadIndicator(isLoading: true)
         Task {
             try await model.fetch()
         }
@@ -59,6 +63,7 @@ class ShowListController: UIViewController, ShowListView {
 
     private func setupModelCallback() {
         model.hasFinishedFetch = { [weak self] in
+            self?.animateLoadIndicator(isLoading: false)
             self?.collection.reloadData()
         }
 
@@ -67,7 +72,18 @@ class ShowListController: UIViewController, ShowListView {
         }
     }
 
+    private func animateLoadIndicator(isLoading: Bool) {
+        if isLoading {
+            collection.isHidden = true
+            loadingIndicator.startAnimating()
+        } else {
+            collection.isHidden = false
+            loadingIndicator.stopAnimating()
+        }
+    }
+
     private func setupSubviews() {
+        loadingIndicator.setupOn(view: view)
         view.addSubview(collection)
     }
 

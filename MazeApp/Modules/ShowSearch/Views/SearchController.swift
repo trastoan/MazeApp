@@ -34,6 +34,8 @@ class SearchView: UIViewController, SearchViewProtocol {
         return segment
     }()
 
+    private let loadingIndicator = UIActivityIndicatorView()
+
     private var bag = Set<AnyCancellable>()
 
     private let searchController = UISearchController()
@@ -52,17 +54,18 @@ class SearchView: UIViewController, SearchViewProtocol {
         setupSubviews()
         setupConstraints()
 
-        listeForSearch()
+        listenForSearch()
         configureSearchCallback()
     }
 
     private func configureSearchCallback() {
         model.hasFinishedSearching = { [weak self] in
+            self?.animateLoadIndicator(isLoading: false)
             self?.table.reloadData()
         }
     }
 
-    private func listeForSearch() {
+    private func listenForSearch() {
         let publisher = NotificationCenter.default.publisher(for: UISearchTextField.textDidChangeNotification, object: searchController.searchBar.searchTextField)
         publisher.map({
             ($0.object as? UISearchTextField)?.text
@@ -114,6 +117,7 @@ class SearchView: UIViewController, SearchViewProtocol {
 
     private func searchFor(name: String) {
         if name.count > 1 {
+            animateLoadIndicator(isLoading: true)
             Task {
                 try await model.search(for: name)
             }
@@ -123,7 +127,7 @@ class SearchView: UIViewController, SearchViewProtocol {
     }
 
     private func setupConstraints() {
-
+        loadingIndicator.setupOn(view: view)
         NSLayoutConstraint.activate([
             segmentedControl.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             segmentedControl.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 8),
@@ -134,6 +138,16 @@ class SearchView: UIViewController, SearchViewProtocol {
             self.table.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
             self.table.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+    }
+
+    private func animateLoadIndicator(isLoading: Bool) {
+        if isLoading {
+            table.isHidden = true
+            loadingIndicator.startAnimating()
+        } else {
+            table.isHidden = false
+            loadingIndicator.stopAnimating()
+        }
     }
 }
 
