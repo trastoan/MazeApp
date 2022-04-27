@@ -19,7 +19,8 @@ class RootRouter {
     }
 
     static func presentGuardController(in window: UIWindow) {
-        if UserDefaults.authenticationEnabled {
+        let settingsService = SettingServices()
+        if settingsService.authenticationEnabled {
             let destination = GuardRouter.assembleModule()
             guard let appTabController = window.rootViewController as? UITabBarController  else { return }
 

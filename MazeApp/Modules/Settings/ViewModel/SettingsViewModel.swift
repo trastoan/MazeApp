@@ -9,30 +9,34 @@ import Foundation
 
 class SettingsViewModel: ObservableObject {
     var router: SettingsRouter?
+    var settingService: SettingServices
+    var authenticationService: AuthenticationService
 
     @Published var guardEnabled = false {
         didSet {
-            UserDefaults.standard.set(guardEnabled, forKey: UserDefaults.authenticationEnabledKey)
+            settingService.authenticationEnabled = guardEnabled
             if guardEnabled { registerNewPin() }
         }
     }
 
     @Published var biometricsEnabled = false {
         didSet {
-            UserDefaults.standard.set(biometricsEnabled, forKey: UserDefaults.biometricEnabledKey)
+            settingService.biometricsEnabled = biometricsEnabled
         }
     }
 
-    init() {
-        guardEnabled = UserDefaults.authenticationEnabled
-        biometricsEnabled = UserDefaults.biometricsEnabled
+    init(settings: SettingServices = SettingServices(), authService: AuthenticationService = AuthenticationService()) {
+        settingService = settings
+        authenticationService = authService
+        guardEnabled = settingService.authenticationEnabled
+        biometricsEnabled = settingService.biometricsEnabled
     }
 
     @MainActor
     func changeBiometricStatus() {
         if !biometricsEnabled {
             Task {
-                biometricsEnabled = await AuthenticationService.shared.biometricAuthentication()
+                biometricsEnabled = await authenticationService.biometricAuthentication()
             }
         } else {
             biometricsEnabled.toggle()

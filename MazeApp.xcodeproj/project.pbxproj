@@ -34,9 +34,8 @@
 		DA18D3A4281985E6006816CB /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3A3281985E6006816CB /* SettingsRouter.swift */; };
 		DA18D3A628198608006816CB /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3A528198608006816CB /* SettingsViewModel.swift */; };
 		DA18D3A828198612006816CB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3A728198612006816CB /* SettingsView.swift */; };
-		DA18D3AA2819864B006816CB /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3A92819864B006816CB /* UserDefaultsExtension.swift */; };
 		DA18D3AC281988F6006816CB /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3AB281988F6006816CB /* UIViewControllerExtension.swift */; };
-		DA18D3AF28198A95006816CB /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3AE28198A95006816CB /* KeychainManager.swift */; };
+		DA18D3AF28198A95006816CB /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3AE28198A95006816CB /* KeychainService.swift */; };
 		DA18D3B128198AB6006816CB /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3B028198AB6006816CB /* AuthenticationService.swift */; };
 		DA18D3B428198CFF006816CB /* PinInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3B328198CFF006816CB /* PinInputView.swift */; };
 		DA18D3BA28198DAE006816CB /* PinRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3B928198DAE006816CB /* PinRegistrationViewController.swift */; };
@@ -48,6 +47,9 @@
 		DA18D3CF2819DD60006816CB /* ArrayExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3CE2819DD60006816CB /* ArrayExtensionTests.swift */; };
 		DA18D3D52819E020006816CB /* KeychainServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3D42819E020006816CB /* KeychainServiceTests.swift */; };
 		DA18D3D72819E5BA006816CB /* AuthenticationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3D62819E5BA006816CB /* AuthenticationServiceTests.swift */; };
+		DA18D3DB2819EA99006816CB /* GuardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3DA2819EA99006816CB /* GuardViewModelTests.swift */; };
+		DA18D3DD2819EE40006816CB /* SettingServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3DC2819EE3E006816CB /* SettingServices.swift */; };
+		DA18D3E02819F881006816CB /* GuardModelSpies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3DF2819F881006816CB /* GuardModelSpies.swift */; };
 		DAA95F5B2815E7890085388A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95F5A2815E7890085388A /* AppDelegate.swift */; };
 		DAA95F5D2815E7890085388A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95F5C2815E7890085388A /* SceneDelegate.swift */; };
 		DAA95F642815E78D0085388A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA95F632815E78D0085388A /* Assets.xcassets */; };
@@ -129,9 +131,8 @@
 		DA18D3A3281985E6006816CB /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
 		DA18D3A528198608006816CB /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		DA18D3A728198612006816CB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		DA18D3A92819864B006816CB /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		DA18D3AB281988F6006816CB /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
-		DA18D3AE28198A95006816CB /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		DA18D3AE28198A95006816CB /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		DA18D3B028198AB6006816CB /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		DA18D3B328198CFF006816CB /* PinInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinInputView.swift; sourceTree = "<group>"; };
 		DA18D3B928198DAE006816CB /* PinRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinRegistrationViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +144,9 @@
 		DA18D3CE2819DD60006816CB /* ArrayExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensionTests.swift; sourceTree = "<group>"; };
 		DA18D3D42819E020006816CB /* KeychainServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainServiceTests.swift; sourceTree = "<group>"; };
 		DA18D3D62819E5BA006816CB /* AuthenticationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationServiceTests.swift; sourceTree = "<group>"; };
+		DA18D3DA2819EA99006816CB /* GuardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardViewModelTests.swift; sourceTree = "<group>"; };
+		DA18D3DC2819EE3E006816CB /* SettingServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingServices.swift; sourceTree = "<group>"; };
+		DA18D3DF2819F881006816CB /* GuardModelSpies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardModelSpies.swift; sourceTree = "<group>"; };
 		DAA95F572815E7890085388A /* MazeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MazeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA95F5A2815E7890085388A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAA95F5C2815E7890085388A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -337,8 +341,9 @@
 		DA18D3AD28198A82006816CB /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				DA18D3AE28198A95006816CB /* KeychainManager.swift */,
+				DA18D3AE28198A95006816CB /* KeychainService.swift */,
 				DA18D3B028198AB6006816CB /* AuthenticationService.swift */,
+				DA18D3DC2819EE3E006816CB /* SettingServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -436,6 +441,31 @@
 			path = ServicesTests;
 			sourceTree = "<group>";
 		};
+		DA18D3D82819EA81006816CB /* ModuleTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA18D3D92819EA88006816CB /* Guard */,
+			);
+			path = ModuleTests;
+			sourceTree = "<group>";
+		};
+		DA18D3D92819EA88006816CB /* Guard */ = {
+			isa = PBXGroup;
+			children = (
+				DA18D3DE2819F871006816CB /* GuardModel */,
+				DA18D3DA2819EA99006816CB /* GuardViewModelTests.swift */,
+			);
+			path = Guard;
+			sourceTree = "<group>";
+		};
+		DA18D3DE2819F871006816CB /* GuardModel */ = {
+			isa = PBXGroup;
+			children = (
+				DA18D3DF2819F881006816CB /* GuardModelSpies.swift */,
+			);
+			path = GuardModel;
+			sourceTree = "<group>";
+		};
 		DAA95F4E2815E7890085388A = {
 			isa = PBXGroup;
 			children = (
@@ -476,6 +506,7 @@
 		DAA95F702815E78D0085388A /* MazeAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				DA18D3D82819EA81006816CB /* ModuleTests */,
 				DA18D3D32819E010006816CB /* ServicesTests */,
 				DA18D3CD2819DD4D006816CB /* ExtensionsTests */,
 				DAA95F712815E78D0085388A /* MazeAppTests.swift */,
@@ -580,7 +611,6 @@
 				DA18D37328189EC3006816CB /* AppColors.swift */,
 				DA18D3952818F036006816CB /* ArrayExtension.swift */,
 				DA18D39B28198308006816CB /* DateExtensions.swift */,
-				DA18D3A92819864B006816CB /* UserDefaultsExtension.swift */,
 				DA18D3AB281988F6006816CB /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
@@ -847,7 +877,6 @@
 				DAA95FBE2815FDB30085388A /* UIFontExtension.swift in Sources */,
 				DA18D3B128198AB6006816CB /* AuthenticationService.swift in Sources */,
 				DA18D38D2818D62D006816CB /* PeopleDetailView.swift in Sources */,
-				DA18D3AA2819864B006816CB /* UserDefaultsExtension.swift in Sources */,
 				DAA95FED2817446D0085388A /* Episodes.swift in Sources */,
 				DA18D3962818F036006816CB /* ArrayExtension.swift in Sources */,
 				DAA95FD428162DE90085388A /* People.swift in Sources */,
@@ -891,6 +920,7 @@
 				DAA95FA32815F3980085388A /* Show.swift in Sources */,
 				DA18D36C28188622006816CB /* ShowHeaderView.swift in Sources */,
 				DAA95FC828162A5A0085388A /* SearchController.swift in Sources */,
+				DA18D3DD2819EE40006816CB /* SettingServices.swift in Sources */,
 				DAA95FEF281744740085388A /* Seasons.swift in Sources */,
 				DA18D3A628198608006816CB /* SettingsViewModel.swift in Sources */,
 				DAA95FD8281631150085388A /* SearchTableViewCell.swift in Sources */,
@@ -902,7 +932,7 @@
 				DA18D3BA28198DAE006816CB /* PinRegistrationViewController.swift in Sources */,
 				DAA95FA72815F4960085388A /* ShowService.swift in Sources */,
 				DAA95FE4281741870085388A /* ShowDetailsViewModel.swift in Sources */,
-				DA18D3AF28198A95006816CB /* KeychainManager.swift in Sources */,
+				DA18D3AF28198A95006816CB /* KeychainService.swift in Sources */,
 				DAA95F5D2815E7890085388A /* SceneDelegate.swift in Sources */,
 				DA18D39E281984B2006816CB /* PeopleDetailsHeaderViewModel.swift in Sources */,
 				DAA95FAC2815F6CB0085388A /* ReusableViews.swift in Sources */,
@@ -917,7 +947,9 @@
 			files = (
 				DA18D3D52819E020006816CB /* KeychainServiceTests.swift in Sources */,
 				DAA95F722815E78D0085388A /* MazeAppTests.swift in Sources */,
+				DA18D3DB2819EA99006816CB /* GuardViewModelTests.swift in Sources */,
 				DA18D3D72819E5BA006816CB /* AuthenticationServiceTests.swift in Sources */,
+				DA18D3E02819F881006816CB /* GuardModelSpies.swift in Sources */,
 				DA18D3CF2819DD60006816CB /* ArrayExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

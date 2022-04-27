@@ -8,39 +8,43 @@
 import Foundation
 
 protocol GuardViewModelProtocol {
+    var settingsService: SettingServices { get set }
     var defaultAuthentication: (() -> Void)? { get set }
     var failedToAuthenticate: (() -> Void)? { get set }
 
-    func authenticateUser()
+    func authenticateUser() async
     func pinAuthentication(passcode: String)
 }
 
 class GuardViewModel: GuardViewModelProtocol {
     var router: GuardRouterProtocol
+    var settingsService = SettingServices()
+    var authService: AuthenticationServiceProtocol
     var defaultAuthentication: (() -> Void)?
     var failedToAuthenticate: (() -> Void)?
 
-    init(router: GuardRouterProtocol) {
+    init(router: GuardRouterProtocol, authService: AuthenticationServiceProtocol = AuthenticationService()) {
         self.router = router
+        self.authService = authService
     }
 
     @MainActor
-    func authenticateUser() {
-        if UserDefaults.biometricsEnabled {
-            Task {
-                if await AuthenticationService.shared.biometricAuthentication() {
+    func authenticateUser() async {
+        if settingsService.biometricsEnabled {
+//            Task {
+                if await authService.biometricAuthentication() {
                     router.dismissController()
                 } else {
                     defaultAuthentication?()
                 }
-            }
+//            }
         } else {
             defaultAuthentication?()
         }
     }
 
     func pinAuthentication(passcode: String) {
-        if AuthenticationService.shared.pinAuthentication(passcode) {
+        if authService.pinAuthentication(passcode, service: KeychainService.pinService) {
             self.router.dismissController()
         } else {
             failedToAuthenticate?()

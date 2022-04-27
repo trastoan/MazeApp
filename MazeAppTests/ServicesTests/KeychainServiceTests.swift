@@ -17,7 +17,7 @@ class KeychainServiceTests: XCTestCase {
     var service = "testService"
 
     override func setUpWithError() throws {
-        sut = KeychainService.shared
+        sut = KeychainService()
     }
 
     override func tearDownWithError() throws {

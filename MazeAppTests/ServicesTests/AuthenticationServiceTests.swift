@@ -19,12 +19,12 @@ class AuthenticationServiceTests: XCTestCase {
     let service = "TestService"
 
     override func setUpWithError() throws {
-        sut = AuthenticationService.shared
+        sut = AuthenticationService()
     }
 
     override func tearDownWithError() throws {
         sut = nil
-        _ = KeychainService.shared.delete(service: service)
+        _ = KeychainService().delete(service: service)
     }
 
     func test_savePin_itsStoredOnKeychain() {

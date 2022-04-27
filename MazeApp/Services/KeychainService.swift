@@ -1,5 +1,5 @@
 //
-//  KeychainManager.swift
+//  KeychainService.swift
 //  MazeApp
 //
 //  Created by Yuri on 27/04/22.
@@ -8,14 +8,10 @@
 import Foundation
 
 class KeychainService {
-    static var shared = KeychainService()
+    static var pinService = "SecurityPin"
+    var account = "MazeApp"
 
-    static let pinService = "SecurityPin"
-    static let account = "MazeApp"
-
-    private init() {}
-
-    func save(_ data: Data, service: String, account: String = KeychainService.account) -> Bool {
+    func save(_ data: Data, service: String) -> Bool {
         let query = [
             kSecValueData: data,
             kSecClass: kSecClassGenericPassword,
@@ -28,7 +24,7 @@ class KeychainService {
         if status != errSecSuccess {
             print("Error: \(status)")
             if status == errSecDuplicateItem {
-                return update(data: data, service: service, account: account)
+                return update(data: data, service: service)
             }
             return false
         }
@@ -36,7 +32,7 @@ class KeychainService {
         return true
     }
 
-    func update(data: Data, service: String, account: String = KeychainService.account) -> Bool {
+    func update(data: Data, service: String) -> Bool {
         let query = [
             kSecClass: kSecClassGenericPassword,
             kSecAttrService: service,
@@ -52,7 +48,7 @@ class KeychainService {
         return true
     }
 
-    func read(service: String, account: String = KeychainService.account) -> Data? {
+    func read(service: String) -> Data? {
         let query = [
                kSecAttrService: service,
                kSecAttrAccount: account,
@@ -66,7 +62,7 @@ class KeychainService {
         return result as? Data
     }
 
-    func delete(service: String, account: String = KeychainService.account) -> Bool {
+    func delete(service: String) -> Bool {
         let query = [
                kSecAttrService: service,
                kSecAttrAccount: account,

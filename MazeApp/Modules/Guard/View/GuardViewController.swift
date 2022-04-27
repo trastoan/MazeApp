@@ -40,7 +40,9 @@ class GuardViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        model.authenticateUser()
+        Task {
+            await model.authenticateUser()
+        }
     }
 
     private func setupConstraints() {

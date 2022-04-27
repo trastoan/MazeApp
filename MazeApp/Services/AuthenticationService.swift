@@ -7,9 +7,16 @@
 
 import LocalAuthentication
 
-class AuthenticationService {
-    static var shared = AuthenticationService()
-    private init() {}
+protocol AuthenticationServiceProtocol {
+    var keychainService: KeychainService { get set }
+
+    func biometricAuthentication() async -> Bool
+    func savePin(_ value: String, service: String) -> Bool
+    func pinAuthentication(_ pin: String, service: String) -> Bool
+}
+
+class AuthenticationService: AuthenticationServiceProtocol {
+    var keychainService = KeychainService()
 
     func biometricAuthentication() async -> Bool {
         await withCheckedContinuation({ continuation in
@@ -21,11 +28,11 @@ class AuthenticationService {
 
     func savePin(_ value: String, service: String = KeychainService.pinService) -> Bool {
         guard let data = value.data(using: .utf8) else { return false }
-        return KeychainService.shared.save(data, service: service)
+        return keychainService.save(data, service: service)
     }
 
     func pinAuthentication(_ pin: String, service: String = KeychainService.pinService) -> Bool {
-        guard let data = KeychainService.shared.read(service: service),
+        guard let data = keychainService.read(service: service),
               let storedPin = String(data: data, encoding: .utf8) else {
             return false
         }
