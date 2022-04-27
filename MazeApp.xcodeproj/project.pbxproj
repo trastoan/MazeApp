@@ -218,6 +218,37 @@
 			path = InfoView;
 			sourceTree = "<group>";
 		};
+		DA18D3862818D11D006816CB /* PeopleDetails */ = {
+			isa = PBXGroup;
+			children = (
+				DA18D3892818D14B006816CB /* Router */,
+				DA18D3882818D140006816CB /* View */,
+				DA18D3872818D133006816CB /* ViewModel */,
+			);
+			path = PeopleDetails;
+			sourceTree = "<group>";
+		};
+		DA18D3872818D133006816CB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DA18D3882818D140006816CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DA18D3892818D14B006816CB /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		DAA95F4E2815E7890085388A = {
 			isa = PBXGroup;
 			children = (
@@ -291,6 +322,7 @@
 		DAA95F9C2815F3470085388A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				DA18D3862818D11D006816CB /* PeopleDetails */,
 				DA18D3752818A6AB006816CB /* EpisodeDetails */,
 				DAA95FDD2817414C0085388A /* ShowDetails */,
 				DAA95FC4281611140085388A /* ShowSearch */,

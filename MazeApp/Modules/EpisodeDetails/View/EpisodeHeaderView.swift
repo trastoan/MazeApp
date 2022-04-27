@@ -20,11 +20,12 @@ struct EpisodeHeaderView: View {
                 Color.black.opacity(0.3)
                 VStack(alignment: .leading, spacing: 5) {
                     Text(model.number)
-                        .font(.title2)
+                        .font(.title)
                         .bold()
                     Text(model.title)
-                        .font(.subheadline)
+                        .font(.title2)
                 }
+                .foregroundColor(.white)
                 .padding()
             }
         }
