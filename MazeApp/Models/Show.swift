@@ -12,7 +12,8 @@ struct ShowSearch: Decodable {
     var show: Show
 }
 
-struct Show: Decodable {
+struct Show: Decodable, Hashable {
+
     let id: Int
     let name: String
     let image: MazeImage?
@@ -31,5 +32,15 @@ struct Show: Decodable {
     struct Network: Decodable {
         var id: Int
         var name: String
+    }
+
+    static func == (lhs: Show, rhs: Show) -> Bool {
+        lhs.id == rhs.id &&
+        lhs.name == lhs.name
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+        hasher.combine(name)
     }
 }

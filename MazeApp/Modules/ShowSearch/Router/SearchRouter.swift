@@ -38,6 +38,7 @@ class SearchRouter: SearchRouterProtocol {
     }
 
     func presentDetailsForPeople(_ people: People) {
-        //TBD
+        let destination = PeopleDetailRouter.assembleModule(people: people)
+        viewController?.navigationController?.pushViewController(destination, animated: true)
     }
 }

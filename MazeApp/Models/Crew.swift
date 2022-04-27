@@ -16,3 +16,13 @@ struct Crew: Decodable {
         case person
     }
 }
+
+struct CrewCredits: Decodable {
+    var type: String
+    var embedded: EmbeddedContent
+
+    enum CodingKeys: String, CodingKey {
+        case type
+        case embedded = "_embedded"
+    }
+}

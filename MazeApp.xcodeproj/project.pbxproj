@@ -21,6 +21,12 @@
 		DA18D3802818C313006816CB /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D37F2818C313006816CB /* Rating.swift */; };
 		DA18D3822818C80B006816CB /* EpisodeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3812818C80B006816CB /* EpisodeHeaderView.swift */; };
 		DA18D3842818C82F006816CB /* EpisodeHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3832818C82F006816CB /* EpisodeHeaderViewModel.swift */; };
+		DA18D38B2818D623006816CB /* PeopleDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D38A2818D623006816CB /* PeopleDetailRouter.swift */; };
+		DA18D38D2818D62D006816CB /* PeopleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D38C2818D62D006816CB /* PeopleDetailView.swift */; };
+		DA18D38F2818D639006816CB /* PeopleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D38E2818D639006816CB /* PeopleDetailViewModel.swift */; };
+		DA18D3922818D80B006816CB /* PeopleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3912818D80B006816CB /* PeopleEndpoint.swift */; };
+		DA18D3942818D816006816CB /* PeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3932818D816006816CB /* PeopleService.swift */; };
+		DA18D3962818F036006816CB /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3952818F036006816CB /* ArrayExtension.swift */; };
 		DAA95F5B2815E7890085388A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95F5A2815E7890085388A /* AppDelegate.swift */; };
 		DAA95F5D2815E7890085388A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95F5C2815E7890085388A /* SceneDelegate.swift */; };
 		DAA95F642815E78D0085388A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA95F632815E78D0085388A /* Assets.xcassets */; };
@@ -98,6 +104,12 @@
 		DA18D37F2818C313006816CB /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		DA18D3812818C80B006816CB /* EpisodeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeHeaderView.swift; sourceTree = "<group>"; };
 		DA18D3832818C82F006816CB /* EpisodeHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeHeaderViewModel.swift; sourceTree = "<group>"; };
+		DA18D38A2818D623006816CB /* PeopleDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailRouter.swift; sourceTree = "<group>"; };
+		DA18D38C2818D62D006816CB /* PeopleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailView.swift; sourceTree = "<group>"; };
+		DA18D38E2818D639006816CB /* PeopleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailViewModel.swift; sourceTree = "<group>"; };
+		DA18D3912818D80B006816CB /* PeopleEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleEndpoint.swift; sourceTree = "<group>"; };
+		DA18D3932818D816006816CB /* PeopleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleService.swift; sourceTree = "<group>"; };
+		DA18D3952818F036006816CB /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		DAA95F572815E7890085388A /* MazeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MazeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA95F5A2815E7890085388A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAA95F5C2815E7890085388A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -221,6 +233,7 @@
 		DA18D3862818D11D006816CB /* PeopleDetails */ = {
 			isa = PBXGroup;
 			children = (
+				DA18D3902818D7FB006816CB /* PeopleService */,
 				DA18D3892818D14B006816CB /* Router */,
 				DA18D3882818D140006816CB /* View */,
 				DA18D3872818D133006816CB /* ViewModel */,
@@ -231,6 +244,7 @@
 		DA18D3872818D133006816CB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DA18D38E2818D639006816CB /* PeopleDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -238,6 +252,7 @@
 		DA18D3882818D140006816CB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DA18D38C2818D62D006816CB /* PeopleDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -245,8 +260,18 @@
 		DA18D3892818D14B006816CB /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				DA18D38A2818D623006816CB /* PeopleDetailRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		DA18D3902818D7FB006816CB /* PeopleService */ = {
+			isa = PBXGroup;
+			children = (
+				DA18D3912818D80B006816CB /* PeopleEndpoint.swift */,
+				DA18D3932818D816006816CB /* PeopleService.swift */,
+			);
+			path = PeopleService;
 			sourceTree = "<group>";
 		};
 		DAA95F4E2815E7890085388A = {
@@ -395,6 +420,7 @@
 				DAA95FC2281606F80085388A /* ActivityIndicatorExtension.swift */,
 				DA18D36728187A2A006816CB /* StringsExtension.swift */,
 				DA18D37328189EC3006816CB /* AppColors.swift */,
+				DA18D3952818F036006816CB /* ArrayExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -659,15 +685,19 @@
 				DAA95FC3281606F80085388A /* ActivityIndicatorExtension.swift in Sources */,
 				DA18D37228189748006816CB /* SeasonView.swift in Sources */,
 				DA18D37A2818A6D3006816CB /* EpisodeDetailsRouter.swift in Sources */,
+				DA18D38F2818D639006816CB /* PeopleDetailViewModel.swift in Sources */,
 				DAA95FB02815F8A80085388A /* ShowListController.swift in Sources */,
 				DA18D3702818864A006816CB /* ShowHeaderViewModel.swift in Sources */,
 				DAA95FA52815F3B50085388A /* ShowEndpoint.swift in Sources */,
 				DAA95FE6281741920085388A /* ShowDetailsView.swift in Sources */,
 				DAA95FBE2815FDB30085388A /* UIFontExtension.swift in Sources */,
+				DA18D38D2818D62D006816CB /* PeopleDetailView.swift in Sources */,
 				DAA95FED2817446D0085388A /* Episodes.swift in Sources */,
+				DA18D3962818F036006816CB /* ArrayExtension.swift in Sources */,
 				DAA95FD428162DE90085388A /* People.swift in Sources */,
 				DAA95FCE28162AB10085388A /* SearchService.swift in Sources */,
 				DAA95FF1281745FB0085388A /* Crew.swift in Sources */,
+				DA18D3942818D816006816CB /* PeopleService.swift in Sources */,
 				DA18D3802818C313006816CB /* Rating.swift in Sources */,
 				DAA95FC0281606910085388A /* LoadableImageView.swift in Sources */,
 				DAA95FAA2815F6A10085388A /* UIViewExtensions.swift in Sources */,
@@ -683,6 +713,7 @@
 				DA18D3822818C80B006816CB /* EpisodeHeaderView.swift in Sources */,
 				DAA95FB62815F99A0085388A /* RootRouter.swift in Sources */,
 				DAA95FCC28162AA50085388A /* SearchEndpoint.swift in Sources */,
+				DA18D3922818D80B006816CB /* PeopleEndpoint.swift in Sources */,
 				DA18D36828187A2A006816CB /* StringsExtension.swift in Sources */,
 				DAA95FCA28162A6C0085388A /* SearchViewModel.swift in Sources */,
 				DA18D37C2818A6DF006816CB /* EpisodeDetailsView.swift in Sources */,
@@ -698,6 +729,7 @@
 				DAA95FEF281744740085388A /* Seasons.swift in Sources */,
 				DAA95FD8281631150085388A /* SearchTableViewCell.swift in Sources */,
 				DAA95FF528175CE10085388A /* LazyImage.swift in Sources */,
+				DA18D38B2818D623006816CB /* PeopleDetailRouter.swift in Sources */,
 				DAA95FEB281743180085388A /* ShowDetailsService.swift in Sources */,
 				DA18D37428189EC3006816CB /* AppColors.swift in Sources */,
 				DAA95FE92817430B0085388A /* ShowDetailsEndpoint.swift in Sources */,
