@@ -32,7 +32,8 @@ class ShowDetailsRouter: ShowDetailsRouterProtocol {
     }
 
     func presentEpisodeDetails(for episode: Episode) {
-        print("presenting episode \(episode.number)")
+        let destination = EpisodeDetailsRouter.assembleModule(with: episode)
+        viewController?.present(destination, animated: true)
     }
 
     func presentPersonDetails(for person: People) {

@@ -23,10 +23,6 @@ struct Show: Decodable {
     let rating: Rating?
     let network: Network?
 
-    struct Rating: Decodable {
-        let average: Double?
-    }
-
     struct Schedule: Decodable {
         let time: String
         let days: [String]

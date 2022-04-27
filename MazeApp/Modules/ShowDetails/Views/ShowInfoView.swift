@@ -21,7 +21,7 @@ struct ShowInfoView: View {
                     .font(.callout)
             }
             if model.hasAdditionalInfo {
-                HStack {
+                HStack(alignment: .center) {
                     Image(systemName: "calendar")
                     Text("\(model.days) at \(model.time)")
                     Image(systemName: "star.fill")

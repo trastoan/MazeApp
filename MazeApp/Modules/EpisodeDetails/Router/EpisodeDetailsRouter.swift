@@ -21,6 +21,7 @@ class EpisodeDetailsRouter: EpisodeDetailsRouterProtocol {
         let view = EpisodeDetailsView(model: model)
 
         let controller = UIHostingController(rootView: view)
+        controller.view.backgroundColor = .clear
         router.viewController = controller
 
         return controller
