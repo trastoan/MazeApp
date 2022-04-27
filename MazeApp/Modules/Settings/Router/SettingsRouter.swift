@@ -27,5 +27,7 @@ class SettingsRouter {
     }
 
     func registerNewPin() {
+        let destination = PinRegistrationRouter.assembleModule()
+        viewController?.present(destination, animated: true)
     }
 }

@@ -27,7 +27,7 @@ class ShowListRouter: ShowListRouterProtocol {
 
         let nav = UINavigationController(rootViewController: controller)
         nav.setAppearence(background: .appMainColor, tint: .white)
-        nav.preferLargeTitles()
+        controller.preferLargeTitles()
 
         return nav
     }

@@ -36,6 +36,15 @@
 		DA18D3A828198612006816CB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3A728198612006816CB /* SettingsView.swift */; };
 		DA18D3AA2819864B006816CB /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3A92819864B006816CB /* UserDefaultsExtension.swift */; };
 		DA18D3AC281988F6006816CB /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3AB281988F6006816CB /* UIViewControllerExtension.swift */; };
+		DA18D3AF28198A95006816CB /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3AE28198A95006816CB /* KeychainManager.swift */; };
+		DA18D3B128198AB6006816CB /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3B028198AB6006816CB /* AuthenticationService.swift */; };
+		DA18D3B428198CFF006816CB /* PinInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3B328198CFF006816CB /* PinInputView.swift */; };
+		DA18D3BA28198DAE006816CB /* PinRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3B928198DAE006816CB /* PinRegistrationViewController.swift */; };
+		DA18D3BC28198DC1006816CB /* PinRegistrationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3BB28198DC1006816CB /* PinRegistrationRouter.swift */; };
+		DA18D3BE28198DD1006816CB /* PinRegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3BD28198DD1006816CB /* PinRegistrationViewModel.swift */; };
+		DA18D3C428198ED1006816CB /* GuardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3C328198ED1006816CB /* GuardViewController.swift */; };
+		DA18D3C628198EDF006816CB /* GuardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3C528198EDF006816CB /* GuardViewModel.swift */; };
+		DA18D3C828198EE9006816CB /* GuardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3C728198EE9006816CB /* GuardRouter.swift */; };
 		DAA95F5B2815E7890085388A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95F5A2815E7890085388A /* AppDelegate.swift */; };
 		DAA95F5D2815E7890085388A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95F5C2815E7890085388A /* SceneDelegate.swift */; };
 		DAA95F642815E78D0085388A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA95F632815E78D0085388A /* Assets.xcassets */; };
@@ -128,6 +137,15 @@
 		DA18D3A728198612006816CB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		DA18D3A92819864B006816CB /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		DA18D3AB281988F6006816CB /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		DA18D3AE28198A95006816CB /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		DA18D3B028198AB6006816CB /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		DA18D3B328198CFF006816CB /* PinInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinInputView.swift; sourceTree = "<group>"; };
+		DA18D3B928198DAE006816CB /* PinRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinRegistrationViewController.swift; sourceTree = "<group>"; };
+		DA18D3BB28198DC1006816CB /* PinRegistrationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinRegistrationRouter.swift; sourceTree = "<group>"; };
+		DA18D3BD28198DD1006816CB /* PinRegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinRegistrationViewModel.swift; sourceTree = "<group>"; };
+		DA18D3C328198ED1006816CB /* GuardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardViewController.swift; sourceTree = "<group>"; };
+		DA18D3C528198EDF006816CB /* GuardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardViewModel.swift; sourceTree = "<group>"; };
+		DA18D3C728198EE9006816CB /* GuardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardRouter.swift; sourceTree = "<group>"; };
 		DAA95F572815E7890085388A /* MazeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MazeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA95F5A2815E7890085388A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAA95F5C2815E7890085388A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -329,6 +347,91 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		DA18D3AD28198A82006816CB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DA18D3AE28198A95006816CB /* KeychainManager.swift */,
+				DA18D3B028198AB6006816CB /* AuthenticationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DA18D3B228198CEC006816CB /* Pin */ = {
+			isa = PBXGroup;
+			children = (
+				DA18D3B328198CFF006816CB /* PinInputView.swift */,
+			);
+			path = Pin;
+			sourceTree = "<group>";
+		};
+		DA18D3B528198D5A006816CB /* PinRegistration */ = {
+			isa = PBXGroup;
+			children = (
+				DA18D3B828198D89006816CB /* ViewModel */,
+				DA18D3B728198D82006816CB /* View */,
+				DA18D3B628198D7A006816CB /* Router */,
+			);
+			path = PinRegistration;
+			sourceTree = "<group>";
+		};
+		DA18D3B628198D7A006816CB /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				DA18D3BB28198DC1006816CB /* PinRegistrationRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		DA18D3B728198D82006816CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DA18D3B928198DAE006816CB /* PinRegistrationViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DA18D3B828198D89006816CB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DA18D3BD28198DD1006816CB /* PinRegistrationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DA18D3BF28198EA4006816CB /* Guard */ = {
+			isa = PBXGroup;
+			children = (
+				DA18D3C228198EC1006816CB /* ViewModel */,
+				DA18D3C128198EBD006816CB /* View */,
+				DA18D3C028198EB2006816CB /* Router */,
+			);
+			path = Guard;
+			sourceTree = "<group>";
+		};
+		DA18D3C028198EB2006816CB /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				DA18D3C728198EE9006816CB /* GuardRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		DA18D3C128198EBD006816CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DA18D3C328198ED1006816CB /* GuardViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DA18D3C228198EC1006816CB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DA18D3C528198EDF006816CB /* GuardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		DAA95F4E2815E7890085388A = {
 			isa = PBXGroup;
 			children = (
@@ -354,6 +457,7 @@
 		DAA95F592815E7890085388A /* MazeApp */ = {
 			isa = PBXGroup;
 			children = (
+				DA18D3AD28198A82006816CB /* Services */,
 				DAA95FC1281606B90085388A /* CustomComponents */,
 				DAA95FA82815F6600085388A /* Extensions */,
 				DAA95FA12815F3720085388A /* Models */,
@@ -402,12 +506,15 @@
 		DAA95F9C2815F3470085388A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				DAA95FB42815F98F0085388A /* Root */,
+				DA18D3BF28198EA4006816CB /* Guard */,
+				DA18D3B528198D5A006816CB /* PinRegistration */,
+				DA18D3B228198CEC006816CB /* Pin */,
 				DA18D39F281985AF006816CB /* Settings */,
 				DA18D3862818D11D006816CB /* PeopleDetails */,
 				DA18D3752818A6AB006816CB /* EpisodeDetails */,
 				DAA95FDD2817414C0085388A /* ShowDetails */,
 				DAA95FC4281611140085388A /* ShowSearch */,
-				DAA95FB42815F98F0085388A /* Root */,
 				DAA95F9D2815F3500085388A /* ShowsList */,
 			);
 			path = Modules;
@@ -746,26 +853,32 @@
 				DA18D37A2818A6D3006816CB /* EpisodeDetailsRouter.swift in Sources */,
 				DA18D38F2818D639006816CB /* PeopleDetailViewModel.swift in Sources */,
 				DAA95FB02815F8A80085388A /* ShowListController.swift in Sources */,
+				DA18D3BC28198DC1006816CB /* PinRegistrationRouter.swift in Sources */,
+				DA18D3C628198EDF006816CB /* GuardViewModel.swift in Sources */,
 				DA18D3702818864A006816CB /* ShowHeaderViewModel.swift in Sources */,
 				DAA95FA52815F3B50085388A /* ShowEndpoint.swift in Sources */,
 				DAA95FE6281741920085388A /* ShowDetailsView.swift in Sources */,
 				DAA95FBE2815FDB30085388A /* UIFontExtension.swift in Sources */,
+				DA18D3B128198AB6006816CB /* AuthenticationService.swift in Sources */,
 				DA18D38D2818D62D006816CB /* PeopleDetailView.swift in Sources */,
 				DA18D3AA2819864B006816CB /* UserDefaultsExtension.swift in Sources */,
 				DAA95FED2817446D0085388A /* Episodes.swift in Sources */,
 				DA18D3962818F036006816CB /* ArrayExtension.swift in Sources */,
 				DAA95FD428162DE90085388A /* People.swift in Sources */,
 				DA18D39A28197FA2006816CB /* PeopleDetailShowsView.swift in Sources */,
+				DA18D3C828198EE9006816CB /* GuardRouter.swift in Sources */,
 				DAA95FCE28162AB10085388A /* SearchService.swift in Sources */,
 				DA18D39828197F91006816CB /* PeopleDetailHeaderView.swift in Sources */,
 				DAA95FF1281745FB0085388A /* Crew.swift in Sources */,
 				DA18D3942818D816006816CB /* PeopleService.swift in Sources */,
 				DA18D3802818C313006816CB /* Rating.swift in Sources */,
+				DA18D3C428198ED1006816CB /* GuardViewController.swift in Sources */,
 				DAA95FC0281606910085388A /* LoadableImageView.swift in Sources */,
 				DAA95FAA2815F6A10085388A /* UIViewExtensions.swift in Sources */,
 				DA18D3AC281988F6006816CB /* UIViewControllerExtension.swift in Sources */,
 				DA18D3A828198612006816CB /* SettingsView.swift in Sources */,
 				DAA95FF3281747750085388A /* ShowImage.swift in Sources */,
+				DA18D3BE28198DD1006816CB /* PinRegistrationViewModel.swift in Sources */,
 				DAA95FBA2815FBBF0085388A /* NavigationControllerExtension.swift in Sources */,
 				DAA95FC628162A470085388A /* SearchRouter.swift in Sources */,
 				DA18D36628179A10006816CB /* Cast.swift in Sources */,
@@ -800,11 +913,14 @@
 				DAA95FEB281743180085388A /* ShowDetailsService.swift in Sources */,
 				DA18D37428189EC3006816CB /* AppColors.swift in Sources */,
 				DAA95FE92817430B0085388A /* ShowDetailsEndpoint.swift in Sources */,
+				DA18D3BA28198DAE006816CB /* PinRegistrationViewController.swift in Sources */,
 				DAA95FA72815F4960085388A /* ShowService.swift in Sources */,
 				DAA95FE4281741870085388A /* ShowDetailsViewModel.swift in Sources */,
+				DA18D3AF28198A95006816CB /* KeychainManager.swift in Sources */,
 				DAA95F5D2815E7890085388A /* SceneDelegate.swift in Sources */,
 				DA18D39E281984B2006816CB /* PeopleDetailsHeaderViewModel.swift in Sources */,
 				DAA95FAC2815F6CB0085388A /* ReusableViews.swift in Sources */,
+				DA18D3B428198CFF006816CB /* PinInputView.swift in Sources */,
 				DAA95FD628162EA50085388A /* MazeImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

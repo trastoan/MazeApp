@@ -31,7 +31,9 @@ class SettingsViewModel: ObservableObject {
     @MainActor
     func changeBiometricStatus() {
         if !biometricsEnabled {
-
+            Task {
+                biometricsEnabled = await AuthenticationService.shared.biometricAuthentication()
+            }
         } else {
             biometricsEnabled.toggle()
         }
