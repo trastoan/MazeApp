@@ -30,10 +30,4 @@ extension UINavigationController {
         navigationBar.standardAppearance = appearence
         navigationBar.scrollEdgeAppearance = navigationBar.standardAppearance
     }
-
-    func preferLargeTitles(isOn: Bool = true) {
-        navigationBar.prefersLargeTitles = isOn
-        navigationItem.largeTitleDisplayMode = isOn ? .always : .never
-        navigationBar.largeTitleTextAttributes = navigationBar.titleTextAttributes
-    }
 }

@@ -27,10 +27,15 @@ class ShowListController: UIViewController, ShowListView {
 
     override func viewDidLoad() {
         title = model.title
-        setupModelCallback()
+
         setupCollection()
+        setupConfigurationsButton()
+
         setupSubviews()
         setupConstraints()
+
+        setupModelCallback()
+
         Task {
             try await model.fetch()
         }
@@ -40,6 +45,14 @@ class ShowListController: UIViewController, ShowListView {
         collection.delegate = self
         collection.dataSource = self
         collection.prefetchDataSource = self
+    }
+
+    func setupConfigurationsButton() {
+        let barButton = UIBarButtonItem(title: nil,
+                                        image: UIImage(systemName: "gear"),
+                                        primaryAction: UIAction(handler: { _ in self.model.showConfigurations() }))
+
+        navigationItem.setRightBarButton(barButton, animated: false)
     }
 
     private func setupModelCallback() {

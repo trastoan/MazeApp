@@ -19,6 +19,7 @@ protocol ShowListModel {
     func fetchNextPage() async throws
     func show(for index: Int) -> Show
     func showDetails(for index: Int)
+    func showConfigurations()
 }
 
 class ShowListViewModel: ShowListModel {
@@ -29,7 +30,7 @@ class ShowListViewModel: ShowListModel {
     private var hasReachEnd = false
 
     var router: ShowListRouterProtocol!
-    var title: String { "Shows List" }
+    var title: String { "Discover" }
     var numberofShows: Int { shows.count }
 
     var hasFinishedFetch: (() -> ())?
@@ -72,5 +73,9 @@ class ShowListViewModel: ShowListModel {
     func showDetails(for index: Int) {
         let show = shows[index]
         router.presentDetailsForShow(show)
+    }
+
+    func showConfigurations() {
+        router.presentConfigurations()
     }
 }

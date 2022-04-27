@@ -31,6 +31,11 @@
 		DA18D39A28197FA2006816CB /* PeopleDetailShowsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D39928197FA2006816CB /* PeopleDetailShowsView.swift */; };
 		DA18D39C28198308006816CB /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D39B28198308006816CB /* DateExtensions.swift */; };
 		DA18D39E281984B2006816CB /* PeopleDetailsHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D39D281984B2006816CB /* PeopleDetailsHeaderViewModel.swift */; };
+		DA18D3A4281985E6006816CB /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3A3281985E6006816CB /* SettingsRouter.swift */; };
+		DA18D3A628198608006816CB /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3A528198608006816CB /* SettingsViewModel.swift */; };
+		DA18D3A828198612006816CB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3A728198612006816CB /* SettingsView.swift */; };
+		DA18D3AA2819864B006816CB /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3A92819864B006816CB /* UserDefaultsExtension.swift */; };
+		DA18D3AC281988F6006816CB /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3AB281988F6006816CB /* UIViewControllerExtension.swift */; };
 		DAA95F5B2815E7890085388A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95F5A2815E7890085388A /* AppDelegate.swift */; };
 		DAA95F5D2815E7890085388A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95F5C2815E7890085388A /* SceneDelegate.swift */; };
 		DAA95F642815E78D0085388A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA95F632815E78D0085388A /* Assets.xcassets */; };
@@ -118,6 +123,11 @@
 		DA18D39928197FA2006816CB /* PeopleDetailShowsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailShowsView.swift; sourceTree = "<group>"; };
 		DA18D39B28198308006816CB /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		DA18D39D281984B2006816CB /* PeopleDetailsHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailsHeaderViewModel.swift; sourceTree = "<group>"; };
+		DA18D3A3281985E6006816CB /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
+		DA18D3A528198608006816CB /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		DA18D3A728198612006816CB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		DA18D3A92819864B006816CB /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
+		DA18D3AB281988F6006816CB /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		DAA95F572815E7890085388A /* MazeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MazeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA95F5A2815E7890085388A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAA95F5C2815E7890085388A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -285,6 +295,40 @@
 			path = PeopleService;
 			sourceTree = "<group>";
 		};
+		DA18D39F281985AF006816CB /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DA18D3A2281985CE006816CB /* View */,
+				DA18D3A1281985C9006816CB /* ViewModel */,
+				DA18D3A0281985C4006816CB /* Router */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		DA18D3A0281985C4006816CB /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				DA18D3A3281985E6006816CB /* SettingsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		DA18D3A1281985C9006816CB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DA18D3A528198608006816CB /* SettingsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DA18D3A2281985CE006816CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DA18D3A728198612006816CB /* SettingsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DAA95F4E2815E7890085388A = {
 			isa = PBXGroup;
 			children = (
@@ -358,6 +402,7 @@
 		DAA95F9C2815F3470085388A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				DA18D39F281985AF006816CB /* Settings */,
 				DA18D3862818D11D006816CB /* PeopleDetails */,
 				DA18D3752818A6AB006816CB /* EpisodeDetails */,
 				DAA95FDD2817414C0085388A /* ShowDetails */,
@@ -433,6 +478,8 @@
 				DA18D37328189EC3006816CB /* AppColors.swift */,
 				DA18D3952818F036006816CB /* ArrayExtension.swift */,
 				DA18D39B28198308006816CB /* DateExtensions.swift */,
+				DA18D3A92819864B006816CB /* UserDefaultsExtension.swift */,
+				DA18D3AB281988F6006816CB /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -704,6 +751,7 @@
 				DAA95FE6281741920085388A /* ShowDetailsView.swift in Sources */,
 				DAA95FBE2815FDB30085388A /* UIFontExtension.swift in Sources */,
 				DA18D38D2818D62D006816CB /* PeopleDetailView.swift in Sources */,
+				DA18D3AA2819864B006816CB /* UserDefaultsExtension.swift in Sources */,
 				DAA95FED2817446D0085388A /* Episodes.swift in Sources */,
 				DA18D3962818F036006816CB /* ArrayExtension.swift in Sources */,
 				DAA95FD428162DE90085388A /* People.swift in Sources */,
@@ -715,6 +763,8 @@
 				DA18D3802818C313006816CB /* Rating.swift in Sources */,
 				DAA95FC0281606910085388A /* LoadableImageView.swift in Sources */,
 				DAA95FAA2815F6A10085388A /* UIViewExtensions.swift in Sources */,
+				DA18D3AC281988F6006816CB /* UIViewControllerExtension.swift in Sources */,
+				DA18D3A828198612006816CB /* SettingsView.swift in Sources */,
 				DAA95FF3281747750085388A /* ShowImage.swift in Sources */,
 				DAA95FBA2815FBBF0085388A /* NavigationControllerExtension.swift in Sources */,
 				DAA95FC628162A470085388A /* SearchRouter.swift in Sources */,
@@ -723,6 +773,7 @@
 				DAA95FDA281631A70085388A /* SearchTableCellModel.swift in Sources */,
 				DA18D36A28188617006816CB /* InfoView.swift in Sources */,
 				DA18D36E2818863B006816CB /* InfoViewModel.swift in Sources */,
+				DA18D3A4281985E6006816CB /* SettingsRouter.swift in Sources */,
 				DAA95FB82815FA050085388A /* ApplicationTabBarController.swift in Sources */,
 				DA18D3822818C80B006816CB /* EpisodeHeaderView.swift in Sources */,
 				DAA95FB62815F99A0085388A /* RootRouter.swift in Sources */,
@@ -742,6 +793,7 @@
 				DA18D36C28188622006816CB /* ShowHeaderView.swift in Sources */,
 				DAA95FC828162A5A0085388A /* SearchController.swift in Sources */,
 				DAA95FEF281744740085388A /* Seasons.swift in Sources */,
+				DA18D3A628198608006816CB /* SettingsViewModel.swift in Sources */,
 				DAA95FD8281631150085388A /* SearchTableViewCell.swift in Sources */,
 				DAA95FF528175CE10085388A /* LazyImage.swift in Sources */,
 				DA18D38B2818D623006816CB /* PeopleDetailRouter.swift in Sources */,

@@ -10,6 +10,7 @@ import UIKit
 protocol ShowListRouterProtocol {
     static func assembleModule() -> UIViewController
     func presentDetailsForShow(_ show: Show)
+    func presentConfigurations()
 }
 
 class ShowListRouter: ShowListRouterProtocol {
@@ -33,6 +34,11 @@ class ShowListRouter: ShowListRouterProtocol {
 
     func presentDetailsForShow(_ show: Show) {
         let destination = ShowDetailsRouter.assembleModule(for: show)
+        viewController?.navigationController?.pushViewController(destination, animated: true)
+    }
+
+    func presentConfigurations() {
+        let destination = SettingsRouter.assembleModule()
         viewController?.navigationController?.pushViewController(destination, animated: true)
     }
 }

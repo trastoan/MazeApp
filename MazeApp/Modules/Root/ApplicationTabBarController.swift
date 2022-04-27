@@ -15,7 +15,7 @@ class ApplicationTabBarController: UITabBarController {
         let showListController = ShowListRouter.assembleModule()
         let searchController = SearchRouter.assembleModule()
 
-        showListController.tabBarItem = UITabBarItem(title: "Shows", image: UIImage(systemName: "calendar"), tag: 1)
+        showListController.tabBarItem = UITabBarItem(title: "Discover", image: UIImage(systemName: "ticket"), tag: 1)
         searchController.tabBarItem = UITabBarItem(title: "Search", image: UIImage(systemName: "magnifyingglass"), tag: 2)
 
         let tabBarControllers = [showListController, searchController]
