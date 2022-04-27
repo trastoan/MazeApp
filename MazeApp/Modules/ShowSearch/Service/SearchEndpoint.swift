@@ -22,7 +22,7 @@ enum SearchEndpoint: ServiceEndpoint {
 
     var baseUrl: String { "https://api.tvmaze.com" }
 
-    var queryParameters: [String : String]? {
+    var queryParameters: [String: String]? {
         switch self {
             case .show(let name):
                 return ["q": "\(name)"]
@@ -32,5 +32,4 @@ enum SearchEndpoint: ServiceEndpoint {
     }
 
     var method: HttpMethod { .get }
-    
 }

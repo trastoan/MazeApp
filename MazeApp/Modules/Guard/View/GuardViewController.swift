@@ -22,10 +22,12 @@ class GuardViewController: UIViewController {
     }
 
     override func viewDidLoad() {
+        super.viewDidLoad()
+
         self.view.backgroundColor = .appMainColor
         title = "Insert Your pin"
         pinView.delegate = self
-        
+
         model.defaultAuthentication = { [weak self] in
             self?.pinView.beginUserInput()
         }

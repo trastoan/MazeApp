@@ -1,0 +1,33 @@
+
+disabled_rules:
+  - switch_case_alignment
+
+included:
+ - MazeApp
+ - MazeNetwork
+
+opt_in_rules:
+- redundant_nil_coalescing
+- redundant_type_annotation
+- weak_delegate
+- overridden_super_call
+- operator_usage_whitespace
+- multiline_parameters
+- empty_string
+- empty_count
+- empty_collection_literal
+- discouraged_object_literal
+- capture_variable
+
+line_length: 200
+type_body_length:
+- 300 # warning
+- 400 # error
+# or they can set both explicitly
+file_length:
+  warning: 500
+  error: 1200
+
+analyzer_rules: # Rules run by `swiftlint analyze`
+  - explicit_self
+

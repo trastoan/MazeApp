@@ -7,11 +7,10 @@
 
 import SwiftUI
 
-
 struct EpisodeDetailsView: View {
     var model: EpisodeDetailsViewModelProtocol
 
-    var body: some View{
+    var body: some View {
         VStack {
             EpisodeHeaderView(model: model.buildHeaderModel())
                 .frame(height: 250)

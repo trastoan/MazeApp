@@ -65,7 +65,7 @@ class SearchView: UIViewController, SearchViewProtocol {
     private func listeForSearch() {
         let publisher = NotificationCenter.default.publisher(for: UISearchTextField.textDidChangeNotification, object: searchController.searchBar.searchTextField)
         publisher.map({
-            ($0.object as! UISearchTextField).text
+            ($0.object as? UISearchTextField)?.text
         })
         .debounce(for: .milliseconds(300), scheduler: RunLoop.main)
         .removeDuplicates()
@@ -83,11 +83,11 @@ class SearchView: UIViewController, SearchViewProtocol {
 
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController = searchController
-        definesPresentationContext = true 
+        definesPresentationContext = true
     }
 
     private func setupSegmentBar() {
-        for (index,searchType) in model.searchTypes.enumerated() {
+        for (index, searchType) in model.searchTypes.enumerated() {
             let title = searchType.rawValue.capitalized
             segmentedControl.insertSegment(withTitle: title, at: index, animated: false)
         }

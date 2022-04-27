@@ -26,5 +26,4 @@ class PeopleDetailService: PeopleDetailServiceProtocol {
     func listCrewCredits(_ id: Int) async throws -> [CrewCredits] {
         try await client.requestObject(endpoint: PeopleDetailEndpoint.relatedShowAsCrew(peopleId: id))
     }
-    
 }

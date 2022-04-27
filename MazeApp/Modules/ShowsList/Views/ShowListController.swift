@@ -26,6 +26,8 @@ class ShowListController: UIViewController, ShowListView {
     }()
 
     override func viewDidLoad() {
+        super.viewDidLoad()
+
         title = model.title
 
         setupCollection()
@@ -104,9 +106,7 @@ extension ShowListController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         model.showDetails(for: indexPath.row)
     }
-    
 }
-
 
 extension ShowListController: UICollectionViewDelegateFlowLayout {
 
@@ -117,7 +117,6 @@ extension ShowListController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
-
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
@@ -130,7 +129,7 @@ extension ShowListController: UICollectionViewDelegateFlowLayout {
         let height = UIScreen.main.bounds.height - (navBarHeight + tabBarHeight)
 
         if width < height {
-            let cellWidth = width/2
+            let cellWidth = width / 2
             let cellHeight = cellWidth * 1.75
             size = CGSize(width: cellWidth, height: cellHeight)
         } else {

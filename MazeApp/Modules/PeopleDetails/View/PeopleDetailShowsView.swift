@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PeopleDetailShowsView: View {
     var shows: [Show]
-    var didSelectShow: ((Show) -> ())?
+    var didSelectShow: ((Show) -> Void)?
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {

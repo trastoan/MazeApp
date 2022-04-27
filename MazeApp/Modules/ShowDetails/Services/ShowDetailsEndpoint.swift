@@ -28,9 +28,8 @@ enum ShowDetailsEndpoint: ServiceEndpoint {
 
     var baseUrl: String { "https://api.tvmaze.com" }
 
-    var queryParameters: [String : String]? { nil }
+    var queryParameters: [String: String]? { nil }
 
     var method: HttpMethod { .get }
-
 
 }

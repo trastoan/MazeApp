@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ShowDetailsView<ViewModel>: View where ViewModel: ShowDetailViewModelProtocol {
     @ObservedObject var model: ViewModel
-    
+
     var body: some View {
         if model.isLoading {
             ProgressView()

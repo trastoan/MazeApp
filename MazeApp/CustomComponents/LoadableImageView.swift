@@ -26,7 +26,7 @@ class LoadableImageView: UIImageView {
         loadingIndicator.setupOn(view: self)
     }
 
-    func loadImage(withURL url: URL?, defaultImage: UIImage = #imageLiteral(resourceName: "NoPoster")) {
+    func loadImage(withURL url: URL?, defaultImage: UIImage = UIImage(named: "NoPoster")!) {
 
         loadingIndicator.startAnimating()
         Nuke.cancelRequest(for: self)

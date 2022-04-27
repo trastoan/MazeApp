@@ -11,7 +11,7 @@ class KeychainService {
     static var shared = KeychainService()
 
     static let pinService = "SecurityPin"
-    static let account =  "MazeApp"
+    static let account = "MazeApp"
 
     private init() {}
 

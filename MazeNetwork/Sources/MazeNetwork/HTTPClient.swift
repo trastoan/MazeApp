@@ -24,7 +24,7 @@ public struct HTTPWorker: HTTPClient {
         self.session = session
     }
 
-    public func requestObject<Model>(endpoint: ServiceEndpoint) async throws -> Model where Model : Decodable {
+    public func requestObject<Model>(endpoint: ServiceEndpoint) async throws -> Model where Model: Decodable {
         let url = try url(from: endpoint)
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = endpoint.method.value
@@ -33,7 +33,7 @@ public struct HTTPWorker: HTTPClient {
         do {
             let result = try JSONDecoder().decode(Model.self, from: data)
             return result
-        } catch(let error) {
+        } catch {
             print(error)
             throw error
         }

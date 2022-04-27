@@ -5,7 +5,6 @@
 //  Created by Yuri on 27/04/22.
 //
 
-
 import UIKit
 extension UIViewController {
     func preferLargeTitles(isOn: Bool = true) {

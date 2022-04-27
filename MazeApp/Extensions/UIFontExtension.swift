@@ -23,4 +23,3 @@ extension UIFont {
         return UIFont(descriptor: weightedFontDescriptor, size: size)
     }
 }
-

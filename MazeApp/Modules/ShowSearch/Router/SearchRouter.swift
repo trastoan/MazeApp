@@ -28,7 +28,6 @@ class SearchRouter: SearchRouterProtocol {
         let nav = UINavigationController(rootViewController: controller)
         nav.setAppearence(background: .appMainColor, tint: .white)
 
-
         return nav
     }
 

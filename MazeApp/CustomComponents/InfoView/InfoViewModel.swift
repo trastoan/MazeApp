@@ -18,7 +18,7 @@ class InfoViewModel {
         return !(days.isEmpty && rating == "0.0" && time.isEmpty)
     }
 
-    init(summary: String, days: String, rating: String, time: String){
+    init(summary: String, days: String, rating: String, time: String) {
         self.summary = summary
         self.days = days
         self.rating = rating

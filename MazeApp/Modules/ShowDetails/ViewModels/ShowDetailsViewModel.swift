@@ -19,7 +19,6 @@ protocol ShowDetailViewModelProtocol: ObservableObject {
     func presentEpisodeDetails(_ episode: Episode)
 }
 
-
 class ShowDetailViewModel: ShowDetailViewModelProtocol {
     var router: ShowDetailsRouterProtocol!
 
@@ -28,7 +27,7 @@ class ShowDetailViewModel: ShowDetailViewModelProtocol {
     private let service: ShowDetailServiceProtocol
 
     @Published private(set) var isLoading = true
-    private(set) var backgroundImage: URL? = nil
+    private(set) var backgroundImage: URL?
     private(set) var seasons: [Season] = []
     private(set) var episodes: [Episode] = []
     private(set) var cast: [Cast] = []
@@ -42,7 +41,6 @@ class ShowDetailViewModel: ShowDetailViewModelProtocol {
         }
     }
 
-
     private func loadBackgroundImage() async throws {
         let images = try await service.listImages(showId: show.id)
         let background = images.first(where: { $0.type == "background" })
@@ -53,11 +51,9 @@ class ShowDetailViewModel: ShowDetailViewModelProtocol {
         episodes = try await service.listEpisodes(showId: show.id)
     }
 
-
     private func loadCastInfo() async throws {
         cast = try await service.listCast(showId: show.id)
     }
-
 
     private func loadCrewInfo() async throws {
         crew = try await service.listCrew(showId: show.id)

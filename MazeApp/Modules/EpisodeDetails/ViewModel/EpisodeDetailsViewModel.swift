@@ -20,7 +20,6 @@ class EpisodeDetailsViewModel: EpisodeDetailsViewModelProtocol {
         self.episode = episode
     }
 
-
     func buildInfoModel() -> InfoViewModel {
         return InfoViewModel(summary: episode.summary?.removeHTMLTags() ?? "Not available",
                              days: airDateFormatted(episode.airdate),

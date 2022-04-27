@@ -23,7 +23,6 @@ class PeopleViewModel: PeopleViewModelProtocol {
     private (set) var shows: [Show] = []
     @Published private (set) var isLoading = true
 
-
     init(router: PeopleDetailRouterProtocol, people: People, service: PeopleDetailServiceProtocol = PeopleDetailService()) {
         self.router = router
         self.people = people

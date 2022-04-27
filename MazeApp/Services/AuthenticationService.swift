@@ -33,7 +33,7 @@ class AuthenticationService {
         return pin == storedPin
     }
 
-    private func biometricAuth(completion: @escaping (Bool) -> ()) {
+    private func biometricAuth(completion: @escaping (Bool) -> Void) {
         let authContext = LAContext()
         var policyError: NSError?
 
@@ -41,7 +41,7 @@ class AuthenticationService {
         let reason = "Unlock your app"
 
         if authContext.canEvaluatePolicy(.deviceOwnerAuthentication, error: &policyError) {
-            authContext.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason, reply: { success, error in
+            authContext.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason, reply: { success, _ in
                     completion(success)
             })
         }

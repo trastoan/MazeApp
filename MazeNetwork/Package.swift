@@ -7,13 +7,13 @@ let package = Package(
     name: "MazeNetwork",
     platforms: [
         .macOS(.v12),
-        .iOS(.v15),
+        .iOS(.v15)
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "MazeNetwork",
-            targets: ["MazeNetwork"]),
+            targets: ["MazeNetwork"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -27,6 +27,6 @@ let package = Package(
             dependencies: []),
         .testTarget(
             name: "MazeNetworkTests",
-            dependencies: ["MazeNetwork"]),
+            dependencies: ["MazeNetwork"])
     ]
 )

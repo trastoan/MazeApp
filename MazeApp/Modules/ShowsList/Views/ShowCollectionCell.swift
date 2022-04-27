@@ -56,6 +56,7 @@ class ShowCollectionViewCell: UICollectionViewCell {
     }()
 
     override func prepareForReuse() {
+        super.prepareForReuse()
         showPosterImage.image = nil
         genresLabel.text = ""
         titleLabel.text = ""
@@ -126,4 +127,3 @@ class ShowCollectionViewCell: UICollectionViewCell {
         ])
     }
 }
-

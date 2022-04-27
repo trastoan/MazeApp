@@ -13,8 +13,8 @@ extension UINavigationController {
         appearence.configureWithOpaqueBackground()
         appearence.backgroundColor = background
         appearence.shadowColor = .clear
-        appearence.titleTextAttributes = [.foregroundColor : tint]
-        appearence.largeTitleTextAttributes = [.foregroundColor : tint]
+        appearence.titleTextAttributes = [.foregroundColor: tint]
+        appearence.largeTitleTextAttributes = [.foregroundColor: tint]
 
         navigationBar.standardAppearance = appearence
         navigationBar.tintColor = tint
@@ -24,8 +24,8 @@ extension UINavigationController {
     func setTitleColor(_ color: UIColor) {
         let appearence = UINavigationBarAppearance()
         appearence.configureWithTransparentBackground()
-        appearence.titleTextAttributes = [.foregroundColor : color]
-        appearence.largeTitleTextAttributes = [.foregroundColor : color]
+        appearence.titleTextAttributes = [.foregroundColor: color]
+        appearence.largeTitleTextAttributes = [.foregroundColor: color]
 
         navigationBar.standardAppearance = appearence
         navigationBar.scrollEdgeAppearance = navigationBar.standardAppearance

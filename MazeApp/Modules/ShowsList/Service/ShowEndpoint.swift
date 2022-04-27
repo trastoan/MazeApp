@@ -20,7 +20,7 @@ enum ShowEndpoint: ServiceEndpoint {
 
     var baseUrl: String { "https://api.tvmaze.com" }
 
-    var queryParameters: [String : String]? {
+    var queryParameters: [String: String]? {
         switch self {
             case .shows(page: let page):
                 return ["page": "\(page)"]

@@ -25,8 +25,7 @@ class RootRouter {
 
             if appTabController.presentedViewController == nil {
                 appTabController.selectedViewController?.present(destination, animated: true)
-            }
-            else {
+            } else {
                 appTabController.presentedViewController?.present(destination, animated: true)
             }
 

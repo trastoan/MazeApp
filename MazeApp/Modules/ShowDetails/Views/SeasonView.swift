@@ -14,7 +14,7 @@ struct SeasonView: View {
     @State var isExpanded = false
 
     var body: some View {
-        VStack(alignment: .leading){
+        VStack(alignment: .leading) {
             HeaderView(isExpanded: $isExpanded, name: "Season \(season.number)")
                 .contentShape(Rectangle())
                 .onTapGesture {

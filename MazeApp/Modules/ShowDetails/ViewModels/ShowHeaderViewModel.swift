@@ -16,7 +16,7 @@ class ShowHeaderViewModel {
     var network: String
     var genres: String
 
-    init(posterImage: URL?, backgroundImage: URL?, status: String, numberOfSeasons: Int, network: String, genres: String ){
+    init(posterImage: URL?, backgroundImage: URL?, status: String, numberOfSeasons: Int, network: String, genres: String ) {
         self.posterImage = posterImage
         self.backgroundImage = backgroundImage
         self.status = status

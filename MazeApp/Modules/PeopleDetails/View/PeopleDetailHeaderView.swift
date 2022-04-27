@@ -16,8 +16,8 @@ struct PeopleDetailHeaderView: View {
                 .alignmentGuide(.top) { $0[.top] + 50 }
                 .frame(maxWidth: .infinity, maxHeight: 350, alignment: .top)
                 .clipped()
-            LinearGradient(colors: [.clear,.black.opacity(0.8)], startPoint: .top, endPoint: .bottom)
-            VStack(alignment: .leading){
+            LinearGradient(colors: [.clear, .black.opacity(0.8)], startPoint: .top, endPoint: .bottom)
+            VStack(alignment: .leading) {
                 Text(model.name)
                     .font(.title)
                     .bold()

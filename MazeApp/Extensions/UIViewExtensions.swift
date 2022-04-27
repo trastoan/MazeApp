@@ -15,7 +15,6 @@ extension UIView {
         self.layer.shadowRadius = radius
     }
 
-    //Center a view on a super view
     func centerOn(view: UIView) {
         NSLayoutConstraint.activate([
             self.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),

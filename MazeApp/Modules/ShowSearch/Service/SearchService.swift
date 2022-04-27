@@ -8,7 +8,7 @@
 import MazeNetwork
 
 protocol SearchServiceProtocol {
-    func searchFor<T:Decodable>(endpoint: SearchEndpoint) async throws -> [T]
+    func searchFor<T: Decodable>(endpoint: SearchEndpoint) async throws -> [T]
 }
 
 class SearchService: SearchServiceProtocol {
@@ -18,7 +18,7 @@ class SearchService: SearchServiceProtocol {
         self.client = client
     }
 
-    func searchFor<T>(endpoint: SearchEndpoint) async throws -> [T] where T : Decodable {
+    func searchFor<T>(endpoint: SearchEndpoint) async throws -> [T] where T: Decodable {
         try await client.requestObject(endpoint: endpoint)
     }
 }

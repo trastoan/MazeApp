@@ -9,12 +9,11 @@ import SwiftUI
 
 struct PeopleDetailView<ViewModel>: View where ViewModel: PeopleViewModelProtocol {
     @ObservedObject var model: ViewModel
-    
+
     var body: some View {
         if model.isLoading {
             ProgressView()
                 .scaleEffect(4)
-            
         } else {
             VStack {
                 PeopleDetailHeaderView(model: model.buildHeaderModel())

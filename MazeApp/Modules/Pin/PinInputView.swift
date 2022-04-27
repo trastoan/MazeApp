@@ -44,10 +44,10 @@ class PinInputView: UIView {
     }()
 
     private let hiddenTextfield: UITextField = {
-        let tf = UITextField()
-        tf.keyboardType = .numberPad
-        tf.isHidden = true
-        return tf
+        let textfield = UITextField()
+        textfield.keyboardType = .numberPad
+        textfield.isHidden = true
+        return textfield
     }()
 
     weak var delegate: PinInputViewDelegate?
@@ -109,7 +109,7 @@ class PinInputView: UIView {
 
     private func customizePinViews() {
         pinViews.forEach { pin in
-            pin.layer.cornerRadius = pin.frame.height/2
+            pin.layer.cornerRadius = pin.frame.height / 2
             pin.backgroundColor = .clear
             pin.layer.borderWidth = 1
             pin.layer.borderColor = UIColor.white.cgColor
@@ -121,7 +121,6 @@ class PinInputView: UIView {
             $0.backgroundColor = .clear
         }
     }
-
 
     @objc
     private func changedText(textfield: UITextField) {
@@ -139,7 +138,6 @@ class PinInputView: UIView {
             delegate?.didFinishInput(self, pin: textfield.text!)
         }
     }
-
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

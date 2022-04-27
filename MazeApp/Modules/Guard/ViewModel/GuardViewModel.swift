@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 protocol GuardViewModelProtocol {
     var defaultAuthentication: (() -> Void)? { get set }
     var failedToAuthenticate: (() -> Void)? { get set }

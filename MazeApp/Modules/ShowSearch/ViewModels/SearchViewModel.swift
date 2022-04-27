@@ -18,7 +18,7 @@ protocol SearchViewModelProtocol {
     var searchTypes: [SearchType] { get }
     var title: String { get }
 
-    var hasFinishedSearching: (() -> ())? { get set }
+    var hasFinishedSearching: (() -> Void)? { get set }
 
     func resetSearch()
     func changeSearch(index: Int)
@@ -39,8 +39,7 @@ class SearchViewModel: SearchViewModelProtocol {
     var numberOfResults: Int { results.count }
     var searchTypes: [SearchType] { [.show, .people]}
 
-    var hasFinishedSearching: (() -> ())?
-
+    var hasFinishedSearching: (() -> Void)?
 
     init(with service: SearchServiceProtocol = SearchService()) {
         self.service = service
@@ -66,10 +65,10 @@ class SearchViewModel: SearchViewModelProtocol {
                 lastPeople = searchResult.map { $0.person }
                 results = searchResult.map { SearchTableCellModel(with: $0.person) }
             case .show:
-                let SearchResult: [ShowSearch] = try await service.searchFor(endpoint: .show(named: name))
+                let searchResult: [ShowSearch] = try await service.searchFor(endpoint: .show(named: name))
                 try Task.checkCancellation()
-                lastShows = SearchResult.map { $0.show }
-                results = SearchResult.map { SearchTableCellModel(with: $0.show) }
+                lastShows = searchResult.map { $0.show }
+                results = searchResult.map { SearchTableCellModel(with: $0.show) }
         }
         hasFinishedSearching?()
     }

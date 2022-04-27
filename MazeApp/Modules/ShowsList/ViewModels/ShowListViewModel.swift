@@ -12,8 +12,8 @@ protocol ShowListModel {
     var title: String { get }
     var numberofShows: Int { get }
 
-    var hasFinishedFetch: (() -> ())? { get set }
-    var insertNewShows: (([IndexPath]) -> ())? { get set }
+    var hasFinishedFetch: (() -> Void)? { get set }
+    var insertNewShows: (([IndexPath]) -> Void)? { get set }
 
     func fetch() async throws
     func fetchNextPage() async throws
@@ -33,8 +33,8 @@ class ShowListViewModel: ShowListModel {
     var title: String { "Discover" }
     var numberofShows: Int { shows.count }
 
-    var hasFinishedFetch: (() -> ())?
-    var insertNewShows: (([IndexPath]) -> ())?
+    var hasFinishedFetch: (() -> Void)?
+    var insertNewShows: (([IndexPath]) -> Void)?
 
     init(service: ShowServiceProtocol = ShowService()) {
         self.service = service

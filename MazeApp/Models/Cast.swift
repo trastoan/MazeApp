@@ -25,7 +25,6 @@ struct CastCredits: Decodable {
     enum CodingKeys: String, CodingKey {
         case embedded = "_embedded"
     }
-    
 }
 
 struct EmbeddedContent: Decodable {

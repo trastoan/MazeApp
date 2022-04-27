@@ -34,11 +34,11 @@ class PinRegistrationViewController: UIViewController {
         self.model = model
         super.init(nibName: nil, bundle: nil)
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Pin Registration"
@@ -92,7 +92,7 @@ class PinRegistrationViewController: UIViewController {
 
             confirmationPinView.leadingAnchor.constraint(equalTo: pinView.trailingAnchor),
             confirmationPinView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            confirmationPinView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor, constant: -80),
+            confirmationPinView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor, constant: -80)
         ])
     }
 
@@ -117,17 +117,17 @@ class PinRegistrationViewController: UIViewController {
     }
 
     private func scrollToBegin() {
-        let y = scrollView.contentOffset.y
+        let contentToScroll = scrollView.contentOffset.y
 
-        scrollView.setContentOffset(CGPoint(x: 0, y: y), animated: true)
+        scrollView.setContentOffset(CGPoint(x: 0, y: contentToScroll), animated: true)
         pinView.beginUserInput()
     }
 
     private func scrollToConfirmation() {
-        let x = contentView.frame.width/2
-        let y = scrollView.contentOffset.y
+        let nextX = contentView.frame.width / 2
+        let nextY = scrollView.contentOffset.y
 
-        scrollView.setContentOffset(CGPoint(x: x, y: y), animated: true)
+        scrollView.setContentOffset(CGPoint(x: nextX, y: nextY), animated: true)
         confirmationPinView.beginUserInput()
     }
 }

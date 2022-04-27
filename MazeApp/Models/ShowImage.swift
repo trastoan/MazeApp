@@ -16,9 +16,10 @@ struct ShowImage: Decodable {
         var original: ImageInfo?
         var medium: ImageInfo?
 
-        struct ImageInfo: Decodable {
-            var url: String
-        }
      }
+
+    struct ImageInfo: Decodable {
+        var url: String
+    }
 
 }

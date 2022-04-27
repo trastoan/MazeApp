@@ -34,5 +34,3 @@ class PinRegistrationRouter: PinRegistrationRouterProtocol {
         viewController?.navigationController?.dismiss(animated: true)
     }
 }
-
-

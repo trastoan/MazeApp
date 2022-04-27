@@ -37,7 +37,7 @@ class ShowDetailsRouter: ShowDetailsRouterProtocol {
     }
 
     func presentPersonDetails(for person: People) {
-        //TBD
+        // TBD
     }
 
 }

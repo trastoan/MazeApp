@@ -14,7 +14,7 @@ protocol ShowDetailServiceProtocol {
     func listCast(showId: Int) async throws -> [Cast]
 }
 
-class ShowDetailService:  ShowDetailServiceProtocol {
+class ShowDetailService: ShowDetailServiceProtocol {
     private let client: HTTPClient
 
     init(client: HTTPClient = HTTPWorker()) {

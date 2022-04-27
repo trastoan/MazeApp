@@ -35,6 +35,7 @@ class SearchTableViewCell: UITableViewCell {
     var model: SearchTableCellModel?
 
     override func prepareForReuse() {
+        super.prepareForReuse()
         nameLabel.text = ""
         subtitleLabel.text = ""
         posterImageView.image = nil
