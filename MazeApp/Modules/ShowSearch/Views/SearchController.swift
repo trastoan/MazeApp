@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 protocol SearchViewProtocol {
     var model: SearchViewModel! { get }
@@ -33,6 +34,8 @@ class SearchView: UIViewController, SearchViewProtocol {
         return segment
     }()
 
+    private var bag = Set<AnyCancellable>()
+
     private let searchController = UISearchController()
 
     override func viewDidLoad() {
@@ -48,6 +51,7 @@ class SearchView: UIViewController, SearchViewProtocol {
         setupSubviews()
         setupConstraints()
 
+        listeForSearch()
         configureSearchCallback()
     }
 
@@ -57,8 +61,19 @@ class SearchView: UIViewController, SearchViewProtocol {
         }
     }
 
+    private func listeForSearch() {
+        let publisher = NotificationCenter.default.publisher(for: UISearchTextField.textDidChangeNotification, object: searchController.searchBar.searchTextField)
+        publisher.map({
+            ($0.object as! UISearchTextField).text
+        })
+        .debounce(for: .milliseconds(300), scheduler: RunLoop.main)
+        .removeDuplicates()
+        .sink { searchText in
+            self.searchFor(name: searchText ?? "")
+        }.store(in: &bag)
+    }
+
     private func setupSearchBar() {
-        searchController.searchResultsUpdater = self
         searchController.searchBar.delegate = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search for movies"
@@ -119,12 +134,7 @@ class SearchView: UIViewController, SearchViewProtocol {
     }
 }
 
-extension SearchView: UISearchResultsUpdating, UISearchBarDelegate {
-    func updateSearchResults(for searchController: UISearchController) {
-        guard let name = searchController.searchBar.text else { return }
-        searchFor(name: name)
-    }
-
+extension SearchView: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         model.resetSearch()
     }
