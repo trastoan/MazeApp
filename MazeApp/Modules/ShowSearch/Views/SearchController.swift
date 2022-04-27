@@ -29,7 +29,7 @@ class SearchView: UIViewController, SearchViewProtocol {
     private let segmentedControl: UISegmentedControl = {
         let segment = UISegmentedControl()
         segment.translatesAutoresizingMaskIntoConstraints = false
-        segment.backgroundColor = .systemBackground
+        segment.backgroundColor = .segmentedBackground
         segment.selectedSegmentIndex = 0
         return segment
     }()
@@ -41,6 +41,7 @@ class SearchView: UIViewController, SearchViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = model.title
+        view.backgroundColor = .defaultBackground
 
         table.dataSource = self
         table.delegate = self
@@ -76,7 +77,7 @@ class SearchView: UIViewController, SearchViewProtocol {
     private func setupSearchBar() {
         searchController.searchBar.delegate = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search for movies"
+        searchController.searchBar.placeholder = "Search for shows"
         searchController.searchBar.searchTextField.backgroundColor = .systemBackground
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).tintColor = .black
 
@@ -102,6 +103,8 @@ class SearchView: UIViewController, SearchViewProtocol {
             return
         }
         searchFor(name: name)
+        let type = segmented.titleForSegment(at: segmented.selectedSegmentIndex)
+        searchController.searchBar.placeholder = "Search for \(type!.lowercased())"
     }
 
     private func setupSubviews() {
@@ -122,9 +125,9 @@ class SearchView: UIViewController, SearchViewProtocol {
     private func setupConstraints() {
 
         NSLayoutConstraint.activate([
-            segmentedControl.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            segmentedControl.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
-            segmentedControl.rightAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.rightAnchor),
+            segmentedControl.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            segmentedControl.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 8),
+            segmentedControl.rightAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.rightAnchor, constant: -8),
 
             self.table.topAnchor.constraint(equalTo: segmentedControl.bottomAnchor),
             self.table.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),

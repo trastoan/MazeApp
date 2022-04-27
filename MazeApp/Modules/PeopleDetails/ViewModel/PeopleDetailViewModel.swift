@@ -10,9 +10,9 @@ import Foundation
 protocol PeopleViewModelProtocol: ObservableObject {
     var isLoading: Bool { get }
     var shows: [Show] { get }
-    var poster: URL? { get }
-    var name: String { get }
+
     func presentShowDetail(show: Show)
+    func buildHeaderModel() -> PeopleDetailHeaderViewModel
 }
 
 class PeopleViewModel: PeopleViewModelProtocol {
@@ -21,8 +21,6 @@ class PeopleViewModel: PeopleViewModelProtocol {
     private var service: PeopleDetailServiceProtocol
 
     private (set) var shows: [Show] = []
-    var poster: URL? { URL(string: people.image?.medium ?? "")}
-    var name: String { people.name }
     @Published private (set) var isLoading = true
 
 
@@ -54,6 +52,13 @@ class PeopleViewModel: PeopleViewModelProtocol {
     func loadShowsAsCrew() async throws {
         let crewCredits = try await service.listCrewCredits(people.id)
         shows.append(contentsOf: crewCredits.compactMap { $0.embedded.show })
+    }
+
+    func buildHeaderModel() -> PeopleDetailHeaderViewModel {
+        PeopleDetailHeaderViewModel(poster: URL(string: people.image?.original ?? ""),
+                                    name: people.name,
+                                    country: people.country?.name ?? "Country Unknow",
+                                    age: people.age)
     }
 
     func presentShowDetail(show: Show) {

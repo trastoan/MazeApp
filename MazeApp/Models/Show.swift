@@ -20,13 +20,13 @@ struct Show: Decodable, Hashable {
     let genres: [String]
     let summary: String?
     let status: String?
-    let schedule: Schedule
+    let schedule: Schedule?
     let rating: Rating?
     let network: Network?
 
     struct Schedule: Decodable {
-        let time: String
-        let days: [String]
+        let time: String?
+        let days: [String]?
     }
 
     struct Network: Decodable {

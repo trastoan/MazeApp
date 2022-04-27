@@ -27,6 +27,10 @@
 		DA18D3922818D80B006816CB /* PeopleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3912818D80B006816CB /* PeopleEndpoint.swift */; };
 		DA18D3942818D816006816CB /* PeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3932818D816006816CB /* PeopleService.swift */; };
 		DA18D3962818F036006816CB /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3952818F036006816CB /* ArrayExtension.swift */; };
+		DA18D39828197F91006816CB /* PeopleDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D39728197F90006816CB /* PeopleDetailHeaderView.swift */; };
+		DA18D39A28197FA2006816CB /* PeopleDetailShowsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D39928197FA2006816CB /* PeopleDetailShowsView.swift */; };
+		DA18D39C28198308006816CB /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D39B28198308006816CB /* DateExtensions.swift */; };
+		DA18D39E281984B2006816CB /* PeopleDetailsHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D39D281984B2006816CB /* PeopleDetailsHeaderViewModel.swift */; };
 		DAA95F5B2815E7890085388A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95F5A2815E7890085388A /* AppDelegate.swift */; };
 		DAA95F5D2815E7890085388A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95F5C2815E7890085388A /* SceneDelegate.swift */; };
 		DAA95F642815E78D0085388A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA95F632815E78D0085388A /* Assets.xcassets */; };
@@ -110,6 +114,10 @@
 		DA18D3912818D80B006816CB /* PeopleEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleEndpoint.swift; sourceTree = "<group>"; };
 		DA18D3932818D816006816CB /* PeopleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleService.swift; sourceTree = "<group>"; };
 		DA18D3952818F036006816CB /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		DA18D39728197F90006816CB /* PeopleDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailHeaderView.swift; sourceTree = "<group>"; };
+		DA18D39928197FA2006816CB /* PeopleDetailShowsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailShowsView.swift; sourceTree = "<group>"; };
+		DA18D39B28198308006816CB /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		DA18D39D281984B2006816CB /* PeopleDetailsHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailsHeaderViewModel.swift; sourceTree = "<group>"; };
 		DAA95F572815E7890085388A /* MazeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MazeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA95F5A2815E7890085388A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAA95F5C2815E7890085388A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -245,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				DA18D38E2818D639006816CB /* PeopleDetailViewModel.swift */,
+				DA18D39D281984B2006816CB /* PeopleDetailsHeaderViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -252,6 +261,8 @@
 		DA18D3882818D140006816CB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DA18D39728197F90006816CB /* PeopleDetailHeaderView.swift */,
+				DA18D39928197FA2006816CB /* PeopleDetailShowsView.swift */,
 				DA18D38C2818D62D006816CB /* PeopleDetailView.swift */,
 			);
 			path = View;
@@ -421,6 +432,7 @@
 				DA18D36728187A2A006816CB /* StringsExtension.swift */,
 				DA18D37328189EC3006816CB /* AppColors.swift */,
 				DA18D3952818F036006816CB /* ArrayExtension.swift */,
+				DA18D39B28198308006816CB /* DateExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -695,7 +707,9 @@
 				DAA95FED2817446D0085388A /* Episodes.swift in Sources */,
 				DA18D3962818F036006816CB /* ArrayExtension.swift in Sources */,
 				DAA95FD428162DE90085388A /* People.swift in Sources */,
+				DA18D39A28197FA2006816CB /* PeopleDetailShowsView.swift in Sources */,
 				DAA95FCE28162AB10085388A /* SearchService.swift in Sources */,
+				DA18D39828197F91006816CB /* PeopleDetailHeaderView.swift in Sources */,
 				DAA95FF1281745FB0085388A /* Crew.swift in Sources */,
 				DA18D3942818D816006816CB /* PeopleService.swift in Sources */,
 				DA18D3802818C313006816CB /* Rating.swift in Sources */,
@@ -723,6 +737,7 @@
 				DA18D3842818C82F006816CB /* EpisodeHeaderViewModel.swift in Sources */,
 				DAA95FBC2815FD320085388A /* ShowCollectionCell.swift in Sources */,
 				DAA95FAE2815F8310085388A /* ShowListRouter.swift in Sources */,
+				DA18D39C28198308006816CB /* DateExtensions.swift in Sources */,
 				DAA95FA32815F3980085388A /* Show.swift in Sources */,
 				DA18D36C28188622006816CB /* ShowHeaderView.swift in Sources */,
 				DAA95FC828162A5A0085388A /* SearchController.swift in Sources */,
@@ -736,6 +751,7 @@
 				DAA95FA72815F4960085388A /* ShowService.swift in Sources */,
 				DAA95FE4281741870085388A /* ShowDetailsViewModel.swift in Sources */,
 				DAA95F5D2815E7890085388A /* SceneDelegate.swift in Sources */,
+				DA18D39E281984B2006816CB /* PeopleDetailsHeaderViewModel.swift in Sources */,
 				DAA95FAC2815F6CB0085388A /* ReusableViews.swift in Sources */,
 				DAA95FD628162EA50085388A /* MazeImage.swift in Sources */,
 			);

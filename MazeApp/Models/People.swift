@@ -18,10 +18,16 @@ struct People: Decodable {
     var name: String
     var country: Country?
     var image: MazeImage?
+    var birthday: String?
+    var age: Int? {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        guard let birthDate = formatter.date(from: birthday ?? "") else { return nil }
+        return birthDate.yearsBetweenDate(endDate: Date())
+    }
 
     struct Country: Decodable {
         var name: String
         var code: String
     }
-
 }

@@ -16,8 +16,9 @@ struct EpisodeDetailsView: View {
             EpisodeHeaderView(model: model.buildHeaderModel())
                 .frame(height: 250)
             InfoView(model: model.buildInfoModel())
-            Spacer()
         }
         .background(Color.defaultBackground)
+        .cornerRadius(10)
+        .frame(maxHeight: .infinity, alignment: .top)
     }
 }

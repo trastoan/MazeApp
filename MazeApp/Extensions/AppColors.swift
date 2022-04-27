@@ -46,4 +46,7 @@ extension UIColor {
 
     static let appMainColor = UIColor(light: UIColor(red: 0.24, green: 0.58, blue: 0.55, alpha: 1),
                                       dark:  UIColor(red: 0.24, green: 0.58, blue: 0.55, alpha: 1))
+
+    static let segmentedBackground = UIColor(light: UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1),
+                                             dark:  UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 1))
 }

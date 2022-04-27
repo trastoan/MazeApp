@@ -97,9 +97,14 @@ class ShowDetailViewModel: ShowDetailViewModelProtocol {
 
     func buildInfoViewModel() -> InfoViewModel {
         return InfoViewModel(summary: show.summary?.removeHTMLTags() ?? "None Available",
-                                          days: show.schedule.days.reduce("", { $0 + " | " + $1.prefix(3)}),
+                                          days: formatShowDays(),
                                           rating: "\(show.rating?.average ?? 0)",
-                                          time: show.schedule.time)
+                                          time: show.schedule?.time ?? "")
+    }
+
+    func formatShowDays() -> String {
+        guard let days = show.schedule?.days else { return "" }
+        return days.reduce("", { $0 + " | " + $1.prefix(3)})
     }
 
     func buildHeaderViewModel() -> ShowHeaderViewModel {
