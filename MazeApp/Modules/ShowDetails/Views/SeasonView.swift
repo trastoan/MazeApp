@@ -15,10 +15,12 @@ struct SeasonView: View {
 
     var body: some View {
         VStack(alignment: .leading){
-            HeaderView(name: "Season \(season.number)")
+            HeaderView(isExpanded: $isExpanded, name: "Season \(season.number)")
                 .contentShape(Rectangle())
                 .onTapGesture {
-                    isExpanded.toggle()
+                    withAnimation(.easeInOut(duration: 0.3)) {
+                        isExpanded.toggle()
+                    }
                 }
             if isExpanded {
                 ForEach(season.episodes) { episode in
@@ -33,6 +35,7 @@ struct SeasonView: View {
 }
 
 struct HeaderView: View {
+    @Binding var isExpanded: Bool
     var name: String
 
     var body: some View {
@@ -40,7 +43,7 @@ struct HeaderView: View {
             Text(name)
                 .font(.title)
                 .bold()
-            Image(systemName: "chevron.down")
+            Image(systemName: isExpanded ? "chevron.up" : "chevron.down")
             Spacer()
         }
         .padding()
