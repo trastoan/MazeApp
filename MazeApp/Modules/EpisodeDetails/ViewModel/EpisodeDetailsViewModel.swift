@@ -7,7 +7,7 @@
 
 import Foundation
 protocol EpisodeDetailsViewModelProtocol {
-    func buildInfoModel() -> ShowInfoViewModel
+    func buildInfoModel() -> InfoViewModel
     func buildHeaderModel() -> EpisodeHeaderViewModel
 }
 
@@ -21,8 +21,8 @@ class EpisodeDetailsViewModel: EpisodeDetailsViewModelProtocol {
     }
 
 
-    func buildInfoModel() -> ShowInfoViewModel {
-        return ShowInfoViewModel(summary: episode.summary?.removeHTMLTags() ?? "",
+    func buildInfoModel() -> InfoViewModel {
+        return InfoViewModel(summary: episode.summary?.removeHTMLTags() ?? "",
                                  days: episode.airdate ?? "",
                                  rating: "\(episode.rating?.average ?? 0.0)",
                                  time: episode.airtime ?? "")

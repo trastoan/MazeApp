@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct ShowInfoView: View {
-    var model: ShowInfoViewModel
+struct InfoView: View {
+    var model: InfoViewModel
 
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {

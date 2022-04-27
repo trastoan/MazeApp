@@ -15,7 +15,7 @@ struct EpisodeDetailsView: View {
         VStack {
             EpisodeHeaderView(model: model.buildHeaderModel())
                 .frame(height: 250)
-            ShowInfoView(model: model.buildInfoModel())
+            InfoView(model: model.buildInfoModel())
             Spacer()
         }
         .background(Color.defaultBackground)

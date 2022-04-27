@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ShowInfoViewModel {
+class InfoViewModel {
 
     var summary: String
     var days: String

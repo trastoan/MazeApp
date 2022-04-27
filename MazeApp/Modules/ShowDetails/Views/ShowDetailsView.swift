@@ -19,7 +19,7 @@ struct ShowDetailsView<ViewModel>: View where ViewModel: ShowDetailViewModelProt
                 VStack {
                     ShowHeaderView(model: model.buildHeaderViewModel())
                         .frame(height: 250)
-                    ShowInfoView(model: model.buildInfoViewModel())
+                    InfoView(model: model.buildInfoViewModel())
                     ForEach(model.seasons) {
                         SeasonView(season: $0, onEpisodeSelect: { episode in
                             model.presentEpisodeDetails(episode)

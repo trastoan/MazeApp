@@ -14,7 +14,7 @@ protocol ShowDetailViewModelProtocol: ObservableObject {
     var title: String { get }
     var seasons: [Season] { get }
 
-    func buildInfoViewModel() -> ShowInfoViewModel
+    func buildInfoViewModel() -> InfoViewModel
     func buildHeaderViewModel() -> ShowHeaderViewModel
     func presentEpisodeDetails(_ episode: Episode)
 }
@@ -95,8 +95,8 @@ class ShowDetailViewModel: ShowDetailViewModelProtocol {
         return season
     }
 
-    func buildInfoViewModel() -> ShowInfoViewModel {
-        return ShowInfoViewModel(summary: show.summary?.removeHTMLTags() ?? "None Available",
+    func buildInfoViewModel() -> InfoViewModel {
+        return InfoViewModel(summary: show.summary?.removeHTMLTags() ?? "None Available",
                                           days: show.schedule.days.reduce("", { $0 + " | " + $1.prefix(3)}),
                                           rating: "\(show.rating?.average ?? 0)",
                                           time: show.schedule.time)
