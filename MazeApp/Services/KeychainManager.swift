@@ -66,4 +66,20 @@ class KeychainService {
         return result as? Data
     }
 
+    func delete(service: String, account: String = KeychainService.account) -> Bool {
+        let query = [
+               kSecAttrService: service,
+               kSecAttrAccount: account,
+               kSecClass: kSecClassGenericPassword
+           ] as CFDictionary
+
+        let status = SecItemDelete(query)
+
+        if status != errSecSuccess {
+            print("Error: \(status)")
+            return false
+        }
+        return true
+    }
+
 }

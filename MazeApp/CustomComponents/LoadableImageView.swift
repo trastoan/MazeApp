@@ -23,7 +23,6 @@ class LoadableImageView: UIImageView {
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        loadingIndicator.setupOn(view: self)
     }
 
     func loadImage(withURL url: URL?, defaultImage: UIImage = UIImage(named: "NoPoster")!) {

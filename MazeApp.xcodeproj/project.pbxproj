@@ -45,13 +45,13 @@
 		DA18D3C428198ED1006816CB /* GuardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3C328198ED1006816CB /* GuardViewController.swift */; };
 		DA18D3C628198EDF006816CB /* GuardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3C528198EDF006816CB /* GuardViewModel.swift */; };
 		DA18D3C828198EE9006816CB /* GuardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3C728198EE9006816CB /* GuardRouter.swift */; };
+		DA18D3CF2819DD60006816CB /* ArrayExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3CE2819DD60006816CB /* ArrayExtensionTests.swift */; };
+		DA18D3D52819E020006816CB /* KeychainServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3D42819E020006816CB /* KeychainServiceTests.swift */; };
 		DAA95F5B2815E7890085388A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95F5A2815E7890085388A /* AppDelegate.swift */; };
 		DAA95F5D2815E7890085388A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95F5C2815E7890085388A /* SceneDelegate.swift */; };
 		DAA95F642815E78D0085388A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA95F632815E78D0085388A /* Assets.xcassets */; };
 		DAA95F672815E78D0085388A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA95F652815E78D0085388A /* LaunchScreen.storyboard */; };
 		DAA95F722815E78D0085388A /* MazeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95F712815E78D0085388A /* MazeAppTests.swift */; };
-		DAA95F7C2815E78D0085388A /* MazeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95F7B2815E78D0085388A /* MazeAppUITests.swift */; };
-		DAA95F7E2815E78D0085388A /* MazeAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95F7D2815E78D0085388A /* MazeAppUITestsLaunchTests.swift */; };
 		DAA95F982815EEB10085388A /* MazeNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = DAA95F972815EEB10085388A /* MazeNetwork */; };
 		DAA95F9B2815F2070085388A /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = DAA95F9A2815F2070085388A /* Nuke */; };
 		DAA95FA32815F3980085388A /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95FA22815F3980085388A /* Show.swift */; };
@@ -92,13 +92,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		DAA95F6E2815E78D0085388A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DAA95F4F2815E7890085388A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DAA95F562815E7890085388A;
-			remoteInfo = MazeApp;
-		};
-		DAA95F782815E78D0085388A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DAA95F4F2815E7890085388A /* Project object */;
 			proxyType = 1;
@@ -146,6 +139,8 @@
 		DA18D3C328198ED1006816CB /* GuardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardViewController.swift; sourceTree = "<group>"; };
 		DA18D3C528198EDF006816CB /* GuardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardViewModel.swift; sourceTree = "<group>"; };
 		DA18D3C728198EE9006816CB /* GuardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardRouter.swift; sourceTree = "<group>"; };
+		DA18D3CE2819DD60006816CB /* ArrayExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensionTests.swift; sourceTree = "<group>"; };
+		DA18D3D42819E020006816CB /* KeychainServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainServiceTests.swift; sourceTree = "<group>"; };
 		DAA95F572815E7890085388A /* MazeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MazeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA95F5A2815E7890085388A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAA95F5C2815E7890085388A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,9 +149,6 @@
 		DAA95F682815E78D0085388A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAA95F6D2815E78D0085388A /* MazeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA95F712815E78D0085388A /* MazeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeAppTests.swift; sourceTree = "<group>"; };
-		DAA95F772815E78D0085388A /* MazeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAA95F7B2815E78D0085388A /* MazeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeAppUITests.swift; sourceTree = "<group>"; };
-		DAA95F7D2815E78D0085388A /* MazeAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazeAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DAA95F952815EE620085388A /* MazeNetwork */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MazeNetwork; sourceTree = "<group>"; };
 		DAA95FA22815F3980085388A /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
 		DAA95FA42815F3B50085388A /* ShowEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowEndpoint.swift; sourceTree = "<group>"; };
@@ -205,13 +197,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DAA95F6A2815E78D0085388A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DAA95F742815E78D0085388A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -432,13 +417,28 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		DA18D3CD2819DD4D006816CB /* ExtensionsTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA18D3CE2819DD60006816CB /* ArrayExtensionTests.swift */,
+			);
+			path = ExtensionsTests;
+			sourceTree = "<group>";
+		};
+		DA18D3D32819E010006816CB /* ServicesTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA18D3D42819E020006816CB /* KeychainServiceTests.swift */,
+			);
+			path = ServicesTests;
+			sourceTree = "<group>";
+		};
 		DAA95F4E2815E7890085388A = {
 			isa = PBXGroup;
 			children = (
 				DAA95F942815EE620085388A /* Packages */,
 				DAA95F592815E7890085388A /* MazeApp */,
 				DAA95F702815E78D0085388A /* MazeAppTests */,
-				DAA95F7A2815E78D0085388A /* MazeAppUITests */,
 				DAA95F582815E7890085388A /* Products */,
 				DAA95F962815EEB10085388A /* Frameworks */,
 			);
@@ -449,7 +449,6 @@
 			children = (
 				DAA95F572815E7890085388A /* MazeApp.app */,
 				DAA95F6D2815E78D0085388A /* MazeAppTests.xctest */,
-				DAA95F772815E78D0085388A /* MazeAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -474,18 +473,11 @@
 		DAA95F702815E78D0085388A /* MazeAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				DA18D3D32819E010006816CB /* ServicesTests */,
+				DA18D3CD2819DD4D006816CB /* ExtensionsTests */,
 				DAA95F712815E78D0085388A /* MazeAppTests.swift */,
 			);
 			path = MazeAppTests;
-			sourceTree = "<group>";
-		};
-		DAA95F7A2815E78D0085388A /* MazeAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				DAA95F7B2815E78D0085388A /* MazeAppUITests.swift */,
-				DAA95F7D2815E78D0085388A /* MazeAppUITestsLaunchTests.swift */,
-			);
-			path = MazeAppUITests;
 			sourceTree = "<group>";
 		};
 		DAA95F942815EE620085388A /* Packages */ = {
@@ -754,24 +746,6 @@
 			productReference = DAA95F6D2815E78D0085388A /* MazeAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DAA95F762815E78D0085388A /* MazeAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DAA95F872815E78D0085388A /* Build configuration list for PBXNativeTarget "MazeAppUITests" */;
-			buildPhases = (
-				DAA95F732815E78D0085388A /* Sources */,
-				DAA95F742815E78D0085388A /* Frameworks */,
-				DAA95F752815E78D0085388A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DAA95F792815E78D0085388A /* PBXTargetDependency */,
-			);
-			name = MazeAppUITests;
-			productName = MazeAppUITests;
-			productReference = DAA95F772815E78D0085388A /* MazeAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -786,10 +760,6 @@
 						CreatedOnToolsVersion = 13.3.1;
 					};
 					DAA95F6C2815E78D0085388A = {
-						CreatedOnToolsVersion = 13.3.1;
-						TestTargetID = DAA95F562815E7890085388A;
-					};
-					DAA95F762815E78D0085388A = {
 						CreatedOnToolsVersion = 13.3.1;
 						TestTargetID = DAA95F562815E7890085388A;
 					};
@@ -813,7 +783,6 @@
 			targets = (
 				DAA95F562815E7890085388A /* MazeApp */,
 				DAA95F6C2815E78D0085388A /* MazeAppTests */,
-				DAA95F762815E78D0085388A /* MazeAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -829,13 +798,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DAA95F6B2815E78D0085388A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DAA95F752815E78D0085388A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -950,16 +912,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA18D3D52819E020006816CB /* KeychainServiceTests.swift in Sources */,
 				DAA95F722815E78D0085388A /* MazeAppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DAA95F732815E78D0085388A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DAA95F7C2815E78D0085388A /* MazeAppUITests.swift in Sources */,
-				DAA95F7E2815E78D0085388A /* MazeAppUITestsLaunchTests.swift in Sources */,
+				DA18D3CF2819DD60006816CB /* ArrayExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -970,11 +925,6 @@
 			isa = PBXTargetDependency;
 			target = DAA95F562815E7890085388A /* MazeApp */;
 			targetProxy = DAA95F6E2815E78D0085388A /* PBXContainerItemProxy */;
-		};
-		DAA95F792815E78D0085388A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DAA95F562815E7890085388A /* MazeApp */;
-			targetProxy = DAA95F782815E78D0085388A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1198,42 +1148,6 @@
 			};
 			name = Release;
 		};
-		DAA95F882815E78D0085388A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 489VWS49NR;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yuri.MazeAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MazeApp;
-			};
-			name = Debug;
-		};
-		DAA95F892815E78D0085388A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 489VWS49NR;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yuri.MazeAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MazeApp;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1260,15 +1174,6 @@
 			buildConfigurations = (
 				DAA95F852815E78D0085388A /* Debug */,
 				DAA95F862815E78D0085388A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DAA95F872815E78D0085388A /* Build configuration list for PBXNativeTarget "MazeAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DAA95F882815E78D0085388A /* Debug */,
-				DAA95F892815E78D0085388A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
