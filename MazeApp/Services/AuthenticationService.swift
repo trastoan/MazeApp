@@ -19,13 +19,13 @@ class AuthenticationService {
         })
     }
 
-    func savePin(_ value: String) -> Bool {
+    func savePin(_ value: String, service: String = KeychainService.pinService) -> Bool {
         guard let data = value.data(using: .utf8) else { return false }
-        return KeychainService.shared.save(data, service: KeychainService.pinService)
+        return KeychainService.shared.save(data, service: service)
     }
 
-    func pinAuthentication(_ pin: String) -> Bool {
-        guard let data = KeychainService.shared.read(service: KeychainService.pinService),
+    func pinAuthentication(_ pin: String, service: String = KeychainService.pinService) -> Bool {
+        guard let data = KeychainService.shared.read(service: service),
               let storedPin = String(data: data, encoding: .utf8) else {
             return false
         }
