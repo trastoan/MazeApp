@@ -21,7 +21,7 @@ struct SettingsView: View {
                     .tint(.appMainColor)
                 if model.guardEnabled {
                     Button {
-                        model.changeBiometricStatus()
+                        Task { await model.changeBiometricStatus() }
                     } label: {
                         Text("\(model.biometricsEnabled ? "Disable" : "Enable") Biometrics")
                     }

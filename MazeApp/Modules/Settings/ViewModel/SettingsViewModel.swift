@@ -8,9 +8,9 @@
 import Foundation
 
 class SettingsViewModel: ObservableObject {
-    var router: SettingsRouter?
+    var router: SettingsRouterProtocol?
     var settingService: SettingServices
-    var authenticationService: AuthenticationService
+    var authenticationService: AuthenticationServiceProtocol
 
     @Published var guardEnabled = false {
         didSet {
@@ -25,7 +25,7 @@ class SettingsViewModel: ObservableObject {
         }
     }
 
-    init(settings: SettingServices = SettingServices(), authService: AuthenticationService = AuthenticationService()) {
+    init(settings: SettingServices = SettingServices(), authService: AuthenticationServiceProtocol = AuthenticationService()) {
         settingService = settings
         authenticationService = authService
         guardEnabled = settingService.authenticationEnabled
@@ -33,11 +33,9 @@ class SettingsViewModel: ObservableObject {
     }
 
     @MainActor
-    func changeBiometricStatus() {
+    func changeBiometricStatus() async {
         if !biometricsEnabled {
-            Task {
-                biometricsEnabled = await authenticationService.biometricAuthentication()
-            }
+            biometricsEnabled = await authenticationService.biometricAuthentication()
         } else {
             biometricsEnabled.toggle()
         }

@@ -5,8 +5,6 @@
 //  Created by Yuri on 27/04/22.
 //
 
-import Foundation
-
 import XCTest
 @testable import MazeApp
 

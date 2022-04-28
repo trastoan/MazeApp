@@ -8,10 +8,15 @@
 import UIKit
 import SwiftUI
 
-class SettingsRouter {
+protocol SettingsRouterProtocol {
+    static func assembleModule() -> UIViewController
+    func registerNewPin()
+}
+
+class SettingsRouter: SettingsRouterProtocol {
     var viewController: UIViewController?
 
-    static func assembleModule() -> UIHostingController<SettingsView> {
+    static func assembleModule() -> UIViewController {
         let model = SettingsViewModel()
         let router = SettingsRouter()
         let view = SettingsView(with: model)

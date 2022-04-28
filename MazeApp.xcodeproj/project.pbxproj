@@ -50,6 +50,10 @@
 		DA18D3DB2819EA99006816CB /* GuardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3DA2819EA99006816CB /* GuardViewModelTests.swift */; };
 		DA18D3DD2819EE40006816CB /* SettingServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3DC2819EE3E006816CB /* SettingServices.swift */; };
 		DA18D3E02819F881006816CB /* GuardModelSpies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3DF2819F881006816CB /* GuardModelSpies.swift */; };
+		DA670678281A0A86003B37A7 /* PinRegistrationModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA670677281A0A86003B37A7 /* PinRegistrationModelTests.swift */; };
+		DA67067A281A0AE8003B37A7 /* PinRegistrationModelSpies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA670679281A0AE8003B37A7 /* PinRegistrationModelSpies.swift */; };
+		DA67067D281A1F3B003B37A7 /* SettingsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67067C281A1F3B003B37A7 /* SettingsViewModelTests.swift */; };
+		DA67067F281A201E003B37A7 /* SettingsSpies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67067E281A201E003B37A7 /* SettingsSpies.swift */; };
 		DAA95F5B2815E7890085388A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95F5A2815E7890085388A /* AppDelegate.swift */; };
 		DAA95F5D2815E7890085388A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95F5C2815E7890085388A /* SceneDelegate.swift */; };
 		DAA95F642815E78D0085388A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA95F632815E78D0085388A /* Assets.xcassets */; };
@@ -147,6 +151,10 @@
 		DA18D3DA2819EA99006816CB /* GuardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardViewModelTests.swift; sourceTree = "<group>"; };
 		DA18D3DC2819EE3E006816CB /* SettingServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingServices.swift; sourceTree = "<group>"; };
 		DA18D3DF2819F881006816CB /* GuardModelSpies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardModelSpies.swift; sourceTree = "<group>"; };
+		DA670677281A0A86003B37A7 /* PinRegistrationModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinRegistrationModelTests.swift; sourceTree = "<group>"; };
+		DA670679281A0AE8003B37A7 /* PinRegistrationModelSpies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinRegistrationModelSpies.swift; sourceTree = "<group>"; };
+		DA67067C281A1F3B003B37A7 /* SettingsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelTests.swift; sourceTree = "<group>"; };
+		DA67067E281A201E003B37A7 /* SettingsSpies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSpies.swift; sourceTree = "<group>"; };
 		DAA95F572815E7890085388A /* MazeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MazeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA95F5A2815E7890085388A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAA95F5C2815E7890085388A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -444,6 +452,8 @@
 		DA18D3D82819EA81006816CB /* ModuleTests */ = {
 			isa = PBXGroup;
 			children = (
+				DA67067B281A1F2B003B37A7 /* Settings */,
+				DA670676281A0A73003B37A7 /* PinRegistration */,
 				DA18D3D92819EA88006816CB /* Guard */,
 			);
 			path = ModuleTests;
@@ -453,7 +463,6 @@
 			isa = PBXGroup;
 			children = (
 				DA18D3DE2819F871006816CB /* GuardModel */,
-				DA18D3DA2819EA99006816CB /* GuardViewModelTests.swift */,
 			);
 			path = Guard;
 			sourceTree = "<group>";
@@ -461,9 +470,28 @@
 		DA18D3DE2819F871006816CB /* GuardModel */ = {
 			isa = PBXGroup;
 			children = (
+				DA18D3DA2819EA99006816CB /* GuardViewModelTests.swift */,
 				DA18D3DF2819F881006816CB /* GuardModelSpies.swift */,
 			);
 			path = GuardModel;
+			sourceTree = "<group>";
+		};
+		DA670676281A0A73003B37A7 /* PinRegistration */ = {
+			isa = PBXGroup;
+			children = (
+				DA670677281A0A86003B37A7 /* PinRegistrationModelTests.swift */,
+				DA670679281A0AE8003B37A7 /* PinRegistrationModelSpies.swift */,
+			);
+			path = PinRegistration;
+			sourceTree = "<group>";
+		};
+		DA67067B281A1F2B003B37A7 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DA67067C281A1F3B003B37A7 /* SettingsViewModelTests.swift */,
+				DA67067E281A201E003B37A7 /* SettingsSpies.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		DAA95F4E2815E7890085388A = {
@@ -945,12 +973,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA670678281A0A86003B37A7 /* PinRegistrationModelTests.swift in Sources */,
+				DA67067A281A0AE8003B37A7 /* PinRegistrationModelSpies.swift in Sources */,
 				DA18D3D52819E020006816CB /* KeychainServiceTests.swift in Sources */,
+				DA67067F281A201E003B37A7 /* SettingsSpies.swift in Sources */,
 				DAA95F722815E78D0085388A /* MazeAppTests.swift in Sources */,
 				DA18D3DB2819EA99006816CB /* GuardViewModelTests.swift in Sources */,
 				DA18D3D72819E5BA006816CB /* AuthenticationServiceTests.swift in Sources */,
 				DA18D3E02819F881006816CB /* GuardModelSpies.swift in Sources */,
 				DA18D3CF2819DD60006816CB /* ArrayExtensionTests.swift in Sources */,
+				DA67067D281A1F3B003B37A7 /* SettingsViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

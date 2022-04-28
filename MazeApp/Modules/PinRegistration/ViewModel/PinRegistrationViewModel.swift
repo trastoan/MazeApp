@@ -17,11 +17,11 @@ protocol PinRegistrationViewModelProtocol {
 class PinRegistrationViewModel: PinRegistrationViewModelProtocol {
     var router: PinRegistrationRouterProtocol
     var failedConfirmation: (() -> Void)?
-    var authService: AuthenticationService
+    var authService: AuthenticationServiceProtocol
 
-    private var registeredPin: String
+    var registeredPin: String
 
-    init(router: PinRegistrationRouterProtocol, registeredPin: String = "", auth: AuthenticationService = AuthenticationService()) {
+    init(router: PinRegistrationRouterProtocol, registeredPin: String = "", auth: AuthenticationServiceProtocol = AuthenticationService()) {
         self.router = router
         self.registeredPin = registeredPin
         self.authService = auth
@@ -37,7 +37,7 @@ class PinRegistrationViewModel: PinRegistrationViewModelProtocol {
 
     func checkPin(_ value: String) {
         if registeredPin == value {
-            _ = authService.savePin(value)
+            _ = authService.savePin(value, service: KeychainService.pinService)
             router.dismissController()
         } else {
             failedConfirmation?()
