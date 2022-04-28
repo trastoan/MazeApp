@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 
 public protocol HTTPClient {
     func requestObject<Model: Decodable>(endpoint: ServiceEndpoint) async throws -> Model
@@ -14,6 +13,7 @@ public protocol HTTPClient {
 
 public enum HTTPClientError: Error, Equatable {
     case urlCreation
+    case invalidObject
 }
 
 public struct HTTPWorker: HTTPClient {
@@ -34,8 +34,7 @@ public struct HTTPWorker: HTTPClient {
             let result = try JSONDecoder().decode(Model.self, from: data)
             return result
         } catch {
-            print(error)
-            throw error
+            throw HTTPClientError.invalidObject
         }
 
     }

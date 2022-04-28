@@ -1,0 +1,428 @@
+[
+    {
+        "self": false,
+        "voice": false,
+        "_links": {
+            "show": {
+                "href": "https://api.tvmaze.com/shows/1"
+            },
+            "character": {
+                "href": "https://api.tvmaze.com/characters/1"
+            }
+        },
+        "_embedded": {
+            "show": {
+                "id": 1,
+                "url": "https://www.tvmaze.com/shows/1/under-the-dome",
+                "name": "Under the Dome",
+                "type": "Scripted",
+                "language": "English",
+                "genres": [
+                    "Drama",
+                    "Science-Fiction",
+                    "Thriller"
+                ],
+                "status": "Ended",
+                "runtime": 60,
+                "averageRuntime": 60,
+                "premiered": "2013-06-24",
+                "ended": "2015-09-10",
+                "officialSite": "http://www.cbs.com/shows/under-the-dome/",
+                "schedule": {
+                    "time": "22:00",
+                    "days": [
+                        "Thursday"
+                    ]
+                },
+                "rating": {
+                    "average": 6.5
+                },
+                "weight": 98,
+                "network": {
+                    "id": 2,
+                    "name": "CBS",
+                    "country": {
+                        "name": "United States",
+                        "code": "US",
+                        "timezone": "America/New_York"
+                    },
+                    "officialSite": "https://www.cbs.com/"
+                },
+                "webChannel": null,
+                "dvdCountry": null,
+                "externals": {
+                    "tvrage": 25988,
+                    "thetvdb": 264492,
+                    "imdb": "tt1553656"
+                },
+                "image": {
+                    "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/81/202627.jpg",
+                    "original": "https://static.tvmaze.com/uploads/images/original_untouched/81/202627.jpg"
+                },
+                "summary": "<p><b>Under the Dome</b> is the story of a small town that is suddenly and inexplicably sealed off from the rest of the world by an enormous transparent dome. The town's inhabitants must deal with surviving the post-apocalyptic conditions while searching for answers about the dome, where it came from and if and when it will go away.</p>",
+                "updated": 1631010933,
+                "_links": {
+                    "self": {
+                        "href": "https://api.tvmaze.com/shows/1"
+                    },
+                    "previousepisode": {
+                        "href": "https://api.tvmaze.com/episodes/185054"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "self": false,
+        "voice": false,
+        "_links": {
+            "show": {
+                "href": "https://api.tvmaze.com/shows/942"
+            },
+            "character": {
+                "href": "https://api.tvmaze.com/characters/89565"
+            }
+        },
+        "_embedded": {
+            "show": {
+                "id": 942,
+                "url": "https://www.tvmaze.com/shows/942/pan-am",
+                "name": "Pan Am",
+                "type": "Scripted",
+                "language": "English",
+                "genres": [
+                    "Drama",
+                    "Thriller"
+                ],
+                "status": "Ended",
+                "runtime": 60,
+                "averageRuntime": 60,
+                "premiered": "2011-09-25",
+                "ended": "2012-02-19",
+                "officialSite": null,
+                "schedule": {
+                    "time": "22:00",
+                    "days": [
+                        "Sunday"
+                    ]
+                },
+                "rating": {
+                    "average": 7.8
+                },
+                "weight": 49,
+                "network": {
+                    "id": 3,
+                    "name": "ABC",
+                    "country": {
+                        "name": "United States",
+                        "code": "US",
+                        "timezone": "America/New_York"
+                    },
+                    "officialSite": "https://abc.com/"
+                },
+                "webChannel": null,
+                "dvdCountry": null,
+                "externals": {
+                    "tvrage": 28397,
+                    "thetvdb": 247361,
+                    "imdb": "tt1826805"
+                },
+                "image": {
+                    "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/6/16205.jpg",
+                    "original": "https://static.tvmaze.com/uploads/images/original_untouched/6/16205.jpg"
+                },
+                "summary": "<p>Passion, jealousy, espionage. They do it all and they do it at 30,000 feet. Mad Men's style meets Grey's Anatomy's entanglements in this thrilling and highly original new drama from producer Nancy Hult Ganis , writer Jack Orman and director Tommy Schlamme.</p>",
+                "updated": 1617606834,
+                "_links": {
+                    "self": {
+                        "href": "https://api.tvmaze.com/shows/942"
+                    },
+                    "previousepisode": {
+                        "href": "https://api.tvmaze.com/episodes/91568"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "self": false,
+        "voice": false,
+        "_links": {
+            "show": {
+                "href": "https://api.tvmaze.com/shows/2942"
+            },
+            "character": {
+                "href": "https://api.tvmaze.com/characters/164406"
+            }
+        },
+        "_embedded": {
+            "show": {
+                "id": 2942,
+                "url": "https://www.tvmaze.com/shows/2942/childhoods-end",
+                "name": "Childhood's End",
+                "type": "Scripted",
+                "language": "English",
+                "genres": [
+                    "Drama",
+                    "Science-Fiction"
+                ],
+                "status": "Ended",
+                "runtime": 120,
+                "averageRuntime": 120,
+                "premiered": "2015-12-14",
+                "ended": "2015-12-16",
+                "officialSite": "http://www.syfy.com/childhoodsend",
+                "schedule": {
+                    "time": "20:00",
+                    "days": [
+                        "Monday"
+                    ]
+                },
+                "rating": {
+                    "average": 7.4
+                },
+                "weight": 92,
+                "network": {
+                    "id": 16,
+                    "name": "Syfy",
+                    "country": {
+                        "name": "United States",
+                        "code": "US",
+                        "timezone": "America/New_York"
+                    },
+                    "officialSite": null
+                },
+                "webChannel": null,
+                "dvdCountry": null,
+                "externals": {
+                    "tvrage": 35425,
+                    "thetvdb": 296065,
+                    "imdb": "tt4146128"
+                },
+                "image": {
+                    "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/31/78541.jpg",
+                    "original": "https://static.tvmaze.com/uploads/images/original_untouched/31/78541.jpg"
+                },
+                "summary": "<p>Written by Arthur C. Clarke and hailed as a revolutionary work of science fiction since its publishing in 1953, <b>Childhood's End </b>follows the peaceful alien invasion of Earth by the mysterious \"Overlords,\" whose arrival begins decades of apparent utopia under indirect alien rule, at the cost of human identity and culture.</p>",
+                "updated": 1574216870,
+                "_links": {
+                    "self": {
+                        "href": "https://api.tvmaze.com/shows/2942"
+                    },
+                    "previousepisode": {
+                        "href": "https://api.tvmaze.com/episodes/209079"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "self": false,
+        "voice": false,
+        "_links": {
+            "show": {
+                "href": "https://api.tvmaze.com/shows/4730"
+            },
+            "character": {
+                "href": "https://api.tvmaze.com/characters/176889"
+            }
+        },
+        "_embedded": {
+            "show": {
+                "id": 4730,
+                "url": "https://www.tvmaze.com/shows/4730/miami-medical",
+                "name": "Miami Medical",
+                "type": "Scripted",
+                "language": "English",
+                "genres": [],
+                "status": "Ended",
+                "runtime": 60,
+                "averageRuntime": 60,
+                "premiered": "2010-04-02",
+                "ended": "2011-07-02",
+                "officialSite": null,
+                "schedule": {
+                    "time": "21:00",
+                    "days": [
+                        "Friday"
+                    ]
+                },
+                "rating": {
+                    "average": null
+                },
+                "weight": 72,
+                "network": {
+                    "id": 2,
+                    "name": "CBS",
+                    "country": {
+                        "name": "United States",
+                        "code": "US",
+                        "timezone": "America/New_York"
+                    },
+                    "officialSite": "https://www.cbs.com/"
+                },
+                "webChannel": null,
+                "dvdCountry": null,
+                "externals": {
+                    "tvrage": 22781,
+                    "thetvdb": 142561,
+                    "imdb": "tt1406662"
+                },
+                "image": {
+                    "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/21/53020.jpg",
+                    "original": "https://static.tvmaze.com/uploads/images/original_untouched/21/53020.jpg"
+                },
+                "summary": "<p><b>Miami Medical</b> (formerly titled Miami Trauma) is a medical drama television series created by Jeffrey Lieber. It follows the professional and private lives of a team of trauma surgeons. The series was produced by Jerry Bruckheimer Television and Warner Bros. Television. It premiered on CBS on April 2, 2010. In May 2010, CBS announced that the series had been canceled, with the final episode airing on July 2, 2010. (Wikipedia)</p>",
+                "updated": 1533901640,
+                "_links": {
+                    "self": {
+                        "href": "https://api.tvmaze.com/shows/4730"
+                    },
+                    "previousepisode": {
+                        "href": "https://api.tvmaze.com/episodes/302660"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "self": false,
+        "voice": false,
+        "_links": {
+            "show": {
+                "href": "https://api.tvmaze.com/shows/24623"
+            },
+            "character": {
+                "href": "https://api.tvmaze.com/characters/458714"
+            }
+        },
+        "_embedded": {
+            "show": {
+                "id": 24623,
+                "url": "https://www.tvmaze.com/shows/24623/the-brave",
+                "name": "The Brave",
+                "type": "Scripted",
+                "language": "English",
+                "genres": [
+                    "Drama",
+                    "Action",
+                    "War"
+                ],
+                "status": "Ended",
+                "runtime": 60,
+                "averageRuntime": 60,
+                "premiered": "2017-09-25",
+                "ended": "2018-01-29",
+                "officialSite": "https://www.nbc.com/the-brave",
+                "schedule": {
+                    "time": "22:00",
+                    "days": [
+                        "Monday"
+                    ]
+                },
+                "rating": {
+                    "average": 7.7
+                },
+                "weight": 94,
+                "network": {
+                    "id": 1,
+                    "name": "NBC",
+                    "country": {
+                        "name": "United States",
+                        "code": "US",
+                        "timezone": "America/New_York"
+                    },
+                    "officialSite": "https://www.nbc.com/"
+                },
+                "webChannel": null,
+                "dvdCountry": null,
+                "externals": {
+                    "tvrage": null,
+                    "thetvdb": 328517,
+                    "imdb": "tt6461736"
+                },
+                "image": {
+                    "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/123/307553.jpg",
+                    "original": "https://static.tvmaze.com/uploads/images/original_untouched/123/307553.jpg"
+                },
+                "summary": "<p>This fresh, heart-pounding journey into the complex world of America's elite undercover military heroes follows D.I.A. Deputy Director Patricia Campbell and her team of analysts as they wield the world's most advanced surveillance technology from headquarters in D.C. All the while, Adam Dalton and his heroic Special Ops squad of highly trained undercover specialists use their unbreakable bond and commitment to freedom to save lives of innocent people and execute missions in some of the most dangerous places in the world.</p>",
+                "updated": 1573667853,
+                "_links": {
+                    "self": {
+                        "href": "https://api.tvmaze.com/shows/24623"
+                    },
+                    "previousepisode": {
+                        "href": "https://api.tvmaze.com/episodes/1384022"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "self": false,
+        "voice": false,
+        "_links": {
+            "show": {
+                "href": "https://api.tvmaze.com/shows/46073"
+            },
+            "character": {
+                "href": "https://api.tvmaze.com/characters/705966"
+            }
+        },
+        "_embedded": {
+            "show": {
+                "id": 46073,
+                "url": "https://www.tvmaze.com/shows/46073/sexlife",
+                "name": "Sex/Life",
+                "type": "Scripted",
+                "language": "English",
+                "genres": [
+                    "Drama",
+                    "Comedy",
+                    "Adult"
+                ],
+                "status": "Running",
+                "runtime": null,
+                "averageRuntime": 48,
+                "premiered": "2021-06-25",
+                "ended": null,
+                "officialSite": "https://www.netflix.com/title/80991848",
+                "schedule": {
+                    "time": "",
+                    "days": []
+                },
+                "rating": {
+                    "average": 5.1
+                },
+                "weight": 95,
+                "network": null,
+                "webChannel": {
+                    "id": 1,
+                    "name": "Netflix",
+                    "country": null,
+                    "officialSite": "https://www.netflix.com/"
+                },
+                "dvdCountry": null,
+                "externals": {
+                    "tvrage": null,
+                    "thetvdb": 368373,
+                    "imdb": "tt10839422"
+                },
+                "image": {
+                    "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/321/803599.jpg",
+                    "original": "https://static.tvmaze.com/uploads/images/original_untouched/321/803599.jpg"
+                },
+                "summary": "<p><b>Sex/Life</b> is the story of a love triangle between a woman, Billie Connelly, her husband, and her past which takes a deliciously steamy new look at female identity and desire.</p>",
+                "updated": 1634677885,
+                "_links": {
+                    "self": {
+                        "href": "https://api.tvmaze.com/shows/46073"
+                    },
+                    "previousepisode": {
+                        "href": "https://api.tvmaze.com/episodes/2109279"
+                    }
+                }
+            }
+        }
+    }
+]

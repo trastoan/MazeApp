@@ -54,6 +54,16 @@
 		DA67067A281A0AE8003B37A7 /* PinRegistrationModelSpies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA670679281A0AE8003B37A7 /* PinRegistrationModelSpies.swift */; };
 		DA67067D281A1F3B003B37A7 /* SettingsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67067C281A1F3B003B37A7 /* SettingsViewModelTests.swift */; };
 		DA67067F281A201E003B37A7 /* SettingsSpies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67067E281A201E003B37A7 /* SettingsSpies.swift */; };
+		DA670682281A2FD2003B37A7 /* Show.json in Resources */ = {isa = PBXBuildFile; fileRef = DA670681281A2FD2003B37A7 /* Show.json */; };
+		DA670684281A2FE9003B37A7 /* Episode.json in Resources */ = {isa = PBXBuildFile; fileRef = DA670683281A2FE9003B37A7 /* Episode.json */; };
+		DA670686281A2FFE003B37A7 /* Shows.json in Resources */ = {isa = PBXBuildFile; fileRef = DA670685281A2FFE003B37A7 /* Shows.json */; };
+		DA670688281A307E003B37A7 /* People.json in Resources */ = {isa = PBXBuildFile; fileRef = DA670687281A307E003B37A7 /* People.json */; };
+		DA67068A281A30A9003B37A7 /* Peoples.json in Resources */ = {isa = PBXBuildFile; fileRef = DA670689281A30A9003B37A7 /* Peoples.json */; };
+		DA67068D281A3173003B37A7 /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67068C281A3173003B37A7 /* JSONLoader.swift */; };
+		DA670690281A327A003B37A7 /* ShowFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67068F281A327A003B37A7 /* ShowFixtures.swift */; };
+		DA670692281A32C1003B37A7 /* EpisodeFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA670691281A32C1003B37A7 /* EpisodeFixtures.swift */; };
+		DA670694281A3302003B37A7 /* PeopleFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA670693281A3302003B37A7 /* PeopleFixtures.swift */; };
+		DA670696281A3336003B37A7 /* Episodes.json in Resources */ = {isa = PBXBuildFile; fileRef = DA670695281A3336003B37A7 /* Episodes.json */; };
 		DAA95F5B2815E7890085388A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95F5A2815E7890085388A /* AppDelegate.swift */; };
 		DAA95F5D2815E7890085388A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA95F5C2815E7890085388A /* SceneDelegate.swift */; };
 		DAA95F642815E78D0085388A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA95F632815E78D0085388A /* Assets.xcassets */; };
@@ -155,6 +165,16 @@
 		DA670679281A0AE8003B37A7 /* PinRegistrationModelSpies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinRegistrationModelSpies.swift; sourceTree = "<group>"; };
 		DA67067C281A1F3B003B37A7 /* SettingsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelTests.swift; sourceTree = "<group>"; };
 		DA67067E281A201E003B37A7 /* SettingsSpies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSpies.swift; sourceTree = "<group>"; };
+		DA670681281A2FD2003B37A7 /* Show.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Show.json; sourceTree = "<group>"; };
+		DA670683281A2FE9003B37A7 /* Episode.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Episode.json; sourceTree = "<group>"; };
+		DA670685281A2FFE003B37A7 /* Shows.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Shows.json; sourceTree = "<group>"; };
+		DA670687281A307E003B37A7 /* People.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = People.json; sourceTree = "<group>"; };
+		DA670689281A30A9003B37A7 /* Peoples.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Peoples.json; sourceTree = "<group>"; };
+		DA67068C281A3173003B37A7 /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
+		DA67068F281A327A003B37A7 /* ShowFixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowFixtures.swift; sourceTree = "<group>"; };
+		DA670691281A32C1003B37A7 /* EpisodeFixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeFixtures.swift; sourceTree = "<group>"; };
+		DA670693281A3302003B37A7 /* PeopleFixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFixtures.swift; sourceTree = "<group>"; };
+		DA670695281A3336003B37A7 /* Episodes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Episodes.json; sourceTree = "<group>"; };
 		DAA95F572815E7890085388A /* MazeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MazeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA95F5A2815E7890085388A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAA95F5C2815E7890085388A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -494,6 +514,37 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		DA670680281A2FB6003B37A7 /* MockedJsons */ = {
+			isa = PBXGroup;
+			children = (
+				DA670681281A2FD2003B37A7 /* Show.json */,
+				DA670683281A2FE9003B37A7 /* Episode.json */,
+				DA670685281A2FFE003B37A7 /* Shows.json */,
+				DA670687281A307E003B37A7 /* People.json */,
+				DA670689281A30A9003B37A7 /* Peoples.json */,
+				DA670695281A3336003B37A7 /* Episodes.json */,
+			);
+			path = MockedJsons;
+			sourceTree = "<group>";
+		};
+		DA67068B281A3164003B37A7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DA67068C281A3173003B37A7 /* JSONLoader.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DA67068E281A3269003B37A7 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				DA67068F281A327A003B37A7 /* ShowFixtures.swift */,
+				DA670691281A32C1003B37A7 /* EpisodeFixtures.swift */,
+				DA670693281A3302003B37A7 /* PeopleFixtures.swift */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
 		DAA95F4E2815E7890085388A = {
 			isa = PBXGroup;
 			children = (
@@ -534,6 +585,9 @@
 		DAA95F702815E78D0085388A /* MazeAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				DA67068E281A3269003B37A7 /* Fixtures */,
+				DA67068B281A3164003B37A7 /* Utils */,
+				DA670680281A2FB6003B37A7 /* MockedJsons */,
 				DA18D3D82819EA81006816CB /* ModuleTests */,
 				DA18D3D32819E010006816CB /* ServicesTests */,
 				DA18D3CD2819DD4D006816CB /* ExtensionsTests */,
@@ -862,6 +916,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA67068A281A30A9003B37A7 /* Peoples.json in Resources */,
+				DA670696281A3336003B37A7 /* Episodes.json in Resources */,
+				DA670688281A307E003B37A7 /* People.json in Resources */,
+				DA670682281A2FD2003B37A7 /* Show.json in Resources */,
+				DA670686281A2FFE003B37A7 /* Shows.json in Resources */,
+				DA670684281A2FE9003B37A7 /* Episode.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -974,12 +1034,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA670678281A0A86003B37A7 /* PinRegistrationModelTests.swift in Sources */,
+				DA67068D281A3173003B37A7 /* JSONLoader.swift in Sources */,
+				DA670694281A3302003B37A7 /* PeopleFixtures.swift in Sources */,
 				DA67067A281A0AE8003B37A7 /* PinRegistrationModelSpies.swift in Sources */,
 				DA18D3D52819E020006816CB /* KeychainServiceTests.swift in Sources */,
+				DA670692281A32C1003B37A7 /* EpisodeFixtures.swift in Sources */,
 				DA67067F281A201E003B37A7 /* SettingsSpies.swift in Sources */,
 				DAA95F722815E78D0085388A /* MazeAppTests.swift in Sources */,
 				DA18D3DB2819EA99006816CB /* GuardViewModelTests.swift in Sources */,
 				DA18D3D72819E5BA006816CB /* AuthenticationServiceTests.swift in Sources */,
+				DA670690281A327A003B37A7 /* ShowFixtures.swift in Sources */,
 				DA18D3E02819F881006816CB /* GuardModelSpies.swift in Sources */,
 				DA18D3CF2819DD60006816CB /* ArrayExtensionTests.swift in Sources */,
 				DA67067D281A1F3B003B37A7 /* SettingsViewModelTests.swift in Sources */,

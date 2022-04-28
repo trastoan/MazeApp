@@ -1,0 +1,73 @@
+[
+    {
+        "score": 1,
+        "person": {
+            "id": 5348,
+            "url": "https://www.tvmaze.com/people/5348/tom-holland",
+            "name": "Tom Holland",
+            "country": {
+                "name": "United Kingdom",
+                "code": "GB",
+                "timezone": "Europe/London"
+            },
+            "birthday": "1996-06-01",
+            "deathday": null,
+            "gender": "Male",
+            "image": {
+                "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/264/660270.jpg",
+                "original": "https://static.tvmaze.com/uploads/images/original_untouched/264/660270.jpg"
+            },
+            "updated": 1646986274,
+            "_links": {
+                "self": {
+                    "href": "https://api.tvmaze.com/people/5348"
+                }
+            }
+        }
+    },
+    {
+        "score": 0.56568545,
+        "person": {
+            "id": 266733,
+            "url": "https://www.tvmaze.com/people/266733/thomas-d-holland",
+            "name": "Thomas D. Holland",
+            "country": null,
+            "birthday": null,
+            "deathday": null,
+            "gender": "Male",
+            "image": null,
+            "updated": 1587833845,
+            "_links": {
+                "self": {
+                    "href": "https://api.tvmaze.com/people/266733"
+                }
+            }
+        }
+    },
+    {
+        "score": 0.38095236,
+        "person": {
+            "id": 343406,
+            "url": "https://www.tvmaze.com/people/343406/tim-hovland",
+            "name": "Tim Hovland",
+            "country": {
+                "name": "United States",
+                "code": "US",
+                "timezone": "America/New_York"
+            },
+            "birthday": "1959-02-23",
+            "deathday": null,
+            "gender": "Male",
+            "image": {
+                "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/401/1004073.jpg",
+                "original": "https://static.tvmaze.com/uploads/images/original_untouched/401/1004073.jpg"
+            },
+            "updated": 1648355083,
+            "_links": {
+                "self": {
+                    "href": "https://api.tvmaze.com/people/343406"
+                }
+            }
+        }
+    }
+]
