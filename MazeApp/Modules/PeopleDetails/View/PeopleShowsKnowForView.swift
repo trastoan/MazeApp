@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PeopleDetailShowsView: View {
+struct PeopleShowsKnowForView: View {
     var shows: [Show]
     var didSelectShow: ((Show) -> Void)?
 

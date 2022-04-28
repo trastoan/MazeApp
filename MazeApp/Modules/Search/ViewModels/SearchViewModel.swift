@@ -13,7 +13,6 @@ enum SearchType: String {
 }
 
 protocol SearchViewModelProtocol {
-    var router: SearchRouter! { get }
     var numberOfResults: Int { get }
     var searchTypes: [SearchType] { get }
     var title: String { get }
@@ -28,21 +27,23 @@ protocol SearchViewModelProtocol {
 }
 
 class SearchViewModel: SearchViewModelProtocol {
-    private var results: [SearchTableCellModel] = []
+    private var router: SearchRouterProtocol
     private var service: SearchServiceProtocol
+
+    private var results: [SearchTableCellModel] = []
     private var currentSearchType: SearchType = .show
     private var lastShows: [Show] = []
     private var lastPeople: [People] = []
 
-    var router: SearchRouter!
     var title: String { return "Search"}
     var numberOfResults: Int { results.count }
     var searchTypes: [SearchType] { [.show, .people]}
 
     var hasFinishedSearching: (() -> Void)?
 
-    init(with service: SearchServiceProtocol = SearchService()) {
+    init(with service: SearchServiceProtocol = SearchService(), router: SearchRouterProtocol = SearchRouter()) {
         self.service = service
+        self.router = router
     }
 
     func resetSearch() {

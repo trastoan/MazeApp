@@ -28,7 +28,7 @@
 		DA18D3942818D816006816CB /* PeopleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3932818D816006816CB /* PeopleService.swift */; };
 		DA18D3962818F036006816CB /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3952818F036006816CB /* ArrayExtension.swift */; };
 		DA18D39828197F91006816CB /* PeopleDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D39728197F90006816CB /* PeopleDetailHeaderView.swift */; };
-		DA18D39A28197FA2006816CB /* PeopleDetailShowsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D39928197FA2006816CB /* PeopleDetailShowsView.swift */; };
+		DA18D39A28197FA2006816CB /* PeopleShowsKnowForView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D39928197FA2006816CB /* PeopleShowsKnowForView.swift */; };
 		DA18D39C28198308006816CB /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D39B28198308006816CB /* DateExtensions.swift */; };
 		DA18D39E281984B2006816CB /* PeopleDetailsHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D39D281984B2006816CB /* PeopleDetailsHeaderViewModel.swift */; };
 		DA18D3A4281985E6006816CB /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3A3281985E6006816CB /* SettingsRouter.swift */; };
@@ -56,6 +56,11 @@
 		DA5659F1281AB86F000A3F92 /* Images.json in Resources */ = {isa = PBXBuildFile; fileRef = DA5659F0281AB86F000A3F92 /* Images.json */; };
 		DA5659F3281AC9F9000A3F92 /* ShowDetailsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5659F2281AC9F9000A3F92 /* ShowDetailsServiceTests.swift */; };
 		DA5659F6281ACA8E000A3F92 /* SessionMocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5659F5281ACA8E000A3F92 /* SessionMocker.swift */; };
+		DA5659FB281AD008000A3F92 /* SearchSpies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5659FA281AD008000A3F92 /* SearchSpies.swift */; };
+		DA5659FD281AD016000A3F92 /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5659FC281AD016000A3F92 /* SearchViewModelTests.swift */; };
+		DA5659FF281AD505000A3F92 /* ShowSearch.json in Resources */ = {isa = PBXBuildFile; fileRef = DA5659FE281AD505000A3F92 /* ShowSearch.json */; };
+		DA565A01281AD619000A3F92 /* PeopleSearch.json in Resources */ = {isa = PBXBuildFile; fileRef = DA565A00281AD619000A3F92 /* PeopleSearch.json */; };
+		DA565A03281ADBCD000A3F92 /* SearchServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA565A02281ADBCD000A3F92 /* SearchServicesTests.swift */; };
 		DA670678281A0A86003B37A7 /* PinRegistrationModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA670677281A0A86003B37A7 /* PinRegistrationModelTests.swift */; };
 		DA67067A281A0AE8003B37A7 /* PinRegistrationModelSpies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA670679281A0AE8003B37A7 /* PinRegistrationModelSpies.swift */; };
 		DA67067D281A1F3B003B37A7 /* SettingsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67067C281A1F3B003B37A7 /* SettingsViewModelTests.swift */; };
@@ -151,7 +156,7 @@
 		DA18D3932818D816006816CB /* PeopleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleService.swift; sourceTree = "<group>"; };
 		DA18D3952818F036006816CB /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		DA18D39728197F90006816CB /* PeopleDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailHeaderView.swift; sourceTree = "<group>"; };
-		DA18D39928197FA2006816CB /* PeopleDetailShowsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailShowsView.swift; sourceTree = "<group>"; };
+		DA18D39928197FA2006816CB /* PeopleShowsKnowForView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleShowsKnowForView.swift; sourceTree = "<group>"; };
 		DA18D39B28198308006816CB /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		DA18D39D281984B2006816CB /* PeopleDetailsHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailsHeaderViewModel.swift; sourceTree = "<group>"; };
 		DA18D3A3281985E6006816CB /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
@@ -179,6 +184,11 @@
 		DA5659F0281AB86F000A3F92 /* Images.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Images.json; sourceTree = "<group>"; };
 		DA5659F2281AC9F9000A3F92 /* ShowDetailsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsServiceTests.swift; sourceTree = "<group>"; };
 		DA5659F5281ACA8E000A3F92 /* SessionMocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionMocker.swift; sourceTree = "<group>"; };
+		DA5659FA281AD008000A3F92 /* SearchSpies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSpies.swift; sourceTree = "<group>"; };
+		DA5659FC281AD016000A3F92 /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
+		DA5659FE281AD505000A3F92 /* ShowSearch.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ShowSearch.json; sourceTree = "<group>"; };
+		DA565A00281AD619000A3F92 /* PeopleSearch.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PeopleSearch.json; sourceTree = "<group>"; };
+		DA565A02281ADBCD000A3F92 /* SearchServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchServicesTests.swift; sourceTree = "<group>"; };
 		DA670677281A0A86003B37A7 /* PinRegistrationModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinRegistrationModelTests.swift; sourceTree = "<group>"; };
 		DA670679281A0AE8003B37A7 /* PinRegistrationModelSpies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinRegistrationModelSpies.swift; sourceTree = "<group>"; };
 		DA67067C281A1F3B003B37A7 /* SettingsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelTests.swift; sourceTree = "<group>"; };
@@ -333,7 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				DA18D39728197F90006816CB /* PeopleDetailHeaderView.swift */,
-				DA18D39928197FA2006816CB /* PeopleDetailShowsView.swift */,
+				DA18D39928197FA2006816CB /* PeopleShowsKnowForView.swift */,
 				DA18D38C2818D62D006816CB /* PeopleDetailView.swift */,
 			);
 			path = View;
@@ -496,6 +506,7 @@
 		DA18D3D82819EA81006816CB /* ModuleTests */ = {
 			isa = PBXGroup;
 			children = (
+				DA5659F9281ACFF8000A3F92 /* Search */,
 				DA5659EB281AB660000A3F92 /* ShowDetails */,
 				DA5659E6281AB008000A3F92 /* EpisodeDetails */,
 				DA670697281A33C6003B37A7 /* PeopleDetails */,
@@ -541,6 +552,16 @@
 			path = ShowDetails;
 			sourceTree = "<group>";
 		};
+		DA5659F9281ACFF8000A3F92 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				DA5659FA281AD008000A3F92 /* SearchSpies.swift */,
+				DA5659FC281AD016000A3F92 /* SearchViewModelTests.swift */,
+				DA565A02281ADBCD000A3F92 /* SearchServicesTests.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		DA670676281A0A73003B37A7 /* PinRegistration */ = {
 			isa = PBXGroup;
 			children = (
@@ -571,6 +592,8 @@
 				DA6706A5281A3736003B37A7 /* CrewCredits.json */,
 				DA922BF0281A3CA000717967 /* CastCredits.json */,
 				DA5659F0281AB86F000A3F92 /* Images.json */,
+				DA5659FE281AD505000A3F92 /* ShowSearch.json */,
+				DA565A00281AD619000A3F92 /* PeopleSearch.json */,
 			);
 			path = MockedJsons;
 			sourceTree = "<group>";
@@ -682,7 +705,7 @@
 				DA18D3862818D11D006816CB /* PeopleDetails */,
 				DA18D3752818A6AB006816CB /* EpisodeDetails */,
 				DAA95FDD2817414C0085388A /* ShowDetails */,
-				DAA95FC4281611140085388A /* ShowSearch */,
+				DAA95FC4281611140085388A /* Search */,
 				DAA95F9D2815F3500085388A /* ShowsList */,
 			);
 			path = Modules;
@@ -784,7 +807,7 @@
 			path = CustomComponents;
 			sourceTree = "<group>";
 		};
-		DAA95FC4281611140085388A /* ShowSearch */ = {
+		DAA95FC4281611140085388A /* Search */ = {
 			isa = PBXGroup;
 			children = (
 				DAA95FD228162AD30085388A /* ViewModels */,
@@ -792,7 +815,7 @@
 				DAA95FD028162AC00085388A /* Router */,
 				DAA95FCF28162AB60085388A /* Service */,
 			);
-			path = ShowSearch;
+			path = Search;
 			sourceTree = "<group>";
 		};
 		DAA95FCF28162AB60085388A /* Service */ = {
@@ -979,11 +1002,13 @@
 				DA67068A281A30A9003B37A7 /* Peoples.json in Resources */,
 				DA922BF1281A3CA000717967 /* CastCredits.json in Resources */,
 				DA670696281A3336003B37A7 /* Episodes.json in Resources */,
+				DA5659FF281AD505000A3F92 /* ShowSearch.json in Resources */,
 				DA670688281A307E003B37A7 /* People.json in Resources */,
 				DA5659F1281AB86F000A3F92 /* Images.json in Resources */,
 				DA6706A6281A3736003B37A7 /* CrewCredits.json in Resources */,
 				DA670682281A2FD2003B37A7 /* Show.json in Resources */,
 				DA670686281A2FFE003B37A7 /* Shows.json in Resources */,
+				DA565A01281AD619000A3F92 /* PeopleSearch.json in Resources */,
 				DA670684281A2FE9003B37A7 /* Episode.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1031,7 +1056,7 @@
 				DAA95FED2817446D0085388A /* Episodes.swift in Sources */,
 				DA18D3962818F036006816CB /* ArrayExtension.swift in Sources */,
 				DAA95FD428162DE90085388A /* People.swift in Sources */,
-				DA18D39A28197FA2006816CB /* PeopleDetailShowsView.swift in Sources */,
+				DA18D39A28197FA2006816CB /* PeopleShowsKnowForView.swift in Sources */,
 				DA18D3C828198EE9006816CB /* GuardRouter.swift in Sources */,
 				DAA95FCE28162AB10085388A /* SearchService.swift in Sources */,
 				DA18D39828197F91006816CB /* PeopleDetailHeaderView.swift in Sources */,
@@ -1107,8 +1132,11 @@
 				DA18D3D52819E020006816CB /* KeychainServiceTests.swift in Sources */,
 				DA5659F3281AC9F9000A3F92 /* ShowDetailsServiceTests.swift in Sources */,
 				DA670692281A32C1003B37A7 /* EpisodeFixtures.swift in Sources */,
+				DA5659FB281AD008000A3F92 /* SearchSpies.swift in Sources */,
 				DA67067F281A201E003B37A7 /* SettingsSpies.swift in Sources */,
 				DAA95F722815E78D0085388A /* MazeAppTests.swift in Sources */,
+				DA5659FD281AD016000A3F92 /* SearchViewModelTests.swift in Sources */,
+				DA565A03281ADBCD000A3F92 /* SearchServicesTests.swift in Sources */,
 				DA18D3DB2819EA99006816CB /* GuardViewModelTests.swift in Sources */,
 				DA18D3D72819E5BA006816CB /* AuthenticationServiceTests.swift in Sources */,
 				DA670690281A327A003B37A7 /* ShowFixtures.swift in Sources */,

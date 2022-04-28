@@ -8,11 +8,7 @@
 import UIKit
 import Combine
 
-protocol SearchViewProtocol {
-    var model: SearchViewModel! { get }
-}
-
-class SearchView: UIViewController, SearchViewProtocol {
+class SearchView: UIViewController {
     var model: SearchViewModel!
 
     private let table: UITableView = {
@@ -168,6 +164,7 @@ extension SearchView: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.searchController.searchBar.resignFirstResponder()
         model.showDetails(for: indexPath.row)
     }
 

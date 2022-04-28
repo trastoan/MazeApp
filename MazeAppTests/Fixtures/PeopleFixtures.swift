@@ -19,6 +19,10 @@ class PeopleFixtures {
         return people
     }
 
+    static func peopleSearchArray() -> [PeopleSearch] {
+        JSONLoader().loadJson(named: "PeopleSearch")!
+    }
+
     static func people() -> People {
         JSONLoader().loadJson(named: "People")!
     }

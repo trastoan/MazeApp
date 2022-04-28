@@ -17,12 +17,11 @@ class SearchRouter: SearchRouterProtocol {
     private weak var viewController: UIViewController?
 
     static func assembleModule() -> UIViewController {
-        let controller = SearchView()
-        let model = SearchViewModel()
         let router = SearchRouter()
+        let controller = SearchView()
+        let model = SearchViewModel(router: router)
 
         controller.model = model
-        model.router = router
         router.viewController = controller
 
         let nav = UINavigationController(rootViewController: controller)

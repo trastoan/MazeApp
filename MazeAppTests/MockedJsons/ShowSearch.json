@@ -1,0 +1,182 @@
+[
+    {
+        "score": 0.9092903,
+        "show": {
+            "id": 19,
+            "url": "https://www.tvmaze.com/shows/19/supernatural",
+            "name": "Supernatural",
+            "type": "Scripted",
+            "language": "English",
+            "genres": [
+                "Drama",
+                "Action",
+                "Supernatural"
+            ],
+            "status": "Ended",
+            "runtime": 60,
+            "averageRuntime": 60,
+            "premiered": "2005-09-13",
+            "ended": "2020-11-19",
+            "officialSite": "http://www.cwtv.com/shows/supernatural",
+            "schedule": {
+                "time": "20:00",
+                "days": [
+                    "Thursday"
+                ]
+            },
+            "rating": {
+                "average": 8.4
+            },
+            "weight": 98,
+            "network": {
+                "id": 5,
+                "name": "The CW",
+                "country": {
+                    "name": "United States",
+                    "code": "US",
+                    "timezone": "America/New_York"
+                },
+                "officialSite": "https://www.cwtv.com/"
+            },
+            "webChannel": null,
+            "dvdCountry": null,
+            "externals": {
+                "tvrage": 5410,
+                "thetvdb": 78901,
+                "imdb": "tt0460681"
+            },
+            "image": {
+                "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/268/672051.jpg",
+                "original": "https://static.tvmaze.com/uploads/images/original_untouched/268/672051.jpg"
+            },
+            "summary": "<p>This haunting series follows the Winchester brothers as they crisscross the lonely and mysterious back roads of the country in their '67 Chevy Impala, hunting down every evil supernatural force they encounter along the way.</p>",
+            "updated": 1649545465,
+            "_links": {
+                "self": {
+                    "href": "https://api.tvmaze.com/shows/19"
+                },
+                "previousepisode": {
+                    "href": "https://api.tvmaze.com/episodes/1753661"
+                }
+            }
+        }
+    },
+    {
+        "score": 0.86731935,
+        "show": {
+            "id": 13457,
+            "url": "https://www.tvmaze.com/shows/13457/supernatural",
+            "name": "Supernatural",
+            "type": "Scripted",
+            "language": "English",
+            "genres": [
+                "Drama",
+                "Horror",
+                "Supernatural"
+            ],
+            "status": "Ended",
+            "runtime": 50,
+            "averageRuntime": 50,
+            "premiered": "1977-06-11",
+            "ended": "1977-08-06",
+            "officialSite": "http://www.bbc.co.uk/programmes/b04mm2bq",
+            "schedule": {
+                "time": "22:10",
+                "days": [
+                    "Saturday"
+                ]
+            },
+            "rating": {
+                "average": null
+            },
+            "weight": 41,
+            "network": {
+                "id": 12,
+                "name": "BBC One",
+                "country": {
+                    "name": "United Kingdom",
+                    "code": "GB",
+                    "timezone": "Europe/London"
+                },
+                "officialSite": "https://www.bbc.co.uk/bbcone"
+            },
+            "webChannel": null,
+            "dvdCountry": null,
+            "externals": {
+                "tvrage": null,
+                "thetvdb": 74143,
+                "imdb": "tt0396375"
+            },
+            "image": {
+                "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/46/116394.jpg",
+                "original": "https://static.tvmaze.com/uploads/images/original_untouched/46/116394.jpg"
+            },
+            "summary": "<p><b>Supernatural</b> is a British anthology television series that was produced by the BBC in 1977. The series consisted of 8 episodes and was broadcast on BBC1. In each episode, a different prospective member of the \"Club of the Damned\" would be required to tell a horror story, and their application for membership would be judged on how frightening the story was.</p>",
+            "updated": 1650054744,
+            "_links": {
+                "self": {
+                    "href": "https://api.tvmaze.com/shows/13457"
+                },
+                "previousepisode": {
+                    "href": "https://api.tvmaze.com/episodes/631179"
+                }
+            }
+        }
+    },
+    {
+        "score": 0.7002524,
+        "show": {
+            "id": 59302,
+            "url": "https://www.tvmaze.com/shows/59302/supernatural-academy",
+            "name": "Supernatural Academy",
+            "type": "Animation",
+            "language": "English",
+            "genres": [],
+            "status": "Running",
+            "runtime": null,
+            "averageRuntime": 22,
+            "premiered": "2022-01-20",
+            "ended": null,
+            "officialSite": "https://www.peacocktv.com/watch-online/tv/supernatural-academy/9204574821467398112",
+            "schedule": {
+                "time": "",
+                "days": []
+            },
+            "rating": {
+                "average": null
+            },
+            "weight": 93,
+            "network": null,
+            "webChannel": {
+                "id": 347,
+                "name": "Peacock",
+                "country": {
+                    "name": "United States",
+                    "code": "US",
+                    "timezone": "America/New_York"
+                },
+                "officialSite": "https://www.peacocktv.com/"
+            },
+            "dvdCountry": null,
+            "externals": {
+                "tvrage": null,
+                "thetvdb": null,
+                "imdb": null
+            },
+            "image": {
+                "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/389/973791.jpg",
+                "original": "https://static.tvmaze.com/uploads/images/original_untouched/389/973791.jpg"
+            },
+            "summary": "<p>Separated at birth and growing up in diametrically opposite environments, twin werewolves are reunited at the <b>Supernatural Academy</b> and learn that they are dragon-marked. Cursed to serve the evil Dragon King, these adversarial sisters must learn to get over their differences and trust each other to save themselves and the world.</p>",
+            "updated": 1642931522,
+            "_links": {
+                "self": {
+                    "href": "https://api.tvmaze.com/shows/59302"
+                },
+                "previousepisode": {
+                    "href": "https://api.tvmaze.com/episodes/2261198"
+                }
+            }
+        }
+    }
+]

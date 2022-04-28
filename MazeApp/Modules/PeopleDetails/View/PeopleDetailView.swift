@@ -18,7 +18,7 @@ struct PeopleDetailView<ViewModel>: View where ViewModel: PeopleViewModelProtoco
             VStack {
                 PeopleDetailHeaderView(model: model.buildHeaderModel())
                 if model.shows.count > 1 {
-                    PeopleDetailShowsView(shows: model.shows) { model.presentShowDetail(show: $0) }
+                    PeopleShowsKnowForView(shows: model.shows) { model.presentShowDetail(show: $0) }
                 }
                 Spacer()
             }
