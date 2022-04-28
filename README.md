@@ -12,7 +12,7 @@ A app to browser for shows and actors, no especial build instructions needed
 
 # <a name="h_built_with"></a>Built With
 
-- MVVM + Router Architecture
+- MVVM + Router
 - Nuke for all images downloads and cache
 - SwiftUI & UIKit
 
