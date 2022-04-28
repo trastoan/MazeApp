@@ -1,0 +1,277 @@
+
+[
+    {
+        "type": "Executive Producer",
+        "_links": {
+            "show": {
+                "href": "https://api.tvmaze.com/shows/30"
+            }
+        },
+        "_embedded": {
+            "show": {
+                "id": 30,
+                "url": "https://www.tvmaze.com/shows/30/american-horror-story",
+                "name": "American Horror Story",
+                "type": "Scripted",
+                "language": "English",
+                "genres": [
+                    "Drama",
+                    "Horror",
+                    "Thriller"
+                ],
+                "status": "Running",
+                "runtime": 60,
+                "averageRuntime": 61,
+                "premiered": "2011-10-05",
+                "ended": null,
+                "officialSite": "http://www.fxnetworks.com/shows/american-horror-story",
+                "schedule": {
+                    "time": "22:00",
+                    "days": [
+                        "Wednesday"
+                    ]
+                },
+                "rating": {
+                    "average": 7.7
+                },
+                "weight": 99,
+                "network": {
+                    "id": 13,
+                    "name": "FX",
+                    "country": {
+                        "name": "United States",
+                        "code": "US",
+                        "timezone": "America/New_York"
+                    },
+                    "officialSite": null
+                },
+                "webChannel": null,
+                "dvdCountry": null,
+                "externals": {
+                    "tvrage": 28776,
+                    "thetvdb": 250487,
+                    "imdb": "tt1844624"
+                },
+                "image": {
+                    "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/348/870947.jpg",
+                    "original": "https://static.tvmaze.com/uploads/images/original_untouched/348/870947.jpg"
+                },
+                "summary": "<p><b>American Horror Story </b>is an horror television anthology series. Each season is conceived as a self-contained miniseries, following a disparate set of characters and settings, and a storyline with its own beginning, middle, and end. While some actors appear for more than one year, they play completely different roles in each season.</p>",
+                "updated": 1650364058,
+                "_links": {
+                    "self": {
+                        "href": "https://api.tvmaze.com/shows/30"
+                    },
+                    "previousepisode": {
+                        "href": "https://api.tvmaze.com/episodes/2182799"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "type": "Co-Executive Producer",
+        "_links": {
+            "show": {
+                "href": "https://api.tvmaze.com/shows/30"
+            }
+        },
+        "_embedded": {
+            "show": {
+                "id": 30,
+                "url": "https://www.tvmaze.com/shows/30/american-horror-story",
+                "name": "American Horror Story",
+                "type": "Scripted",
+                "language": "English",
+                "genres": [
+                    "Drama",
+                    "Horror",
+                    "Thriller"
+                ],
+                "status": "Running",
+                "runtime": 60,
+                "averageRuntime": 61,
+                "premiered": "2011-10-05",
+                "ended": null,
+                "officialSite": "http://www.fxnetworks.com/shows/american-horror-story",
+                "schedule": {
+                    "time": "22:00",
+                    "days": [
+                        "Wednesday"
+                    ]
+                },
+                "rating": {
+                    "average": 7.7
+                },
+                "weight": 99,
+                "network": {
+                    "id": 13,
+                    "name": "FX",
+                    "country": {
+                        "name": "United States",
+                        "code": "US",
+                        "timezone": "America/New_York"
+                    },
+                    "officialSite": null
+                },
+                "webChannel": null,
+                "dvdCountry": null,
+                "externals": {
+                    "tvrage": 28776,
+                    "thetvdb": 250487,
+                    "imdb": "tt1844624"
+                },
+                "image": {
+                    "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/348/870947.jpg",
+                    "original": "https://static.tvmaze.com/uploads/images/original_untouched/348/870947.jpg"
+                },
+                "summary": "<p><b>American Horror Story </b>is an horror television anthology series. Each season is conceived as a self-contained miniseries, following a disparate set of characters and settings, and a storyline with its own beginning, middle, and end. While some actors appear for more than one year, they play completely different roles in each season.</p>",
+                "updated": 1650364058,
+                "_links": {
+                    "self": {
+                        "href": "https://api.tvmaze.com/shows/30"
+                    },
+                    "previousepisode": {
+                        "href": "https://api.tvmaze.com/episodes/2182799"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "type": "Executive Producer",
+        "_links": {
+            "show": {
+                "href": "https://api.tvmaze.com/shows/564"
+            }
+        },
+        "_embedded": {
+            "show": {
+                "id": 564,
+                "url": "https://www.tvmaze.com/shows/564/niptuck",
+                "name": "Nip/Tuck",
+                "type": "Scripted",
+                "language": "English",
+                "genres": [
+                    "Drama",
+                    "Medical"
+                ],
+                "status": "Ended",
+                "runtime": 60,
+                "averageRuntime": 60,
+                "premiered": "2003-07-22",
+                "ended": "2010-03-03",
+                "officialSite": null,
+                "schedule": {
+                    "time": "22:00",
+                    "days": [
+                        "Wednesday"
+                    ]
+                },
+                "rating": {
+                    "average": 8.3
+                },
+                "weight": 88,
+                "network": {
+                    "id": 13,
+                    "name": "FX",
+                    "country": {
+                        "name": "United States",
+                        "code": "US",
+                        "timezone": "America/New_York"
+                    },
+                    "officialSite": null
+                },
+                "webChannel": null,
+                "dvdCountry": null,
+                "externals": {
+                    "tvrage": 4677,
+                    "thetvdb": 72201,
+                    "imdb": "tt0361217"
+                },
+                "image": {
+                    "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/4/11715.jpg",
+                    "original": "https://static.tvmaze.com/uploads/images/original_untouched/4/11715.jpg"
+                },
+                "summary": "<p>Two plastic surgeons who are close friends and business partners, own an overwhelmingly successful plastic surgery practice and attempt to bring inner peace and visceral contentment to their patients through external cosmetic procedures. Although their clients aspire to cover up their pain, it is the surgeons who truly wear the masks of anguish and unhappiness, sadness and disillusionment. For more than two decades, they have shared a love for the same woman, who despite being married to one, has loved both. And at midlife, the doctors question the prosperity that has brought them so much -- and has offered so little.</p>",
+                "updated": 1618243313,
+                "_links": {
+                    "self": {
+                        "href": "https://api.tvmaze.com/shows/564"
+                    },
+                    "previousepisode": {
+                        "href": "https://api.tvmaze.com/episodes/53013"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "type": "Co-Producer",
+        "_links": {
+            "show": {
+                "href": "https://api.tvmaze.com/shows/564"
+            }
+        },
+        "_embedded": {
+            "show": {
+                "id": 564,
+                "url": "https://www.tvmaze.com/shows/564/niptuck",
+                "name": "Nip/Tuck",
+                "type": "Scripted",
+                "language": "English",
+                "genres": [
+                    "Drama",
+                    "Medical"
+                ],
+                "status": "Ended",
+                "runtime": 60,
+                "averageRuntime": 60,
+                "premiered": "2003-07-22",
+                "ended": "2010-03-03",
+                "officialSite": null,
+                "schedule": {
+                    "time": "22:00",
+                    "days": [
+                        "Wednesday"
+                    ]
+                },
+                "rating": {
+                    "average": 8.3
+                },
+                "weight": 88,
+                "network": {
+                    "id": 13,
+                    "name": "FX",
+                    "country": {
+                        "name": "United States",
+                        "code": "US",
+                        "timezone": "America/New_York"
+                    },
+                    "officialSite": null
+                },
+                "webChannel": null,
+                "dvdCountry": null,
+                "externals": {
+                    "tvrage": 4677,
+                    "thetvdb": 72201,
+                    "imdb": "tt0361217"
+                },
+                "image": {
+                    "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/4/11715.jpg",
+                    "original": "https://static.tvmaze.com/uploads/images/original_untouched/4/11715.jpg"
+                },
+                "summary": "<p>Two plastic surgeons who are close friends and business partners, own an overwhelmingly successful plastic surgery practice and attempt to bring inner peace and visceral contentment to their patients through external cosmetic procedures. Although their clients aspire to cover up their pain, it is the surgeons who truly wear the masks of anguish and unhappiness, sadness and disillusionment. For more than two decades, they have shared a love for the same woman, who despite being married to one, has loved both. And at midlife, the doctors question the prosperity that has brought them so much -- and has offered so little.</p>",
+                "updated": 1618243313,
+                "_links": {
+                    "self": {
+                        "href": "https://api.tvmaze.com/shows/564"
+                    },
+                    "previousepisode": {
+                        "href": "https://api.tvmaze.com/episodes/53013"
+                    }
+                }
+            }
+        }
+    }
+]

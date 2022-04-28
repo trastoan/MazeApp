@@ -33,7 +33,7 @@ class EpisodeDetailsViewModel: EpisodeDetailsViewModelProtocol {
                                number: String(format: "S%02d | E%02d", episode.season, episode.number))
     }
 
-    private func airDateFormatted(_ unformattedDate: String?) -> String {
+    func airDateFormatted(_ unformattedDate: String?) -> String {
         guard let unformatted = unformattedDate else { return "Unknow" }
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"

@@ -1,0 +1,74 @@
+[
+    {
+    "self": false,
+    "voice": false,
+    "_links": {
+        "show": {
+            "href": "https://api.tvmaze.com/shows/2137"
+        },
+        "character": {
+            "href": "https://api.tvmaze.com/characters/131375"
+        }
+    },
+    "_embedded": {
+        "show": {
+            "id": 2137,
+            "url": "https://www.tvmaze.com/shows/2137/soap",
+            "name": "Soap",
+            "type": "Scripted",
+            "language": "English",
+            "genres": [
+                "Comedy"
+            ],
+            "status": "Ended",
+            "runtime": 30,
+            "averageRuntime": 30,
+            "premiered": "1977-09-13",
+            "ended": "1981-05-25",
+            "officialSite": null,
+            "schedule": {
+                "time": "22:00",
+                "days": [
+                    "Monday"
+                ]
+            },
+            "rating": {
+                "average": 8.3
+            },
+            "weight": 59,
+            "network": {
+                "id": 3,
+                "name": "ABC",
+                "country": {
+                    "name": "United States",
+                    "code": "US",
+                    "timezone": "America/New_York"
+                },
+                "officialSite": "https://abc.com/"
+            },
+            "webChannel": null,
+            "dvdCountry": null,
+            "externals": {
+                "tvrage": 5238,
+                "thetvdb": 77370,
+                "imdb": "tt0075584"
+            },
+            "image": {
+                "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/11/29828.jpg",
+                "original": "https://static.tvmaze.com/uploads/images/original_untouched/11/29828.jpg"
+            },
+            "summary": "<p><b>Soap</b> is an outrageous comedy saga serializing the hilarious exploits of the characters in two unusual families. Meet the Tates and the Campbells, two families who have relationships as complex as those in a Russian novel. But the fun is in the unraveling.</p><p>The well-to-do Tate family is comprised of Chester Tate the father, and Jessica, the mother, the parents of three children. Their two daughters, Corinne and Eunice, have distinctly different personalities. Their son, Billy, compared to the rest of the family, is the only sane member of the group, according to Benson, their hired employee who knows everything about everyone. The witty Benson does his best to hold the family together. Living with the Tate family is Jessica's father, referred to as the Major -- who doesn't quite believe that World War II is over.</p><p>On the other side of town lives Mary Dallas Campbell, Jessica Tate's younger sister. Mary is wed to Burt Campbell who is not as prosperous a breadwinner as Chester. Mary's former husband, Johnny Dallas, has passed on, leaving her with two sons, Danny and Jodie. The older son, Danny, does not quite see eye-to-eye with his stepfather, and while the rest of the family knows Jodie is gay, Danny just thinks Jodie has a wonderful sense of humor.</p>",
+            "updated": 1634069154,
+            "_links": {
+                "self": {
+                    "href": "https://api.tvmaze.com/shows/2137"
+                },
+                "previousepisode": {
+                    "href": "https://api.tvmaze.com/episodes/174124"
+                }
+            }
+        }
+    }
+}
+]
+

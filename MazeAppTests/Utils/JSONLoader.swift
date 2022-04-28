@@ -10,7 +10,7 @@ import Foundation
 class JSONLoader {
 
     func loadJson<Model: Decodable>(named: String) -> Model? {
-        let bundle = Bundle(for: JsonLoader.self)
+        let bundle = Bundle(for: JSONLoader.self)
 
         if let path = bundle.path(forResource: named, ofType: "json") {
             do {
@@ -22,6 +22,7 @@ class JSONLoader {
                 return nil
             }
         }
+        print("\(named) not found")
        return nil
     }
 }

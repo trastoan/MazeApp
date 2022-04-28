@@ -13,6 +13,12 @@ class PeopleFixtures {
         JSONLoader().loadJson(named: "Peoples")!
     }
 
+    static func peopleWithoutCountry() -> People {
+        var people: People = JSONLoader().loadJson(named: "People")!
+        people.country = nil
+        return people
+    }
+
     static func people() -> People {
         JSONLoader().loadJson(named: "People")!
     }
