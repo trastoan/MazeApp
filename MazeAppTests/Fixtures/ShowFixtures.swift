@@ -13,7 +13,15 @@ class ShowFixtures {
         JSONLoader().loadJson(named: "Shows")!
     }
 
+    static func missingInfoShow() -> Show {
+        Show(id: 1, name: "Teste", image: nil, genres: [], summary: nil, status: nil, schedule: nil, rating: nil, network: nil)
+    }
+
     static func show() -> Show {
         JSONLoader().loadJson(named: "Show")!
+    }
+
+    static func showImages() -> [ShowImage] {
+        JSONLoader().loadJson(named: "Images")!
     }
 }

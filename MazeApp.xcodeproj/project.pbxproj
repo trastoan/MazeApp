@@ -51,6 +51,11 @@
 		DA18D3DD2819EE40006816CB /* SettingServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3DC2819EE3E006816CB /* SettingServices.swift */; };
 		DA18D3E02819F881006816CB /* GuardModelSpies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18D3DF2819F881006816CB /* GuardModelSpies.swift */; };
 		DA5659E8281AB020000A3F92 /* EpisodeDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5659E7281AB020000A3F92 /* EpisodeDetailsViewModelTests.swift */; };
+		DA5659ED281AB6F5000A3F92 /* ShowDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5659EC281AB6F5000A3F92 /* ShowDetailsViewModelTests.swift */; };
+		DA5659EF281AB701000A3F92 /* ShowDetailsSpies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5659EE281AB700000A3F92 /* ShowDetailsSpies.swift */; };
+		DA5659F1281AB86F000A3F92 /* Images.json in Resources */ = {isa = PBXBuildFile; fileRef = DA5659F0281AB86F000A3F92 /* Images.json */; };
+		DA5659F3281AC9F9000A3F92 /* ShowDetailsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5659F2281AC9F9000A3F92 /* ShowDetailsServiceTests.swift */; };
+		DA5659F6281ACA8E000A3F92 /* SessionMocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5659F5281ACA8E000A3F92 /* SessionMocker.swift */; };
 		DA670678281A0A86003B37A7 /* PinRegistrationModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA670677281A0A86003B37A7 /* PinRegistrationModelTests.swift */; };
 		DA67067A281A0AE8003B37A7 /* PinRegistrationModelSpies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA670679281A0AE8003B37A7 /* PinRegistrationModelSpies.swift */; };
 		DA67067D281A1F3B003B37A7 /* SettingsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67067C281A1F3B003B37A7 /* SettingsViewModelTests.swift */; };
@@ -169,6 +174,11 @@
 		DA18D3DC2819EE3E006816CB /* SettingServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingServices.swift; sourceTree = "<group>"; };
 		DA18D3DF2819F881006816CB /* GuardModelSpies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardModelSpies.swift; sourceTree = "<group>"; };
 		DA5659E7281AB020000A3F92 /* EpisodeDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailsViewModelTests.swift; sourceTree = "<group>"; };
+		DA5659EC281AB6F5000A3F92 /* ShowDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsViewModelTests.swift; sourceTree = "<group>"; };
+		DA5659EE281AB700000A3F92 /* ShowDetailsSpies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsSpies.swift; sourceTree = "<group>"; };
+		DA5659F0281AB86F000A3F92 /* Images.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Images.json; sourceTree = "<group>"; };
+		DA5659F2281AC9F9000A3F92 /* ShowDetailsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsServiceTests.swift; sourceTree = "<group>"; };
+		DA5659F5281ACA8E000A3F92 /* SessionMocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionMocker.swift; sourceTree = "<group>"; };
 		DA670677281A0A86003B37A7 /* PinRegistrationModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinRegistrationModelTests.swift; sourceTree = "<group>"; };
 		DA670679281A0AE8003B37A7 /* PinRegistrationModelSpies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinRegistrationModelSpies.swift; sourceTree = "<group>"; };
 		DA67067C281A1F3B003B37A7 /* SettingsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelTests.swift; sourceTree = "<group>"; };
@@ -524,6 +534,9 @@
 		DA5659EB281AB660000A3F92 /* ShowDetails */ = {
 			isa = PBXGroup;
 			children = (
+				DA5659EC281AB6F5000A3F92 /* ShowDetailsViewModelTests.swift */,
+				DA5659EE281AB700000A3F92 /* ShowDetailsSpies.swift */,
+				DA5659F2281AC9F9000A3F92 /* ShowDetailsServiceTests.swift */,
 			);
 			path = ShowDetails;
 			sourceTree = "<group>";
@@ -557,6 +570,7 @@
 				DA670695281A3336003B37A7 /* Episodes.json */,
 				DA6706A5281A3736003B37A7 /* CrewCredits.json */,
 				DA922BF0281A3CA000717967 /* CastCredits.json */,
+				DA5659F0281AB86F000A3F92 /* Images.json */,
 			);
 			path = MockedJsons;
 			sourceTree = "<group>";
@@ -565,6 +579,7 @@
 			isa = PBXGroup;
 			children = (
 				DA67068C281A3173003B37A7 /* JSONLoader.swift */,
+				DA5659F5281ACA8E000A3F92 /* SessionMocker.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -965,6 +980,7 @@
 				DA922BF1281A3CA000717967 /* CastCredits.json in Resources */,
 				DA670696281A3336003B37A7 /* Episodes.json in Resources */,
 				DA670688281A307E003B37A7 /* People.json in Resources */,
+				DA5659F1281AB86F000A3F92 /* Images.json in Resources */,
 				DA6706A6281A3736003B37A7 /* CrewCredits.json in Resources */,
 				DA670682281A2FD2003B37A7 /* Show.json in Resources */,
 				DA670686281A2FFE003B37A7 /* Shows.json in Resources */,
@@ -1084,10 +1100,12 @@
 				DA6706A0281A352C003B37A7 /* CrewCreditsFixtures.swift in Sources */,
 				DA5659E8281AB020000A3F92 /* EpisodeDetailsViewModelTests.swift in Sources */,
 				DA67068D281A3173003B37A7 /* JSONLoader.swift in Sources */,
+				DA5659ED281AB6F5000A3F92 /* ShowDetailsViewModelTests.swift in Sources */,
 				DA670694281A3302003B37A7 /* PeopleFixtures.swift in Sources */,
 				DA670699281A33F1003B37A7 /* PeopleDetailViewModelTests.swift in Sources */,
 				DA67067A281A0AE8003B37A7 /* PinRegistrationModelSpies.swift in Sources */,
 				DA18D3D52819E020006816CB /* KeychainServiceTests.swift in Sources */,
+				DA5659F3281AC9F9000A3F92 /* ShowDetailsServiceTests.swift in Sources */,
 				DA670692281A32C1003B37A7 /* EpisodeFixtures.swift in Sources */,
 				DA67067F281A201E003B37A7 /* SettingsSpies.swift in Sources */,
 				DAA95F722815E78D0085388A /* MazeAppTests.swift in Sources */,
@@ -1098,7 +1116,9 @@
 				DA18D3CF2819DD60006816CB /* ArrayExtensionTests.swift in Sources */,
 				DA67069C281A3435003B37A7 /* PeopleDetailSpies.swift in Sources */,
 				DA67067D281A1F3B003B37A7 /* SettingsViewModelTests.swift in Sources */,
+				DA5659F6281ACA8E000A3F92 /* SessionMocker.swift in Sources */,
 				DA67069E281A3521003B37A7 /* CastCreditsFixtures.swift in Sources */,
+				DA5659EF281AB701000A3F92 /* ShowDetailsSpies.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

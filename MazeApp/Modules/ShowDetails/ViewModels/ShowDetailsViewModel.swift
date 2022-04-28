@@ -20,21 +20,22 @@ protocol ShowDetailViewModelProtocol: ObservableObject {
 }
 
 class ShowDetailViewModel: ShowDetailViewModelProtocol {
-    var router: ShowDetailsRouterProtocol!
+    var router: ShowDetailsRouterProtocol
 
     var title: String { show.name }
     private var show: Show
     private let service: ShowDetailServiceProtocol
 
-    @Published private(set) var isLoading = true
+    @Published var isLoading = true
     private(set) var backgroundImage: URL?
     private(set) var seasons: [Season] = []
     private(set) var episodes: [Episode] = []
     private(set) var cast: [Cast] = []
     private(set) var crew: [Crew] = []
 
-    init(show: Show, service: ShowDetailServiceProtocol = ShowDetailService()) {
+    init(show: Show, service: ShowDetailServiceProtocol = ShowDetailService(), router: ShowDetailsRouterProtocol = ShowDetailsRouter()) {
         self.show = show
+        self.router = router
         self.service = service
         Task {
             try await loadInfo()
@@ -51,22 +52,12 @@ class ShowDetailViewModel: ShowDetailViewModelProtocol {
         episodes = try await service.listEpisodes(showId: show.id)
     }
 
-    private func loadCastInfo() async throws {
-        cast = try await service.listCast(showId: show.id)
-    }
-
-    private func loadCrewInfo() async throws {
-        crew = try await service.listCrew(showId: show.id)
-    }
-
     @MainActor
-    private func loadInfo() async throws {
+    func loadInfo() async throws {
         isLoading = true
         await withThrowingTaskGroup(of: Void.self, body: { group in
             group.addTask { try await self.loadBackgroundImage() }
             group.addTask { try await self.loadEpisodesInfo() }
-            group.addTask { try await self.loadCastInfo() }
-            group.addTask { try await self.loadCrewInfo() }
         })
         seasons = buildSeasons(episodes: episodes)
         isLoading = false
@@ -94,13 +85,8 @@ class ShowDetailViewModel: ShowDetailViewModelProtocol {
     func buildInfoViewModel() -> InfoViewModel {
         return InfoViewModel(summary: show.summary?.removeHTMLTags() ?? "None Available",
                                           days: formatShowDays(),
-                                          rating: "\(show.rating?.average ?? 0)",
+                                          rating: formatRating(),
                                           time: show.schedule?.time ?? "")
-    }
-
-    func formatShowDays() -> String {
-        guard let days = show.schedule?.days else { return "" }
-        return days.reduce("", { $0 + " | " + $1.prefix(3)})
     }
 
     func buildHeaderViewModel() -> ShowHeaderViewModel {
@@ -110,6 +96,15 @@ class ShowDetailViewModel: ShowDetailViewModelProtocol {
                                               numberOfSeasons: seasons.count,
                                               network: show.network?.name ?? "Unknow",
                                               genres: show.genres.prefix(3).joined(separator: " | "))
+    }
+
+    func formatRating() -> String {
+        guard let rating = show.rating?.average else { return "Not Rated"}
+        return "\(rating)"
+    }
+    func formatShowDays() -> String {
+        guard let days = show.schedule?.days else { return "" }
+        return days.reduce("", { $0 + " | " + $1.prefix(3)})
     }
 
     func presentEpisodeDetails(_ episode: Episode) {

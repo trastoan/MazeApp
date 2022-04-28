@@ -15,7 +15,7 @@ class InfoViewModel {
     var time: String
 
     var hasAdditionalInfo: Bool {
-        return !(days.isEmpty && rating == "0.0" && time.isEmpty)
+        return !(days.isEmpty && rating == "Not Rated" && time.isEmpty)
     }
 
     init(summary: String, days: String, rating: String, time: String) {

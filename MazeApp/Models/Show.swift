@@ -21,7 +21,7 @@ struct Show: Decodable, Hashable {
     let summary: String?
     let status: String?
     let schedule: Schedule?
-    let rating: Rating?
+    var rating: Rating?
     let network: Network?
 
     struct Schedule: Decodable {

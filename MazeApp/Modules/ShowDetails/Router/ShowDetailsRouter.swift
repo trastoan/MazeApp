@@ -12,7 +12,6 @@ import SwiftUI
 protocol ShowDetailsRouterProtocol {
     static func assembleModule(for show: Show) -> UIViewController
     func presentEpisodeDetails(for episode: Episode)
-    func presentPersonDetails(for person: People)
 }
 
 class ShowDetailsRouter: ShowDetailsRouterProtocol {
@@ -35,9 +34,4 @@ class ShowDetailsRouter: ShowDetailsRouterProtocol {
         let destination = EpisodeDetailsRouter.assembleModule(with: episode)
         viewController?.present(destination, animated: true)
     }
-
-    func presentPersonDetails(for person: People) {
-        // TBD
-    }
-
 }
