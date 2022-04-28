@@ -12,11 +12,12 @@ class SearchViewModelTests: XCTestCase {
     var sut: SearchViewModel!
     var spyRouter: SearchRouterSpy!
     var mockService: SearchServiceMock!
-
+    
     override func setUp() {
         spyRouter = SearchRouterSpy()
         mockService = SearchServiceMock()
         sut = SearchViewModel(with: mockService, router: spyRouter)
+
     }
 
     override func tearDown() async throws {

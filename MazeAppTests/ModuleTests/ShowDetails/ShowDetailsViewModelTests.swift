@@ -152,4 +152,11 @@ class ShowDetailsViewModelTests: XCTestCase {
     func test_title_shouldBeEqualtoShowName(){
         XCTAssertEqual(sut.title, mockShow.name)
     }
+
+    func test_seasoId_returnsSeasonNumber() async throws {
+        try await sut.loadInfo()
+        let firstSeason = sut.seasons.first!
+
+        XCTAssertEqual(firstSeason.id, 1)
+    }
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ShowListModel {
-    var router: ShowListRouterProtocol! { get }
+    var router: ShowListRouterProtocol { get }
     var title: String { get }
     var numberofShows: Int { get }
 
@@ -26,18 +26,19 @@ class ShowListViewModel: ShowListModel {
 
     private let service: ShowServiceProtocol
     private var shows: [Show] = []
-    private var currentPage = 0
     private var hasReachEnd = false
+    var currentPage = 0
 
-    var router: ShowListRouterProtocol!
+    var router: ShowListRouterProtocol
     var title: String { "Discover" }
     var numberofShows: Int { shows.count }
 
     var hasFinishedFetch: (() -> Void)?
     var insertNewShows: (([IndexPath]) -> Void)?
 
-    init(service: ShowServiceProtocol = ShowService()) {
+    init(service: ShowServiceProtocol = ShowService(), router: ShowListRouterProtocol) {
         self.service = service
+        self.router = router
     }
 
     private func fetchShows() async throws -> [Show] {

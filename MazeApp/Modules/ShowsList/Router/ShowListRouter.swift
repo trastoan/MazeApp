@@ -17,11 +17,10 @@ class ShowListRouter: ShowListRouterProtocol {
     private weak var viewController: UIViewController?
 
     static func assembleModule() -> UIViewController {
-        let controller = ShowListController()
-        let model = ShowListViewModel()
         let router = ShowListRouter()
+        let model = ShowListViewModel(router: router)
+        let controller = ShowListController()
 
-        model.router = router
         controller.model = model
         router.viewController = controller
 
