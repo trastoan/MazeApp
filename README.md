@@ -1,7 +1,7 @@
 
 # Maze App
 
-A app to browser for shows and actors, no especial build instructions needed
+A app to browser for shows and actors, made in four days, no especial build instructions needed
 
 # <a name="h_features"></a>Features
 
