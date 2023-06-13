@@ -1,0 +1,19 @@
+fastlane_version '2.157'
+default_platform :ios
+
+platform :ios do
+    desc 'Builds project and executes unit tests'
+    lane :test do |options|
+      scan(
+        clean: options[:clean],
+        skip_package_dependencies_resolution: options[:skip_package_dependencies_resolution]
+      )
+    end
+end
+
+lane :clean do
+	sh("killall Xcode", log:false, error_callback: ->(result) {
+		UI.message("Xcode was already closed")
+	})
+	clear_derived_data
+end
