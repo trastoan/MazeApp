@@ -76,4 +76,8 @@ DerivedData/
 
 .build/
 
+# fastlane
+Fastlane/report.xml
+Fastlane/test_output
+
 # End of https://www.toptal.com/developers/gitignore/api/swift,macos
